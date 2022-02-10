@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input - type 속성3</title>
+</head>
+<body>
+    <h2>Form</h2>
+
+    <form action="" method="GET">
+
+        <button type="submit">제출</button>
+        <input type="submit">
+        <input type="submit" value="제출하기">
+        
+        <!-- 메모 -->
+        <!-- 제출하기 버튼은 button과 input에서 생성 가능하다
+            button은 <button type="submit">제출</button>이라고 생성해야하며
+            input은<input type="submit">으로 생성가능하다
+            단, 둘다 제출하기가 생성가능하지만 button은 제출이라는 글을 직접 만들어야되며
+            input은 옵션으로 들어있어서 input type="submit"이라고 해주면된다
+            만약 "제출"글이 아니라 "제출하기"라고 하고싶으면 
+            <input type="submit" value="제출하기"> value="제출하기"라고 해주면된다 -->
+            
+            <!-- <input type="button" value="빈 버튼">
+                input의 button의 value="빈 버튼"으로 생성한것은 그냥 속성이 있다고 생각하면됨 -->
+                
+                <!-- 초기화 -->
+                <input type="reset"> <!-- 기본적으로 초기화라고 생성이된다-->
+                
+                <input type="reset" value="초기화하기"> 
+                <!-- 글을 변경하고 싶으면 value="초기화하기"이런식으로 넣어주면된다.-->
+                
+                <div>
+                    <!-- checkbox에 체크할수있게 되어있다. -->
+                    <label>CHECKBOX:
+                        <input type="checkbox" name="checkbox1">
+                        <input type="checkbox" name="checkbox2">
+                        <input type="checkbox" name="checkbox3">
+                    </label>
+                </div>
+
+                <div>
+                    <!-- checkbox에 checkbox2번이 체크되어 있다 -->
+                    <label>
+                        <input type="checkbox" name="checkbox1">
+                        <input type="checkbox" name="checkbox2" checked>
+                        <!-- 미리 체크 되어있다 checked -->
+                        <input type="checkbox" name="checkbox3">
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="check1">
+                        <input type="radio" name="check2">
+                        <input type="radio" name="check3">
+                        <!-- radio는 중복선택이 안되게 할때 사용하지만 label로 묶어서 
+                            input을 이렇게 할때는 각각이 되어있기 때문에
+                            radio는 각자임 그래서 다 선택되게 된다
+                            따로 선택되게 만들어야한다.-->
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="radio" value="r1">
+                        <input type="radio" name="radio" value="r2">
+                        <input type="radio" name="radio" value="r3">
+                        <!-- radio의 중복선택을 막기 위해서 radio를 하나로 맞춰야한다. -->
+                        <!-- radio의 value는 웹에서 선택에서 제출 버튼을 눌렀을때 GET에 적힐때 value로 구분한다 -->
+                    </label>
+                </div>
+    </form>
+</body>
+</html>

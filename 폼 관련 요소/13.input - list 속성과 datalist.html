@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datalist</title>
+</head>
+<body>
+    <!-- <datalist> -->
+    <!-- HTML <datalist>요소는 다른 컨트롤에서 고를 수 있는 가능한 혹은 
+        추천하는 선택지를 나타내는 <option>요소 여럿을 담습니다. -->
+    
+    <h2>Form</h2>
+
+    <form action="" method="GET">
+        <label for="movie">좋아하는 영화: </label>
+        <input type="text" id="movie" name="movie" list="movie-list">
+        <!-- input의 list="movie-list"에서 movie-list가 datalist id="movie-list"
+        를 가리킨다 -->
+        <datalist id="movie-list">
+            <option>주토피아</option>
+            <option>인사이드아웃</option>
+            <option>토이스토리1</option>
+            <option>토이스토리2</option>
+            <option>토이스토리3</option>
+        </datalist>
+
+        <!-- <select>의 <option>과 <datalist>의 <option>의 차이 -->
+            <!-- <select>의 <option>은 정해진 선택목록을 선택만 할수있게되어있고
+                datalist는 검색창에서 기존의 datalist에서 미리 지정한 값들을
+            추천해주고 여기에 검색창에 직접검색해서 추가할수있다. -->
+
+        <input type="submit">
+    </form>
+</body>
+</html>

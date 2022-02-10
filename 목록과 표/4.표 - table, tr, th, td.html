@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.표 - table,tr,th, td</title>
+</head>
+<body>
+    <table>
+
+        <tr> <!-- table row-->
+            <th scope="col">나라이름</th>
+            <th scope="col">수도</th>
+            <th scope="col">인구</th>
+        </tr>
+
+        <tr>
+            <th scope="row">한국</th> 
+            <!-- 행을 대표하는 scope이고 row 행을 대표해서.. 접근성을 대표해서 접근성을 표시할수있다 -->
+            <td>서울</td>
+            <td>5100만</td>
+        </tr>
+
+        <tr>
+            <th scope="row">미국</th>
+            <td>워싱턴 D.C.</td>
+            <td>3억</td>
+        </tr>
+
+        <tr>
+            <th scope="row">태국</th>
+            <td>방콕</td>
+            <td>6900만</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">합계</td> <!-- colspan 칸을 2개를 차지한다(영역 넓힐때)-->
+            <td>4억 2000만</td>
+        </tr>
+
+    </table>
+
+    <!-- 테이블의 행 row -->
+    <!-- 테이블의 열 column -->
+    <!-- 총 3개의 열 -->
+    <!-- th: table head라는 말로써 효과를 주고 굵은 글씨로 들어간다 <대표한다> -->
+    <!-- td: table data로 td로 작성해서 사용한다 -->
+
+    <!-- th가 가질수있는 속성은 scope는 여기서 보면 나라이름으로 한국, 미국, 태국을
+    대표한다고할때 col을 해주면된다.
+    th 수도에서 col, th 인구에도 col -->
+</body>
+</html>

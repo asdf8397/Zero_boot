@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- lang(Language) ko로하면 화면은 korea가 되고 en english가 된다. -->
+<!-- lang이 en이 되면 스크린리더가 읽을때 영어로 읽고 ko가 되면 한국어로 읽는다 -->
+<!-- lang은 웹 접근성을 높이기 위해서 설정하게 된다 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lang</title>
+    <!-- lang -->
+    <!-- 언어 태그 구분 -->
+    <!-- lang 전역특성은 요소 내의 수정 불가한 텍스트의 언어와 수정 가능한 텍스트가 사용해야 하는 언어를 정의합니다
+    특성의 값은 Tags for identifying Languages(BCP47)에 정의된 형식의 "언어 태그" 한 개입니다 -->
+    <!-- lang의 기본값은 "알수없음"이므로 항상 적절한 값을 지정하는 것이 좋습니다 -->
+</head>
+<body>
+
+    <div title="바깥쪽 박스">
+        <div title="첫번째 요소">안녕하세요</div>
+        <div>반갑습니다</div>
+    </div>
+
+    <p lang="en">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima nihil soluta deleniti veritatis voluptas laudantium illo commodi magnam tempora officia eaque debitis quis nam assumenda, porro pariatur. Sint, delectus earum.
+    </p>
+
+    <!-- 웹 화면의 접근성을 높인다고 했을때 html lang="ko"이면 화면이 korea(한글)로
+    되어있어서 스크린 리더는 한글로 읽다가 p태그에 lang="en"이 되어있으므로
+    영어로 읽어준다 -->
+    <!-- lang은 화면의 접근성을 높일때 사용하게 된다. -->
+</body>
+</html>

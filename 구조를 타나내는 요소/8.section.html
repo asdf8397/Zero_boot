@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.section</title>
+</head>
+<body>
+    <!-- <section>: 일반 구획 요소 -->
+    <!-- HTML <section> 요소는 HTML문서의 독립적인 구획을 나타내며, 더 적합한 의미
+        를 가진 요소가 없을 때 사용합니다. 보통 <section>은 제목을 포함하지만,
+            항상 그런 것은 아닙니다. -->
+
+            <h1>Choosing an Apple</h1>
+            <section>
+            <h2>Introduction</h2>
+            <p>This document provides a guide to help with the important task of choosing the correct Apple.</p>
+            </section>
+
+            <section>
+            <h2>Criteria</h2>
+            <p>There are many different criteria to be considered when choosing an Apple — size, color, firmness, sweetness, tartness...</p>
+            </section>
+
+            <!-- 설명 -->
+            <!-- 여기의 이 코드의 내용은 <article>이다
+                하지만 세세하게 나누면 -->
+            <h1>Choosing an Apple</h1>
+            <section> <!-- 이부분은 <section> -->
+            <h2>Introduction</h2>
+            <p>This document provides a guide to help with the important task of choosing the correct Apple.</p>
+            </section>
+
+            <section> <!-- 이부분은 <section> -->
+            <h2>Criteria</h2>
+            <p>There are many different criteria to be considered when choosing an Apple — size, color, firmness, sweetness, tartness...</p>
+            </section>
+
+            <!-- 특성 -->
+            <!-- 이 요소는 전역 특성을 포함한다. -->
+
+            <!-- 사용일람 -->
+            <!-- 각각의 <section>을 식별할 수단이 필요합니다. 주로 제목(<h1>-<h6>)요소를
+                <section>의 자식으로 포함하는 방법을 사용합니다. -->
+            <!-- 요소의 콘텐츠를 따라 구분해야 할 필요가 있으며 <article> 요소를 고려하세요 -->
+            <!-- <section> 요소를 일반 컨테이너로 사용하지 마세요. 특히 단순한 스타일링 목적이라면
+                <div>요소를 사용해야 합니다. 대개, 문서 요약에 해당 구획이 논리적으로 나타나야 하면
+                <section>이 좋은 선택입니다. -->
+            
+            <!-- 예제 -->
+            <!-- 이전 -->
+            <div>
+                <h2>Heading</h2>
+                <img src="some image" alt="">
+            </div>
+
+            <!-- 이후 -->
+            <section>
+                <h2>Heading</h2>
+                <img src="some image" alt="">
+            </section>
+</body>
+</html>

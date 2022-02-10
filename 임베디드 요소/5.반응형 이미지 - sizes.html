@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.반응형 이미지 - sizes</title>
+</head>
+<body>
+    <!-- sizes -->
+    <!-- 소스 크기를 나타내는, 쉼표로 구분한 하나 이상의 문자열이다.
+    1. 미디어 조건, 마지막 항목에서는 생략해야 합니다.
+    2. 소스 크기 값
+    미디어 조건은 이미지의 속성이 아니라 뷰포트 속성을 가리킵니다
+    예를 들어,(max-height: 500px) 1000px은 1000px너비의 소스를 사용하려면
+    뷰포트가 500px 이하여야 한다는 뜻입니다. -->
+
+    <!-- 소스 크기는 의도한 이미지 표시 크기를 지정합니다. 사용자 에이전트는 현재 소스
+    크기를 사용해, 너비(w)서술자를 사용한 srcset 특성의 소스 중 하나를 선택합니다.
+    선택한 소스 크기는 이미지의 고유 크기(en-US)(CSS 스타일을 입히지 않은 경우 이미지의
+    표시 크기)에 영향을 줍니다 srcset이 비어있거나 너비 서술자를 사용하지 않은 경우,
+    sizes 특성은 아무 효과도 없습니다. -->
+
+    <h2>반응형 이미지</h2>
+    <img src="images/large.png"
+    srcset="images/small.png 300w,
+            images/medium.png 450w,
+            images/large.png 600w"
+    sizes="(min-width: 300px) 600px,
+            (min-width: 450px) 450px,
+            300px" 
+    alt="responsive images">
+
+    <!-- 조건에 들어가는것 -->
+    <!-- min-width 최소 가로 min-width: 300px 300픽셀보다 큰 값을 가진것 -->
+    <!-- max-width 최대 가로 -->
+</body>
+</html>

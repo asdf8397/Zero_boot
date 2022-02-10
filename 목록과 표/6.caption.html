@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.caption</title>
+</head>
+<body>
+    <!-- <caption>: 표 설명 요소 -->
+    <!-- HTML <caption> 요소는 표의 설명 또는 제목을 나타냅니다. -->
+    
+    <table>
+        <caption>Example Caption</caption>
+        <tr>
+            <th>Login</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>userl</td>
+            <td>yserl@sample.com</td>
+        </tr>
+        <tr>
+            <td>user2</td>
+            <td>user2@sample.com</td>
+        </tr>
+    </table>
+    <!-- caption을 테이블 요소에 붙이려면 무조건 테이블은 <table>요소
+        첫번째 자식이어야합니다. -->
+    <!-- 만약 caption을 table에서 아래에 넣으려면 CSS에서 설정해서 넣어지게 했다. -->
+
+    <!-- 특성 -->
+    <!-- 전역특성만 포함한다 -->
+    <!-- <caption> 요소는 부모 <table>요소의 첫 번째 자식이어야 합니다 -->
+    <!-- <caption> 요소를 가진 <table> 요소가 만약 <figure> 요소의 유일한 자식인 경우
+        , <figcaption>을 대신 사용하세요. -->
+
+            <h2>Table</h2>
+            <caption>이번달 지출내역</caption>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">품목</th>
+                        <th scope="col">지출</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th colspan="2">식재료</th>
+                </tr>
+                <tr>
+                    <th scope="row">대파</th>
+                    <td>3,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">달걀</th>
+                    <td>4,000</td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <th colspan="2">기타품목</th>
+                </tr>
+                <tr>
+                    <th scope="row">고양이간식</th>
+                    <td>12,000</td>
+                </tr>
+                <tr>
+                    <th scope="row">종이봉투</th>
+                    <td>300</td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tfoot>
+                <tr>
+                    <th colspan="2">합계</th>
+                </tr>
+                <tr>
+                    <th scope="row">Totals</th>
+                    <td>33,000</td>
+                </tr>
+                </tfoot>
+                </tbody>
+            </table>
+        
+</body>
+</html>

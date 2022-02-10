@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textarea</title>
+</head>
+<body>
+    <h2>Form</h2>
+
+    <form action="" method="GET">
+        <label for="comment">댓글: </label>
+        <textarea placeholder="댓글을 입력해주세요" name="comment" id="comment">
+        오늘은.....
+        개행을 해도
+        이렇게
+        </textarea>
+        <!-- <textarea> -->
+        
+        <input type="submit">
+    </form>
+
+    <br>
+    
+    <form action="" method="GET">
+        <label for="comment">댓글: </label>
+        <textarea placeholder="댓글을 입력해주세요" 
+        name="comment" id="comment" rows="5" cols="5">
+            오늘은.....
+            개행을 해도
+            이렇게
+            나오네요
+        </textarea>
+        <!-- textarea의 row="5"는 칸의 줄을 5칸을 늘려준다는 뜻이다.
+            cols="5" cols는 5글자 만큼 칸을 늘려주는것
+            되도록 CSS를 이용해서 변화시켜주는 것이 좋다.
+        -->
+    </form>
+</body>
+</html>

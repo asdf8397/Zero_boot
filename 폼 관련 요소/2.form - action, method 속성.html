@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form - action, method속성</title>
+</head>
+<body>
+    <h2>Form</h2>
+
+    <!-- action -->
+    <!-- 양식 데이터를 처리할 프로그램의 URI <button>, <input type="submit">
+        <input type="image"> 요소의 formaction 특성으로 재정의 할 수 있습니다. -->
+
+    <form action="http://server.com/join" method=""></form>
+    <!-- action 목적을 가지고 action의 주소로 전송한다. -->
+    <form>
+    <input type="text" name="test">
+    </form>
+
+    <h2>Form</h2>
+    <form action="" method="GET">
+        <input type="text" name="test">
+        <button type="submit">제출</button>
+    </form>
+
+    <!-- 웹페이지의 링크에서 제출을 누르면 주소뒤에 제출 누른 글이 붙는다
+    이 뜻은 method="GET"이 여기서 보내준 글자를 받는다는 것이다. 
+        GET Method는 보안에 취약한것
+        Post Method는 주소창에 드러나지 않는다 요청본문(이상한 문자로 변형되서 전송된다)-->
+
+    <!-- method -->
+    <!-- 양식을 제출할 때 사용할 HTTP 메서드 -->
+        <!-- ◆ post: POST메서드 양식 데이터를 요청 부문으로 전송합니다. -->
+        <!-- ◆ get: GET메서드 양식 데이터를 action URL과 ? 구분자 뒤에 이어 붙여서 전송합니다 -->
+        <!-- ◆ dialo: 양식이 <dialog> 안에 위치한 경우ㅡ 제출 과 함께 대화 상자를 닫습니다 -->
+</body>
+</html>

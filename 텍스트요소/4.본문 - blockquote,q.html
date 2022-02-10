@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blockquote,q</title>
+</head>
+<body>
+    <!-- blockquote: 인용 블록 요소 -->
+
+    <!-- HTML<blockquote>요소는 안쪽의 텍스트가 긴 인용문을 나타냅니다 주로 들여쓰기를
+    한 것으로 그려집니다.(외형을 바꾸는 법을 사용 알람을 참고하세요)
+    인용문의 출처 URL은 cite 특성으로, 출처 텍스트는 <cite>요소로 제공할 수 있습니다. -->
+    
+    <!-- q:인라인 인용문 요소 -->
+    <!-- HTML <q>요소는 둘러싼 텍스트가 짧은 인라인 인용문이라는 것을 나타냅니다.
+        대부분의 브라우저에서는 앞과 뒤에 따옴표를 붙여 표현합니다. <q>는 줄 바꿈이
+        없는 짧은 경우에 적당합니다. 긴 인용문은 <blockquote>요소를 사용하세요-->
+
+
+    <!-- 예제 코드1 -->
+    <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>
+            Words can be like X-rays. if you use them properly-they'll go through
+            anything. you read and you're pierced.
+        </p>
+    </blockquote>
+
+    <!-- <blockquote>와 <p>태그의 차이점 글을 적은 문단에서 blockquote는 글의 문단 앞에
+        여백이 생긴다 <p>태그는 여백이 없다. -->
+    <!-- blockquote안에 여러개의 <p>태그가 들어갈수있다. -->
+
+    <!-- 예제 코드2 -->
+    <p>
+        선택의 조건(행복을 어디서 찾을 것인가)라는 도서에서는 아래와 같이 이야기한다.
+        <blockquote>
+            사람들은 이제 휴식을 부끄러워한다. 오랜 사색에 대해선 양심의 가책까지 느낀다.
+            시계를 바라보며 점심 식사는 어떻게 할 것인지 생각하고 눈을 주식 시세가 나와있는
+            신문을 향해 있다.
+        </blockquote>
+    </p>
+
+    <!-- <p>태그 내부에 <blockquote>가 있으면 <p>태그에서 <blockquote>가 시작되기 직전에
+    </p> <p>태그가 닫히게 된다. -->
+
+    <!-- 예제 코드3 -->
+    <p><q>이건 나는 게 아냐, 아주 멋있게 떨어지는 거지</q> - 토이스토리</p>
+    <!-- q태그는 쓴 문자의 앞뒤로 강조표시인 쌍따움표가 들어가게 된다. -->
+    <!-- q태그는 기본적으로 문자의 앞뒤로 쌍따움표를 넣어지게 된다 -->
+    
+    <!-- cite -->
+    <!-- 
+    특징: blockquote와 q태그가 둘다 가지고있는 속성
+    blockquote, q태그 둘다에 cite속성을 적용해줄수있다 
+    -->
+    <!-- 인용문의 출처 문서나 메시지를 가리키는 URL. 
+        인용문의 맥락 혹은 출처 정보를 가리킬 용도이다. 
+        출처정보를 인용할때 사용하게 된다. -->
+
+</body>
+</html>

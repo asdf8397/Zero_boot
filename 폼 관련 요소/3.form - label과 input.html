@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.label과 input</title>
+</head>
+<body>
+    <!-- input -->
+    <!-- 사용자가 입력할수있는 입력창을 input이라고 한다 -->
+    <!-- 어떤 정보를 입력할지 정보를 붙여줄때 -->
+    
+    <!-- for -->
+    <!-- 같은 문서 내의 <label> 요소로서, 레이블 가능한 form-related 요소의
+        id. 레이블 가능한 요소일때 for속성값과 일치하는 id를 가진 문서의 첫 번째 요소는
+        그 label 요소의 라벨 제어(labeled control)라고 합니다.
+        label을 지정할 수 없으면 for 속성은 영향을 미치지 않습니다
+        문서의 뒷부분에 id 값과 일치하는 다른 요소들은 무시합니다 -->
+    <!-- <label> 요소는 for속성과 제어 control요소를 동시에 가질 수 있습니다
+        이때 for 속성은 포함되어 있는 제어 control 요소를 가리키고 있어야 합니다. -->
+    
+    <h2>Form</h2>
+    <div>
+    <form action="" method="GET">
+        <label for="foodname">음식 이름:</label> <!-- 여기 label이 input type을 보고 찾을때 id를 보고 찾게된다.-->
+        <input type="text" name="food" id="foodname">
+        <!-- 여기서 id는 label이 input을 찾을때 id를 통해서 찾게되고
+        name은 서버로 보낼때 name 설정한 food을 보내게 된다 -->
+    </div>
+    <div>
+        <label for="color">색깔: <!-- 접근성을 높이기 위해서는 label에는 텍스트를 넣어주는 것이 좋다-->
+            <input type="text" name="color" id="color">
+        </label>
+        <button type="submit">제출</button>
+    </form>
+    </div>
+</body>
+</html>

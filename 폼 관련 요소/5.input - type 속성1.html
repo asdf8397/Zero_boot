@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input - type속성1</title>
+</head>
+<body>
+    <h2>Form</h2>
+
+    <form action="" method="GET">
+
+        <label>TEXT:
+            <input type="text" name="text">
+            <input type="textarea">
+            <input type="text" minlength="5" maxlength="10">
+            <!-- input type에 넣을수있는 속성은
+                minlength 텍스트에 넣을수있는 최소 글자
+                maxlength 텍스트에 넣을수있는 최대 글자 -->
+            <!-- input type에 속성에서 minlength와 maxlength의 조건에 맞지
+                않게 제출할 경우 submit되지 않는다. -->
+        </label>
+
+        <div>
+            <label>PASSWORD:
+                <input type="password" name="pwd">
+            </label>
+        </div>
+
+        <!-- get메소드를 이용하면 마스킹이 되더라도 보이게 된다 -->
+        <!-- post메소드를 사용해서 마스킹해서 보낼것 -->
+
+        <div>
+            <label>EMAIL:
+                <input type="email" name="email">
+            </label>
+        </div>
+
+        <div>
+            <label>TEL:
+                <input type="tel" name="tel">
+            </label>
+        </div>
+          
+        <button type="submit">제출</button>
+    </form>
+</body>
+</html>

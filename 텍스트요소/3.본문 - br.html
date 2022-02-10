@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.본문 - br</title>
+</head>
+<body>
+    <!-- <br>: 줄바꿈 요소 -->
+    <!-- br은 엔터키를 대신해준다.` -->
+
+    <p> O’er all the hilltops<br>
+        Is quiet now,<br>
+        In all the treetops<br>
+        Hearest thou<br>
+        Hardly a breath;<br>
+        The birds are asleep in the trees:<br>
+        Wait, soon like these<br>
+        Thou too shalt rest.
+    </p>
+
+    <!-- 메모 -->
+    <!-- 나쁜 예 -->
+    <!-- <p> O’er all the hilltops<br>
+        Is quiet now,<br>
+        In all the treetops<br>
+        Hearest thou<br><br><br><br><br><br><br><br><br><br>
+        Hardly a breath;<br>
+        The birds are asleep in the trees:<br>
+        Wait, soon like these<br>
+        Thou too shalt rest.
+    </p> -->
+
+    <!-- 좋은 예 -->
+
+    <!-- <p> 
+        O’er all the hilltops<br>
+        Is quiet now,<br>
+        In all the treetops<br>
+        Hearest thou
+        </p>
+        <p>
+        Hardly a breath;<br>
+        The birds are asleep in the trees:<br>
+        Wait, soon like these<br>
+        Thou too shalt rest. 
+        </p>
+    -->
+
+    <!-- ↑ -->
+
+    <!-- 문단과 문단사이에 빈 여백을 많이 주고싶다고 br을 남발하면안된다
+    그럴땐 <p>요소로 감싼 후 CSS의 margin 속성으로 여백의 크기를 조절할수있다. -->
+    
+    <!-- 접근성 고려사항 -->
+    <!-- 문단 구분을 <br>로 하는건 나쁜 사례일 뿐만 아니라 스크린 리더를 사용해 탐색
+    하는 사용자에게도 문제가 됩니다
+    스크린 리더가 요소의 존재는 알려주겠지만, <br>에는 아무런 내용도 없기 때문입니다
+    따라서 사용자는 내용이 어딨는지 몰라 혼란을 느낄 수 있습니다. -->
+    
+</body>
+</html>

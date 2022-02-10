@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.input - disabled, readonly속성</title>
+</head>
+<body>
+    <h2>Form</h2>
+
+    <form action="" method="GET">
+        <div>
+            <label for="username">이름: </label>
+            <input 
+            type="text"
+            name="username"
+            id="username"
+            placeholder="홍길동"
+            autocomplete="off"
+            required>
+        </div>
+        <div>
+            <label for="job">직업: </label>
+            <input 
+            type="text"
+            name="job"
+            id="job"
+            placeholder="예) 교사">
+        </div>
+        <div>
+            <label for="age">나이: </label>
+            <input 
+            type="number"
+            name="age"
+            id="age"
+            placeholder="10"
+            readonly>
+            
+            <!-- disabled -->
+            <!-- disabled를 넣으면 필드 자체가 비활성화되서 유저가 입력하지도 못하고
+            필드 자체가 전송되지도 않는다
+            disabled는 아예 사용하지 않을때 사용한다.
+            JS에서 사용하게 된다.-->
+            
+            <!-- readonly -->
+            <!-- readonly는 읽기전용이다 커서가 클릭은 되지만 안에 값을 넣을수없음
+            readonly value로 값을 정해놓고 readonly로 사용하게 된다. -->
+            <!-- readonly는 수정만 안되고 Form데이터에 그대로 전송되고 value라는 값으로 
+            기본값을 넣어줄수있고 value로 넣어줄수있다 -->
+        </div>
+
+        <input type="reset">
+        <input type="submit">
+    </form>
+</body>
+</html>

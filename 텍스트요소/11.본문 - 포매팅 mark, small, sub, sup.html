@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포매팅 mark, small, sub, sup</title>
+</head>
+<body>
+    <!-- mark -->
+    <!-- HTML <mark> 요소는 현재 맥락에 관련이 깊거나 중요해 표시 또는 하이라이트한
+        부분을 나타냅니다. -->
+
+    <mark>salamander</mark> <!-- mark태그를 해준 부분에서 하이라이트를(색깔을 넣어준것처럼) 해준것처럼 됨-->
+    
+    <blockquote>
+        It is a period of civil war. Rebel spaceships, striking from a
+        hidden base, have won their first victory against the evil
+        Galactic Empire. During the battle, <mark>Rebel spies managed
+        to steal secret plans</mark> to the Empire’s ultimate weapon,
+        the DEATH STAR, an armored space station with enough power to
+        destroy an entire planet.
+      </blockquote>
+
+      <br>
+
+      <!-- <small>: 덧붙임 글 요소 -->
+        <!-- HTML <small> 요소는 덧붙이는 글이나, 저작권과 법률 표기 등의
+            작은 텍스트를 나타냅니다 기본상태에서 <small>은 자신의 콘텐츠를
+                한 사이즈 작은 글꼴(small에서 x-small 등)로 표시하지만,
+            스타일을 적용한 후에도 글씨 크기가 작을 필요는 없습니다. -->
+            
+            <p>MDN Web Docs is a learning platform for Web technologies and the software that powers the Web.</p>
+
+            <hr>
+    
+            <p><small>The content is licensed under a Creative Commons Attribution-ShareAlike 2.5 Generic License.</small></p>
+            <!-- 작은 글꼴 <small> -->
+
+        <!-- <sub>: 위 첨자 요소 -->
+        <!-- HTML <sup> 요소는 활자 배치를 위 첨자로 해야 하는 인라인 텍스트를 지정합니다.
+            위 첨자는 보통 더 작은 글씨 크기를 가지고, 기준선을 위로 올려 렌더링 합니다.-->
+        
+            <p>One of the most common equations in all of physics is
+                <var>E</var>=<var>m</var><var>c</var><sup>2</sup>.<p>
+            <!-- 지수를 사용할때 <sup>를 사용하게 된다.  거듭제곱 <sup> -->
+            
+            <!-- <sub> -->
+            <!-- HTML <sub> 요소는 활자 배치에 아래 첨자로 해야 하는 인라인 텍스트를
+                지정합니다. 아래 첨자는 보통 더 작은 글씨 크기를 가지고, 기준선을 아래로 내려 렌더링 합니다. -->
+            
+                <p>Almost every developer's favorite molecule is
+                    C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as "caffeine."</p>
+                <!-- 화학식에서 화학문자의 아래 붙는 숫자를 나타낼때 사용하게 된다 <sub> -->
+                    <!-- 각주를 나타낼때 사용하고, 수식나타낼때 사용하며, 화학식에서 사용한다 -->
+
+</body>
+</html>

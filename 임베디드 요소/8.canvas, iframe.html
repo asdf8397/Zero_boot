@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.canvas, iframe</title>
+</head>
+<body>
+    <!-- <canvas>: 그래픽 캔버스 요소 -->
+    <!-- HTML <canvas> 요소는 캠버스 스크립팅API 또는 WebGLAPI와 함께
+        사용해 그래픽과 애니메이션을 그릴 수 있습니다. -->
+
+    <!-- HTML -->
+    <!-- 이 코드 조각은 HTML문서에 캔버스를 추가합니다 대체 텍스트를 추가해서
+    브라우저가 캔버스를 렌더링 할 수 없거나, 캔버스 읽을 수 없는 경우에
+    대비했습니다. -->
+    <canvas id="canvas" width="300" height="300">
+        캔버스의 내용을 설명하는 대체 텍스트
+    </canvas>
+
+    <!-- JavaScript -->
+    <!-- 그 다음, JavaScript 코드 내에서 HTMLCanvasElement, getContext()를 호출해
+    그리기 맥락을 얻어서 캔버스 위에 그립니다. -->
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "green";
+        ctx.fillRect(10, 10, 100, 100);
+    </script>
+
+    <!-- HTML을 JS에서 도형을 맞출수있다. -->
+    <!-- HTML을 크기를 맞추고 JS를 통해서 그림을 그리거나 도형을 할수있다. -->
+
+    <!-- iframe -->
+        <!-- <iframe>: 인라인 프레임 요소 -->
+    <!-- HTML <iframe> 요소는 중첩 브라우징 맥락을 나타내는 요소로,
+        현재 문서 안에 다른 HTML 페이지를 삽입한다. -->
+
+        <!-- iframe은 지도를 웹 사이트에 삽입할때 사용한다 -->
+
+        <iframe
+        width="600"
+         height="450"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+            &q=Space+Needle,Seattle+WA">
+        </iframe>
+
+        <!-- 구글 맵을 iframe으로 가져올때 사용한다. -->
+
+
+</body>
+</html>

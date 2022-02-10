@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.main</title>
+</head>
+<body>
+    <!-- main -->
+    <!-- HTML <main>요소 문서 <body>의 주요 콘텐츠를 나타냅니다. 주요 콘텐츠 영역은
+        문서의 핵심 주제나 앱의 핵심 기능에 직접적으로 연결됐거나 확장하는 콘텐츠를 이루어졌습니다. -->
+
+    <!-- main태그는 body태그의 바로 하위 자식으로 사용되면 유일하게 딱 하나만
+    사용할 수 있다. -->
+    <!-- main은 여러가지 콘텐츠가 있을수 있으나 전체를 아우르는 딱 하나만 사용할수있다 -->
+
+    <!-- hidden 속성 없이 문서에 하나보다 많은 <main> 요소가 존재해선 안됩니다. -->
+
+    <!-- 다른태그의 자식태그로 절대 사용할수없습니다 -->
+
+    <!-- main은 internet Explorer11 이하에서는 지원하지 않는다
+    만약 Internet Explorer11이하 지원할땐 <main> 요소에 "main" ARIA(en-US)역활을
+        명시해 접근성을 확보하는 것이 좋습니다. -->
+
+    <!-- Internet Explorer11 이하를 지원할땐 이런 코드-->
+    <main role="main"> 
+        ...
+    </main>
+    
+    <!-- 예제 -->
+    <main>
+        <h1>Apples</h1>
+        <p>The apple is the pomaceous fruit of the apple tree.</p>
+
+        <article>
+            <h2>Red Delicious</h2>
+            <p>
+                These bright red apples are the most common found in many
+                supermarkets.
+            </p>
+            <p>....</p>
+            <p>....</p>
+        </article>
+
+        <article>
+            <h2>Granny Smith</h2>
+            <p>These juicy, green apples make a great filling for apple pies.</p>
+            <p>....</p>
+            <p>....</p>
+        </article>
+    </main>
+    <!-- ↑ -->
+    <!-- <body>태그의 안에 <main>이 있고 <main>안에 웹페이지의 설명 웹포스팅을 넣어줄수있다
+        <main>이 웹의 구성에서 제일 많은 모든것을 아우르는 태그라고 알아두면 된다. -->
+
+</body>
+</html>

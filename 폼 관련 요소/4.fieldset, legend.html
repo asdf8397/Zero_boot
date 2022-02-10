@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.fieldset, legend</title>
+</head>
+<body>
+    <!-- <fieldset>: 필드셋 요소 -->
+    <!-- HTML <fieldset> 요소는 웹 양식의 여러 컨트롤과 레이블(<label>)을 묶을때 사용함 -->
+    <h2>Form</h2>
+
+    <fieldset>
+        <legend>Choose your favorite monster</legend> <!-- legend는 범례 -->
+        
+        <input type="radio" id="kraken" name="monster">
+        <label for="kraken">Kraken</label><br/>
+
+        <input type="radio" id="sasquatch" name="monster">
+        <label for="sasquatch">Sasquatch</label><br/>
+
+        <input type="radio" id="mothman" name="monster">
+        <label for="mothman">mothman</label>
+    </fieldset>
+
+    <!-- label의 for와 input의 id 둘다 Kraken이다 여기에서 둘다 짝이 맞으면 된다. -->
+    <br>
+    <br>
+
+    <!-- <legend>요소의 부모는 <fieldset>이다 -->
+        <!-- fieldset의 첫번째 자식이 legend이다 -->
+    <h2>Form</h2>
+    <form action="" method="GET">
+
+        <fieldset disabled> <!-- 여기에 disabled를 넣어주면 범례1 전체가 입력불가하게 된다. -->
+            <legend>범례1</legend>
+
+                <div>
+                    <label for="foodname">음식 이름: </label>
+                    <input type="text" name="food" id="foodname" disabled>
+                </div>
+                <!-- disabled는 입력불가하다. input text만 입력불가하지만-->
+                <div>
+                    <label for="color">색깔 :</label>
+                    <input type="text" name="color" id="color">
+                </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>범례2</legend>
+        <div>
+            <label for="foodname">음식 이름: </label>
+            <input type="text" name="food" id="foodname">
+        </div>
+        
+        <div>
+        <label for="color">색깔: </label>
+        <input type="text" name="color" id="color">
+        </div>
+        </fieldset>
+    
+    <button type="submit">제출</button>
+    </form>
+
+    <!-- 메모 -->
+    <!-- 특징 -->
+    <!-- disabled -->
+    <!-- 지정한 경우, 모든 자손 컨트롤을 비활성화합니다. 비활성 컨트롤은 편집할 수 없고,
+        <form>을 제출할 때 데이터에 포함되지 않습니다. 이 마우스 클릭, 포커스 등
+        브라우저 이벤트도 모두 받지 않습니다. 브라우저는 비활성 컨트롤을 주로 회색으로 표시합니다
+        단, <legend> 안의 양식 요소는 비활성 상태로 전환되지 않습니다. -->
+    
+    <!-- 가능한 콘텐츠 선택적인 <legend> 요소와 그 이후의 플로우 콘텐츠 -->
+</body>
+</html>

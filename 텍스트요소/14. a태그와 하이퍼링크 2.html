@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14. a태그와 하이퍼링크 2</title>
+</head>
+<body>
+    <h2>a 태그 - 하이퍼링크</h2>
+    <!-- <h3>속성1: href</h3> -->
+
+    <h3>속성2: target</h3>
+    <a href="https://www.mozilla.com">Mozilla</a>
+
+    <a href="https://www.mozilla.com" target="iframe">Mozilla</a>
+    <!-- 새창이 열리고 Mozilla 홈페이지가 열린다. -->
+
+    <a href="https://www.mozilla.com" target="_blank">Mozilla</a>
+    <!-- 새창이 열리고 Mozilla 홈페이지가 열린다. -->
+    
+
+    <!-- target -->
+    <!-- 링크한 URL을 표시할 위치, 가능한 값을 브라우징 맥락으로, 즉 탭, 창
+        <iframe>의 이름이나 특정 키워드입니다. 다음 키워드는 특별한 뜻을 가지고 있습니다. -->
+        
+        <!-- 
+            _self: URL을 현재 브라우징 맥락에 표시합니다. 기본값(기본값이다.)
+            _blank: URL을 새로운 브라우징 맥락에 표시합니다. 보통 새 탭이지만, 사용자가
+            브라우저 설정을 통해 새 창으로 바꿀 수 있습니다
+            _parent: URL을 현재 브라우징 맥락의 부모에 표시합니다 부모가 존재하지 않으면 _self와
+            동일하게 행동합니다
+            _top: URL을 최상단 브라우징 맥락(현재 맥락의 부모면서 자신의 부모가 존재하지 않는
+                제일 높은 맥락)에 표시합니다. 부모가 존재하지 않으면 _self와 동일하게 행동합니다.
+
+                참고: target을 사용할 때 rel="noreferrer"를 추가해 window.opener API의 악의적인 사용을 
+                방지하는걸 고려하세요.
+       -->
+</body>
+</html>

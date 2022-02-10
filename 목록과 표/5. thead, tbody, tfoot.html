@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.thead, tbody, tfoot</title>
+</head>
+<body>
+    <h2>Table</h2>
+
+    <table> <!-- table도 구획을 나눠서 마크업을 할수있다.-->
+        <thead> <!-- thead를 머릿부분-->
+            <tr>
+                <th scope="col">품목</th>
+                <th scope="col">지출</th>
+            </tr>
+        </thead>
+        <tbody> <!-- 본문의 내용 tbody-->
+        <tr>
+            <th scope="row">대파</th>
+            <td>3,000</td>
+        </tr>
+        <tr>
+            <th scope="row">달걀</th>
+            <td>4,000</td>
+        </tr>
+        <tr>
+            <th scope="row">고양이간식</th>
+            <td>12,000</td>
+        </tr>
+        <tr>
+            <th scope="row">종이봉투</th>
+            <td>300</td>
+        </tr>
+        </tbody>
+        <tfoot> <!-- tfoot 끝단 -->
+        <tr>
+            <th scope="row">Totals</th>
+            <td>33,000</td>
+        </tr>
+        </tfoot>
+    </table>
+
+    <!-- table의 부분을 나눌수있다 head, body, foot부분을 -->
+    <!--
+    thead는 table에서 품목, 지출부분 헤드부분을 나타냄
+    tbody는 table에서 대파 달걀 고양이간식, 종이봉투 같이 body부분을 나타냄
+    tfoot은 table에서 Totals처럼 총액을 나타내는 부분 
+
+    구획을 나눠서 스타일링 하기 쉬워진다.
+    -->
+
+    <br>
+    <br>
+
+    <h2>Table</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">품목</th>
+                <th scope="col">지출</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th colspan="2">식재료</th>
+        </tr>
+        <tr>
+            <th scope="row">대파</th>
+            <td>3,000</td>
+        </tr>
+        <tr>
+            <th scope="row">달걀</th>
+            <td>4,000</td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr>
+            <th colspan="2">기타품목</th>
+        </tr>
+        <tr>
+            <th scope="row">고양이간식</th>
+            <td>12,000</td>
+        </tr>
+        <tr>
+            <th scope="row">종이봉투</th>
+            <td>300</td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tfoot>
+        <tr>
+            <th colspan="2">합계</th>
+        </tr>
+        <tr>
+            <th scope="row">Totals</th>
+            <td>33,000</td>
+        </tr>
+        </tfoot>
+        </tbody>
+    </table>
+
+
+</body>
+</html>

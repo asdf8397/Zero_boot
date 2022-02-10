@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.반응형 이미지 - srcset</title>
+</head>
+<body>
+    <!-- src -->
+    <!-- 이미지 URL 필수 사항입니다. srcset을 지원하는 브라우저의 srcset에 픽셀 밀도
+    1x와 w 서술자가 없는 경우, src는 픽셀 밀도 1x의 이미지 후보로 취급합니다. -->
+
+    <!-- srcset -->
+    <!-- 사용자 에이전트가 사용할 수 있는 이미지 소스의 후보, 쉼표로 구분하는 한 개 이상의
+    문자열 목록입니다. 각각의 문자열은 다음 구성요소로 이루어집니다.
+    1. 이미지의 URL
+    2. 선택적으로, 공백과 함께 그 뒤를 잇는
+        ● 너비 서술자(양의 정수와 바로 뒤의 "w" 문자) 너비 서술자의 값을 sizes 특성으로
+            지정한 소스 크기로 나눠서 픽셀 밀도를 구합니다.
+        ● 픽셀 밀도 서술자(양의 실수와 바로 뒤의 "x"문자) -->
+
+        <h2>반응형 이미지</h2>
+        
+        <img src="../고양이 존예.jpg" 
+        srcset="image/small.png 300w,
+                images/medium.png 450w,
+                images/large.png 600w" 
+        alt="res">
+</body>
+</html>

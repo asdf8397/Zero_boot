@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.input - step,min,max</title>
+</head>
+<body>
+    <div>
+        <label for="score">평점: </label>
+        <input type="number" name="score" id="score" min="0" max="10" step="2">
+        <!-- minlength: 글자의 최소 길이, maxlength: 글자의 최대 길이 -->
+        <!-- min: 숫자의 최소 길이, max: 숫자의 최대 길이 -->
+        <!-- min, max 숫자가 최소 최대 얼마까지 들어갈수있는지 -->
+        <!-- step 숫자를 올리고 내릴때 2씩 오르고 2씩 내린다 -->
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+        <label for="score">평점:</label>
+        <input type="range" name="score" id="score" min="-10" max="10" step="2">
+        <!-- 지정한 range를 min -10 max 10 총 20칸으로 나눠서 step 2씩 이동하게 만들수있다. 
+            range가 이동을 2씩 이동하게 된다. -->
+    </div>
+
+    <input type="reset">
+    <input type="submit">
+</body>
+</html>

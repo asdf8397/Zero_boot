@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.정의목록 - dl, dt, dd</title>
+</head>
+<body>
+    <!-- <dl> -->
+    <!-- HTML <dl> 요소는 설명 목록을 나타냅니다 <dl>은 <dt>로 표기한 용어와
+        <dd> 요소로 표기한 설명 그룹의 목록을 감싸서 설명 목록을 생성합니다
+        주로 용어사전 구현이나 메타데이터(키-값 쌍 목록)를 표시할 때 사용합니다. -->
+    
+        <p>Cryptids of Cornwall:</p>
+
+        <dl> <!-- dt, dd를 묶을때 dl을 사용한다. -->
+            <dt>Beast of Bodmin</dt> <!-- 용어 -->
+            <dd>A large feline inhabiting Bodmin Moor.</dd> <!-- 용어의 설명 -->
+        
+            <dt>Morgawr</dt>
+            <dd>A sea serpent.</dd>
+        
+            <dt>Owlman</dt>
+            <dd>A giant owl-like creature.</dd>
+        </dl>
+
+        <!-- 하나의 용어와 하나의 정의 -->
+        <dl>
+            <dt>Firefox</dt>
+            <dd>
+                Mozilla 재단과 수 백명의
+                자원봉사자가 개발한 무료
+                오픈소스 크로스 플랫폼
+                그래픽 웹 브라우저.
+            </dd>
+            <!-- 다른 용어 및 정의  -->
+        </dl>
+        <!-- 1:1로 매칭이 될땐 하나의 dt에 하나의 dd를 붙여서 사용한다 -->
+
+        <!-- 여러 갱의 용어와 하나의 정의 -->
+
+        <dl>
+            <dt>Firefox</dt>
+            <dt>Mozilla Firefox</dt>
+            <dt>Fx</dt>
+            <dd>
+                Mozilla 재단과 수 백명의
+                자원봉사자가 개발한 무료
+                오픈소스 크로스 플랫폼
+                그래픽 웹 브라우저
+            </dd>
+
+            <!-- 다른 용어 및 정의 -->
+        </dl>
+        <!-- 여러개의 용어와 하나의 정의 dt여러개 dd하나 -->
+
+        <!-- 하나의 용어와 여러 개의 정의 -->
+        <dl>
+            <dt>Firefox</dt>
+            <dd> 
+                Mozilla 재단과 수 백명의
+                자원봉사자가 개발한 무료
+                오픈소스 크로스 플랫폼
+                그래픽 웹 브라우저
+            </dd>
+            <dd>
+                붉은 판다, 레서 판다, 랫서 판다,
+                혹은 "Firefox"는 초식성 포유류이다.
+                몸 길이는 애완용 고양이보다 약간
+                큰 정도인 60cm다.
+            </dd>
+
+            <!-- 다른 용어 및 정의 -->
+        </dl>
+
+        <!-- 용어가 하나일때 -->
+        <!-- 용어가 하나지만 2개의 뜻으로 사용된다 -->
+
+
+        <!-- 메타데이터 -->
+        <!-- <dl>은 메타데이터를 키-값 쌍으로 표시할 때도 유용합니다 -->
+        
+        <dl>
+            <dt>Name</dt>
+            <dd>Godzilla</dd>
+            <dt>Born</dt>
+            <dd>1952</dd>
+            <dt>Birthplace</dt>
+            <dd>Japan</dd>
+            <dt>Color</dt>
+            <dd>Green</dd>
+        </dl>
+
+        <!-- dt, dd는 번갈아가면서 사용할수도 있다 -->
+        
+
+        <!-- 이름 - 값 그룹을 <div>로 감싸기 -->
+        <!-- WHATWG HTML에서는 <dl> 안 각각의 이름-값 그룹을 <div>로 감쌀 수 있습니다.
+            마이크로데이터를 사용할 때, 그룹에 전역 특성을 적용할 때,
+            아니면 스타일을 적용할 때 유용할 수 있습니다. -->
+
+        <dl>
+            <div>
+                <dt>Name</dt>
+                <dd>Godzilla</dd>
+            </div>
+            <div>
+                <dt>Born</dt>
+                <dd>1952</dd>
+            </div>
+            <div>
+                <dt>Birthplace</dt>
+                <dd>Japan</dd>
+            </div>
+            <div>
+                <dt>Color</dt>
+                <dd>Green</dd>
+            </div>
+        </dl>
+
+        <br>
+        <br>
+
+        <dl>
+            <div>
+                <dt>Name</dt>
+                <dd>Godzilla</dd>
+                <div>추가정보</div>
+            </div>
+            <div>
+                <dt>Born</dt>
+                <dd>1952</dd>
+            </div>
+            <div>
+                <dt>Birthplace</dt>
+                <dd>Japan</dd>
+            </div>
+            <div>
+                <dt>Color</dt>
+                <dd>Green</dd>
+            </div>
+        </dl>
+
+        <!-- <dl>태그 내에 <div>로 묶은 다음 <div>의 자녀로서
+            <dt>, <dd>를 넣었는데 여기에 <div>를 형제태그로 넣으면 안된다.-->
+</body>
+</html>

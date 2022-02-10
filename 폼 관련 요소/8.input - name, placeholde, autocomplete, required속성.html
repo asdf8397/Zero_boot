@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.input - name, placeholder</title>
+</head>
+<body>
+    <h2>Form</h2>
+
+    <form action="" method="GET">
+        <div>
+            <!-- autocomplete는 text박스에 입력한적 있으면 과거에 입력한 것이 자동완성되게 해준다 on 자동완성 켜기 off 자동완성 끄기 -->
+            <label for="username">이름: </label>
+            <input type="email" name="username" id="username" placeholder="이름을 입력하세요." autocomplete="on">  
+        </div>
+        <div>
+            <!-- placeholder text박스의 힌트를 줄때 사용한다. -->
+            <label for="job">직업: </label>
+            <input type="text" name="job" id="job" placeholder="당신의 직업을 입력하세요" required>
+            <!-- required을 설정한 text박스에서 아무것도 입력하지 않을 경우 빈칸에 입력해주세요라고 글자가 뜬다 -->
+        </div>
+        <div>
+            <label for="age">나이: </label>
+            <input type="number" name="age" id="age">
+        </div>
+
+        <input type="reset">
+        <input type="submit">
+    </form>
+</body>
+</html>

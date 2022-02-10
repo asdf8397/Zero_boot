@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>본문 - p</title>
+</head>
+<body>
+    <!-- p태그-->
+    <!-- 
+        HTML<p> 요소는 하나의 문단을 나타냅니다 시각적인 매체에서, 문단은 보통 인접
+        블록과의 여백과 첫 줄의 들여쓰기로 구분하지만, HTML에서 문단은 이미지나 입력 폼 등 서로
+        관련있는 콘텐츠 무엇이나 될 수 있습니다.
+
+        문단은 블록 레벨 요소이며, 자신의 닫는 태그(</p>)이전에 다른 블록 레벨 태그가 분석되면
+        자동으로 닫힙니다 아래의 "태그 생략"항목을 참고하세요
+    -->
+
+    <p>첫 번째 문단입니다.
+        첫 번째 문단입니다.
+        첫 번째 문단입니다.</p>
+    <p>두 번째 문단입니다.
+        두 번째 문단입니다.
+        두 번째 문단입니다.
+        두 번째 문단입니다.</p>
+    <!-- p태그 안에서 개행이 무시되고 한줄로 표시가 난다.(개행무시 묵여있으면) -->
+
+    <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    Facilis itaque dolorum earum adipisci libero odit delectus ipsam quaerat dolorem qui a dolor incidunt, 
+    perferendis officia quibusdam architecto deserunt, recusandae saepe.
+    </p>
+    <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    Facilis itaque dolorum earum adipisci libero odit delectus ipsam quaerat dolorem qui a dolor incidunt, 
+    perferendis officia quibusdam architecto deserunt, recusandae saepe.
+    </p>
+    <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    Facilis itaque dolorum earum adipisci libero odit delectus ipsam quaerat dolorem qui a dolor incidunt, 
+    perferendis officia quibusdam architecto deserunt, recusandae saepe.
+    </p>
+    <p>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+    Facilis itaque dolorum earum adipisci libero odit delectus ipsam quaerat dolorem qui a dolor incidunt, 
+    perferendis officia quibusdam architecto deserunt, recusandae saepe.
+    </p>
+    <!-- 접근성 고려사항 -->
+    <!-- 콘텐츠를 문단으로 나누면 페이지의 접근을 높입니다. 스크린 리더 등 보조 기술은
+    다음 문단으로 넘어갈 수 있는 단축키 등을 제공하므로 시각적 메체의 여백이 사용자의
+    빠른 콘텐츠 탐색을 돕는 것과 같은 효과를 얻을 수 있다
+    빈<p></p>요소를 사용해 문단 사이에 엽개을 추가하면 스크린 리더 사용자에게 부정적인
+    경험을 줄 수 있다 스크린 리더다 문단의 존재는 알려주겠지만, 더 읽을 내용이 없기 때문이다.
+    따라서 스크린 리더 사용자가 혼란을 느낄 수 있습니다. -->
+
+    <!-- heading태그를 수집해서 내용들과 문단들이 있을때 다른 문단을 읽어달라고 할때
+    문단을 묶어줘야지 이질감이 없다
+    여백을 넣기 위해서는 <p>태그를 사용하는것이 아닌 css요소를 사용하라 -->
+</body>
+</html>

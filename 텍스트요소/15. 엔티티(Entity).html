@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15. 엔티티(Entity)</title>
+</head>
+    <!-- Entity references: HTML에 특수 문자 포함 -->
+    <!-- HTML에서 문자 <,> "및" &는 특수 문자입니다 이들은 HTML 구문 자체의 일부입니다.
+    그럼 어떻게 이러한 특수 문자 중 하나를 내가 사용하고 싶은 텍스트에 포함할까요?
+    예를 들어, 엠퍼샌드 또는 이하 기호를 텍스트에 사용하고 HTML코드로 해석되지 않게
+    않게 하려는 경우와 같이 말입니다
+
+    표를 참고하여 실습해보세요 오른쪽의 특별한 코드는 특수 문자를 표현할 때 사용되는
+    문자 참조 코드입니다 각 문자 참조는 엠퍼샌드 (&)로 시작하고 세미콜론(;)으로 끝납니다 -->
+
+<!-- 
+    Literal character       /       Character reference equivalent
+            <                               &lt;  (~ 보다 작은)
+            >                               &gt; (~ 보다 큰)
+            "                               &quot; 
+            '                               &apos;
+            &                               &amp;
+-->
+
+    <p>다섯개의 스페이싱(     )</p>
+    <pre>
+        문단을 나타내는 태그는 <p></p>태그입니다.
+    </pre>
+    <!-- <pre><p></p></pre> pre안에 있는 p는 글자로 인식하는게 아니라 문단을 구분지어
+    주는 것이라고 인식하게 된다 -->
+
+    <p>다섯개의 스페이싱(     )</p>
+    <pre>
+        문단을 나타내는 태그는 &lt;p&gt;&lt;/p&gt;태그입니다.
+    </pre>
+    <!-- &lt; &gt; 여는 가로와 닫는 가로로 나타내며 pre태그 안에서 나타나게 된다. -->
+    
+    <p>다섯개의 스페이싱(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+    <pre>
+        &quot; "" 쌍따옴표
+        &apos; '' 홑따옴표
+        &amp;  & 엔퍼센트
+        &nbsp; 스페이싱
+    </pre>
+</body>
+</html>

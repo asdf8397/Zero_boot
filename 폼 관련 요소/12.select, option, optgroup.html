@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.select, option, optgroup</title>
+</head>
+<body>
+    <!-- <select> -->
+    <!-- HTML <select> 요소는 옵션 메뉴를 제공하는 컨트롤을 나타냅니다. -->
+    
+    <h2>Form</h2>
+    <form action="" method="GET">
+        <label for="movie">좋아하는 영화: </label>
+        <select name="movie" id="movie">
+            <!-- 후보군으로 넣을것들은 <option>을 사용해서 할 것 -->
+            
+            <option value="toystory">토이스토리</option>
+            <option value="zootopia">주토피아</option>
+            <option value="insideout">인사이드아웃</option>
+            <!-- 서버로 보낼땐 name필드와 value값으로 서버로 보내게 된다 -->
+        </select>
+
+        <input type="submit">
+    </form>
+
+        <br>
+        <br>
+        <br>
+
+        <h2>Form</h2>
+        <form action="" method="GET">
+            <label for="movie">좋아하는 영화2: </label>
+            <select name="movie" id="movie" required>
+                <option value="">--Please Choose an option--</option>
+                <!-- <option> --Please Choose an option</option>을 했을때
+                    선택사항에서 선택할수있게 된다
+                    만약 선택하지 않게 지정하고 싶으면 value값을 지정해야되며
+                    select에 required를 걸어뒀기때문에 option value=""인
+                    Please Choose an option이 값이 없으므로 Please Choose an
+                    option을 뺸 나머지 토이스토리 주토피아, 인사이드아웃만
+                    선택할수있게 된다.
+                -->
+                <option value="toystory1">토이스토리</option>
+                <option value="zootopia1" selected>주토피아</option>
+                <!-- <option>에 selected를 설정하면 처음 선택할때 주토피아가 저절로
+                    지정되어있게 된다. -->
+                <option value="insideout1">인사이드아웃</option>
+            </select>
+
+            <input type="submit">
+        </form>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <h2>Form</h2>
+        <form action="" method="GET">
+            <label for="movie">좋아하는 영화3: </label>
+            <select name="movie" id="movie" required>
+                <option value="">--Please Choose an option--</option>
+                <optgroup label="ANIMAL">
+                    <option value="toystory">토이스토리</option>
+                    <option value="zootopia">주토피아</option>
+                    <option value="insideout">인사이드아웃</option>
+                </optgroup>
+                <optgroup label="SF">
+                    <option value="matrix">매트릭스</option>
+                </optgroup>
+                <!-- <optgroup>은 목록에서 구분지어줄때 사용한다
+                    (옵션이 여러개 일때 라벨링할때 사용하게 된다.) -->
+            </select>
+
+            <input type="submit">
+        </form>
+</body>
+</html>

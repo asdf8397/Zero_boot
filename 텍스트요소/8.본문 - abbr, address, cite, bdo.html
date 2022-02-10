@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.본문 - abbr, address, cite, bdo</title>
+</head>
+<body>
+    <!-- abbr 약어(abbreviation) --> 준말 약어라는 뜻
+    <p>
+        <abbr title="World Wide Web">WWW</abbr> 
+        <!-- 이니셜을 써놓고 원래 걔의 원래 의미를 작성할때 사용한다 -->
+        <!-- 원래 의미를 title이라는 것을 가지고 나타낸다. -->
+        <!-- 화면에는 WWW라고 적혀있지만 마우스를 올려보년 title에 적은 World Wide Web이 보인다.(툴팁) -->
+        <!-- <p>태그도 title과 같은 속성을 가질수있다. (툴팁)-->
+        and
+        <abbr title="Hyper Text Markup Language">HTML</abbr>
+    </p>
+
+    <br>
+    <br>
+
+    <!-- <address> 주소 -->
+    <address>
+        You can contact author at <a href="http://www.somedomain.com">www.somedomain.com</a><br/>
+        If you see any bugs, please <a href="mailto:webmaster@somedomain.com">mailto:webmaster@somedomain.com</a><br/>
+        You may also want to visit us:<br/>
+        Mozilla Foundation<br/>
+        331 E Evelyn Ave<br/>
+        Mountain view, CA 94041<br/>
+        USA
+    </address>
+    <!-- <address> 자체는 주소를 담고있다는 의미가 크다. -->
+    <!-- <address> SNS, 메일주소 웹사이트주소 등 통칭해서 나타낼때 묶어서 사용한다 
+        주소라는 의미를 담고 있는 것이 크다. -->
+    <!-- 주의 웹 브라우저 마다 글꼴이 변화한다 그 말은 address, abbr의 웹브라우저가
+    다른 브라우저를 사용했는데 글꼴이 변화하거나 스타일이 변화했을때 써주면 안된다는거다. -->
+
+    <!-- <cite> 인용의 출처 --> <!-- cite는 인용한것을 출처를 나타낼때 cite를 사용한다. -->
+        <figure>
+            <blockquote>
+                <p>It was a bright cold day in April, and the clocks were striking thirteen</p>
+            </blockquote>
+            <figcaption>
+                First sentence in
+                <cite>Nineteen Eighty-Four</cite>
+                by George Orwell (part 1, Chapter 1).
+            </figcaption>
+        </figure>
+
+        <!-- <figcaption></figcaption>으로 묶어준 글귀안에 <cite>Nineteen Eighty-Four</cite>에서
+        여기서의 인용문의 핵심은 cite안에 있는것이다 브라우저 마다 스타일링을 다르게
+        적용하게 되는데 cite는 <blockquote></blockquote cite=""> 안에도 사용가능하다 
+        그런데 단점은 인용할때 보이지 않는다는것 그래서 <cite></cite>로 사용하는것을 권장한다.-->
+
+        <!-- <bdo> bidirectional override -->
+        <p>이 글은 왼쪽에서 오른쪽으로 작성합니다.</p>
+        <p><bdo dir="rtl">이 글은 오른쪽에서 왼쪽으로 작성합니다.</bdo></p>
+        <p><bdo dir="utd">이 글은 오른쪽에서 왼쪽으로 작성합니다.</bdo></p> <!-- 위아래로는 안된다. -->
+
+        <!-- <bdo dir="rtl"></bdo> dir="rtl" rtl은 right to left인데 글이
+        적히는 것은 오른쪽에서 왼쪽으로 글이 뒤집혀서 적혀지게 된다. -->
+
+        
+
+
+</body>
+</html>

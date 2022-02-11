@@ -35,8 +35,8 @@ for(let key in user4) {
 
 admin4.name4 = "park";
 
-console.log(admin4.name4);
-console.log(user4.name4);
+console.log(admin4.name4); // output: "park"
+console.log(user4.name4); // output: "john"
 
 // 얕은 복사(shallow copy) -2
 let user5 = {
@@ -67,7 +67,7 @@ let admin6_spread = {...user6};
 admin6_spread.name6 = "park";
 user6.age6 = 30;
 
-console.log(admin6_spread.name6);
-console.log(user6.name6);
-console.log(admin6_spread.age6);
-console.log(user6.age6);
+console.log(admin6_spread.name6); // output: "park"
+console.log(user6.name6); // output: "john"
+console.log(admin6_spread.age6); // output: 23
+console.log(user6.age6); // output: 30

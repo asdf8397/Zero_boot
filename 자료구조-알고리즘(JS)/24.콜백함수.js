@@ -43,22 +43,33 @@ console.log(calculator(mul, 7, 3)); // output: 21
 console.log(calculator(div, 7, 3)); // output: 0.4222222222
 
 
-// call by
+// call by (원시타입)
 // call by value
 // 값에 의한 복사로 함수 내에서 매개 변수 값을 변경 시켜도 영향을 미치지 않음
 // 원시타입(primitive type)을 매개변수로 넘겼을 때 발생
 
 let a = 1;
-let add = function (b) {b = b + 1};
-add(a);
-console.log(a);
+let add = function (b) {b = b + 1}; // callee
+add(a); // caller
+console.log(a); // output: 1
+
+/* function(b) {b = b + 1};로 지정한 function(b)를 let add에 넣어주고
+  add(a)는 let a = 1;이면 let add에 넣어준 function (b) {b = b +1};의
+  매개변수는 1이 된다
+  결론적으로 console.log(a);를 했을땐 output: 1이 된다*/
 
 
-// call by reference
+// call by reference (객체타입)
 // 주소에 대한 복사로 함수 내에서 매개 변수 내 값을 변경시키면 원본 데이터에도 영향을 받음
 // 객체타입(object type)을 매개변수로 넘겼을 때 발생
 
 var a = {v:1};
-var add = function (b) {b.v = b.v + 1;};
-add(a);
-console.log(a.v);
+var add = function (b) {b.v = b.v + 1;}; // callee
+add(a); // caller
+console.log(a.v); // output: 2
+
+// 생각 정리
+/* var add = function (b) {b.v = b.v + 1};일때 add(a)가 function (b)에 들어가게 되고
+var a = {v:1} var a를 지정한 값은 (b) {b.v = v + 1}이렇게 들어가게되고
+연산이 진행되서 (a) {a.v = v + 1} 이렇게 진행되게 되며 (a)는 output 2가 되게 된다
+그래서 결론 a.v는 console.log를 했을때 ouput:2가 된다 */

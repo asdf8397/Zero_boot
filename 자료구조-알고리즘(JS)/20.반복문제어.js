@@ -42,18 +42,18 @@ console.log(text);
 /* break와 continue를 사용하는 반복문 안에서만 사용 가능하며, 
 break나 continue 지시나 위에 있어야 함 */
 
-
 for(let i = 0; i < 3; i++) {
     for(let j = 0; j < 3; j++) {
         console.log(i + " * " + j + " = " + i * j);
-        break;
+        break; // 여기서 써준 break는 j의 for문에 적용되며 j의 for문은 0에서 반복문이 진행되지 않음
     }
-}
+} // output: 0 * 0 = 0, 1 * 0 = 0, 2 * 0 = 0
 
 
-end: for(let i = 0; i < 3; i++) {
+end: for(let i = 0; i < 3; i++) { // end: for()를 해주면 (let i = 0)으로 지정하고 for문을 돌려준것과 j를 for문을 돌려준것에서 for문의 반복이 멈추게 된다. 그래서
     for (let j = 0; j < 3; j++) {
         console.log(i + " * " + j + " = " + i * j);
         break end;
     }
-}
+} // output: 0 * 0 = 0
+// end되면서 반복문 멈춤 0 * 0 으로 출력

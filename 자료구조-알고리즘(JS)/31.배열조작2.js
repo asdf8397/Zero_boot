@@ -12,3 +12,4 @@ console.log(fruits3);
 
 console.log(fruits3.splice(1,1, "mango", "kiwi"));
 console.log(fruits3);
+

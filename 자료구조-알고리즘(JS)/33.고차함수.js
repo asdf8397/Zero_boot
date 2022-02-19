@@ -83,3 +83,29 @@ let descending_order1 = function(x,y) {
 let fruits1 = ["apple", "Orange", "orange", "melon"];
 console.log(fruits1.sort(ascending_order1)); // output: ["apple","melon","Orange","orange"]
 console.log(fruits1.sort(descending_order1)); // output: ["Orange","orange","melon","apple"]
+
+
+// sort() 고차함수 - (3)
+// 콜백함수 ascending_order, descending_order 공용화
+
+let ascending_order2 = function(x,y) {
+    if(typeof x === "string") x = x.toUpperCase();
+    if(typeof y === "string") y = y.toUpperCase();
+
+    return x > y ? 1 : -1;
+};
+
+let descending_order2 = function(x,y) {
+    if(typeof x === "string") x = x.toUpperCase();
+    if(typeof y === "string") y = y.toUpperCase();
+
+    return x < y ? 1 : -1;
+};
+
+let nums1 = [1,-1,4,0,10,20,12];
+console.log(nums1.sort(ascending_order2));
+console.log(nums1.sort(descending_order2));
+
+let fruits3 = ["apple","Orange","orange","melon"];
+console.log(fruits3.sort(ascending_order2));
+console.log(fruits3.sort(descending_order2));

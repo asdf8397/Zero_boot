@@ -66,3 +66,4 @@ console.log(str_separator); // output: apple;orange;banana;melon;
 let result = str1.split(";");
 console.log(result); // output: ["apple", "orange", "banana", "melon"] 
 // apple;orange;banana;melon; 같이 마침표를 없을때 무엇을 없앨때 .split(;)를 사용하면 된다.
+

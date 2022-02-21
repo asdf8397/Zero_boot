@@ -70,6 +70,7 @@ console.log(find_age);
 // filter()
 // 콜백 함수의 조건을 만족하는 값을 배열로 반환: Array.filter(function(item, index, array){})
 // item: 배열요소, index: 배열위치, array: 배열
+// filter는 정확한 값을 찍어서 output:시킬때나 정확한 값을 거를때 사용한다.
 
 let users1 = [
     { name2: "bob", age: 17, job: false },
@@ -81,16 +82,22 @@ let filter_job = users1.filter(function (user) {
     return user.job == false;
 });
 console.log(filter_job);
+// output: { name2: "bob", age: 17, job: false }
+// output: { name2: 'alice', age: 20, job: false }
 
-
-
-let filter_age = users.filter(function (user) {
+let filter_age = users1.filter(function (user) {
     return user.age > 19;
 });
 console.log(filter_age);
+// output: { name2: "alice", age: 20, job: false }
+// output: { name2: 'john', age: 27, job: true }
+
+// find / filter의 차이
+// find는 조건에서 제일 처음 맞아떨어지는 여러개의 값 들중에 첫번째 값을 산출 1개만
+// filter는 조건에서 맞아떨어지는 값들 여러개를 산출 output 한다.
 
 
-// reduce()
+// reduce()  //한번더 복습해야함 잘 모르겠음
 // 요소 별 함수 수행 누적 결과값 반환: Array.reduce(function(accumulator, item, index,array){})
 // accumulator: 이전 함수 결과(initial로 초기값 설정 가능), item: 배열요소, index: 배열위치, array: 배열
 

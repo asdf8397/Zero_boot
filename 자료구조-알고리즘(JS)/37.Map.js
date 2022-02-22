@@ -46,3 +46,48 @@ map.set("name", "alice").set(123, 789).set(false, "bool_type");
 console.log(map); 
 // output: Map(3) { 'name' => 'alice', 123 => 789, false => 'bool_type' }
 // map.clear(); 해주고나서 map.set으로 연달아서 map.set("name", "alice").set(123, 789).set(false, "bool_type"); 지정 가능함
+
+
+// Map 반복문
+// Collection 객체인 Map이 가지고 있는 iterator 속성을 이용하여 for ... of구문을 통해 반복문 수행 가능
+
+let recipe_juice = new Map([
+//  [key, value]
+    ["strawberry", 50],
+    ["banana", 100],
+    ["ice", 150],
+]);
+
+for (let item of recipe_juice.keys()) console.log(item);
+// output: strawberry, banana, ice
+// recipe_juice의 key값을 출력하니까 strawberry, banana, ice가 출력됨
+
+for (let amount of recipe_juice.values()) console.log(amount);
+// output: 50, 100, 150
+// recipe+jucie의 value값을 출력하니까 50, 100, 150이 출력이 됨
+for (let entity of recipe_juice) console.log(entity);
+// output: ["strawberry", 50] ["banana", 100] ["ice", 150]
+// recipe_juice의 key, value값 전체를 출력하고자 할때
+
+
+console.log(recipe_juice); // Map(3) {"strawberry" => 50, "banana" => 100, "ice" => 150}
+console.log(recipe_juice.entries); // output: [Map entries] { ["strawberry", 50], ["banana", 100] ["ice", 150]}
+// entries()는 Object의 모든 property를 나타내게됨 let recipe_juice의 모든 것을 output하게 된다.
+
+
+// Map <-> Object변환
+let recipe1_juice = new Map([
+    ["strawberry", 50],
+    ["banana", 100],
+    ["ice", 150],
+]);
+
+let recipe1_juice_obj = Object.fromEntries(recipe1_juice);
+let recipe1_juice_kv = Object.entries(recipe1_juice_obj); // [key, value] 형식으로 보고싶을때
+let recipe1_juice_map = new Map(recipe1_juice_kv);
+
+console.log(recipe1_juice); // output: Map(3) { 'strawberry' => 50, 'banana' => 100, 'ice' => 150 }
+console.log(recipe1_juice_obj); // output: { strawberry: 50, banana: 100, ice: 150 }
+console.log(recipe1_juice_kv); // output: [ [ 'strawberry', 50 ], [ 'banana', 100 ], [ 'ice', 150 ] ]
+console.log(recipe1_juice_map); // output: Map(3) { 'strawberry' => 50, 'banana' => 100, 'ice' => 150 }
+// 다시 new Map()으로 지정해줬다.

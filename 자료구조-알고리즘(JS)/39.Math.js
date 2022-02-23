@@ -51,10 +51,50 @@ console.log(Math.PI);  // output: 3.141592653589793
 for (let i = 0; i < 3; i++) {
     console.log(Math.random());
 }
-// output:
-
+/* output:
+0.576755846370302
+0.6707696644838068
+0.02961423970756072
+*/
 
 
 for (let i = 0; i < 3; i++) {
     console.log(Number.parseInt(Math.random() * 10));
 }
+
+/* output:
+1
+4
+1
+*/
+
+
+/* 제곱/제곱근/소수점 처리 */
+// 제곱: Math.pow(x,y), 제곱근: Math.sqrt(x)
+// 소수점 이하 반올림 정수: Math.round(x)
+// 소수점 이하 올림: Math.ceil(x), 소수점 이하 내림: Math.floor(x)
+
+/* 1. pow */
+console.log(Math.pow(2, 3)); // output: 8
+console.log(2 ** 3); // output: 8 // **은 제곱근 연산자
+
+/* 2. sqrt */
+console.log(Math.sqrt(4)); // output: 2
+console.log(Math.sqrt(2)); // output: 1.414213562370951
+
+/* 3. round, ceil, floor */  // round 반올림, ceil 올림
+
+/* round */
+console.log(Math.round(3.5)); // output: 4
+console.log(Math.round(-2.3)); // output: 2
+console.log(Math.round(-2.7)); // output: -3
+
+/* ceil */
+console.log(Math.ceil(3.5));  // output: 4 
+console.log(Math.ceil(-2.3)); // output: -2
+console.log(Math.ceil(-2.7)); // output: -3
+
+/* floor */
+console.log(Math.floor(3.7)); // output: 4
+console.log(Math.floor(-2.3)); // output: -3
+console.log(Math.floor(-2.7)); // outpout: -3

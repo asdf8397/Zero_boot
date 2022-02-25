@@ -52,9 +52,9 @@ let admin3 = user3;
 
 admin3 = name3 = "park";
 
-console.log(admin3.name3); // output: "park"
+console.log(admin3.name3); // output: undefined
 console.log(user3.name3); // output: "park"
 
 user3.age3 = 30;
 console.log(user3.age3); // output: 30
-console.log(admin3.age3); // output: 30
+console.log(admin3.age3); // output: undefined

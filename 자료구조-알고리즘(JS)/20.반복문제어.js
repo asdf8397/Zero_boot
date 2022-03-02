@@ -21,7 +21,6 @@ for(let i = 0; i < 10; i++) {
     if(i === 3) break;
     text = text + i; // i가 text랑 연산을 해서 console.log로 출력한다.
 }
-
 console.log(text);
 
 

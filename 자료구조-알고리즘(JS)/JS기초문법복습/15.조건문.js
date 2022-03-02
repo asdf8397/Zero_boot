@@ -1,51 +1,43 @@
-// 조건문 if_else
+// 조건문 else-if
 
-// if-else 예제
-let apple_price = 9;
+// if-else
+let 사과가격 = 11;
 
-if(apple_price > 10) {
-    console.log("very expensive :( ");
-} else if(apple_price < 5) {
-    console.log("very cheep :) ");
+if(사과가격 > 10) {
+    console.log("와 진짜 비싸다 -__- ");
+} else if(사과가격 < 5) {
+    console.log("사과가격이 싸다!!! ^^ ");
 } else {
-    console.log("nice, 적정가격이네");
-} // output: nice, 적정가격이네
-
-
-let 사과가격은 = 3;
-if (사과가격은 > 10) {
-    console.log("very expensive!!!!!")
-} else if(사과가격은 < 5) {
-    console.log("나이수!!! 땡잡았다 :)");
-} else {
-    console.log("nice very 적정가격이네");
+    console.log("아 적정가격에 파네.. 이런!!"); // output: 와 진짜 비싸다 -__-
 }
 
+let 나이 = 10;
 
-// 3항 연산자
-// msg로 각각의 내용들을 채운 후
-// 마지막에 console.log로 출력
-let age = 20;
-
-if(age < 19) {
-    msg = "아직 성인이 아닙니다";
-} else if(age > 19) {
-    msg = "이제 저는 성인입니다.";
+if(나이 < 10) {
+    console.log("나 아직 어려!")
 } else {
-    msg = "아직 저의 나이와 성인인지 청소년인지 모르겠습니다";
+    console.log("악!!! 늙었어")
+} // output: 악!!! 늙었어
+
+let 나이2 = 20;
+if(나이2 < 19) {
+    msg = "미성년자 입니다"
+} else {
+    msg = "성인입니다"
 }
 console.log(msg);
 
-// 조건문 : 3항 연산자 ---- output되는 String문자의 위치가 중요하다  위치는 true : false 순서이다
-let age1 = 22;
-msg_another = age1 < 19 ? "The user is not an adult" : "The user is an adult";
-console.log(msg_another);
-// output: The user is an adult
-msg_another = age1 < 19 ?  "The user is an adult" : "The user is not an adult";
-console.log(msg_another);
-// output: The user is not an adult
+let 나이3 = 10;
+if(나이3 < 20) {
+    // console.log("미성년자라구!")
+    msg = "미성년자라구!";
+} else {
+    // console.log("나 이제 20살이야 성인이라구!")
+    msg = "이제 20살 넘었어 성인이라구!";
+}
+console.log(msg);
 
-let age2 = 15;
-msg_another2 = age2 < 19 ? "The user is not an adult" : "The user is an adult";
+/* 조건문: 3항 연산자 */
+let age = 18;
+msg_another2 = age < 19 ? "The user is not an adult." : "The user is an adult";
 console.log(msg_another2);
-// output: The user is not an adult

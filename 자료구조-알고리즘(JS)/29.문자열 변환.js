@@ -53,6 +53,7 @@ console.log(result[0]);
 console.log(reuslt[1]);
 console.log(result[2]);
 
+
 let text = "hello";
 
 result = text.split("");

@@ -86,3 +86,8 @@ console.log(a); // output: 1
 
 /* 객체타입 */
 // call by reference
+
+let a = {v: 1};
+let add = function (b) {b.v = b.v + 1}
+add(a);
+console.log(a.v); // output: 2

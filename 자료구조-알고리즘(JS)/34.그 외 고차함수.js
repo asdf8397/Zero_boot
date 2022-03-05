@@ -36,7 +36,7 @@ let nums2 = [1,2,3,4,5];
 let use_map = nums2.map(function (item) {
     return item * 2;
 });
-console.log(use_map)
+console.log(use_map);
 // output: [2,4,6,8,10]
 /* use_map의 안에 item이 있는데 이 item은 *2 연산이 되고 .map에 의해서
  use_map에 저장되게 된다 이것을 console.log(use.map)으로 output함 */

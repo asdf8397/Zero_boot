@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. 이벤트 버블링</title>
+    <script src="./2.이벤트 버블링.js"></script>
+</head>
+<body>
+    <article>
+        ARTICLE
+        <div>
+            DIV
+            <p>
+                P
+                <br>
+                <button>BUTTON</button>
+            </p>
+        </div>
+    </article>
+</body>
+<script>
+    const article = document.querySelector("article");
+    const division = document.querySelector("div");
+    const paragraph = document.querySelector("p");
+    const button = document.querySelector("button");
+
+    /*
+    article.addEventListener("click", () => window.alert("article"));
+    division.addEventListener("click", () => window.alert("division"));
+    paragraph.addEventListener("click", () => window.alert("paragraph"));
+    button.addEventListener("click", () => window.alert("button"));
+    */
+    /* 여기서 button을 클릭하면 alert로서 button 그 다음 paragraph 그 다음 division 그 다음 article 순서대로
+    alert로 호출되서 나온다 */
+
+    // 만약 호출에서 그렇게 순서대로 나오지 않게 하고싶다면
+
+    /*
+    article.addEventListener("click", () => window.alert("article"));
+    division.addEventListener("click", () => window.alert("division"));
+    paragraph.addEventListener("click", () => window.alert("paragraph"));
+    button.addEventListener("click", (event) => {
+        event.stopPropagation();
+
+        window.alert("button")
+        });
+    */
+    /* 이것은 button을 클릭 했을때 article, division, paragraph을 연속해서 alert를 막아둔것임
+        단, button을 클릭했을때 button에서만 작동된다. paragraph를 클릭하면 division, article 연속해서
+        alert된다 그렇다는건 button에만 코드가 적용되어있다는 것
+        따로 따로 적용해줘야함 */
+
+    article.addEventListener("click", (event) => { 
+        event.stopPropagation();
+        window.alert("article")});
+    division.addEventListener("click", (event) => { 
+        event.stopPropagation();
+        window.alert("division")});
+    paragraph.addEventListener("click", (event) => {
+        event.stopPropagation();
+        window.alert("paragraph")});
+    button.addEventListener("click", (event) => {
+        event.stopPropagation(); // 연속되는 버블링 멈추는 것
+
+        // evnt 버블링이란 이벤트가 연속하여 발생하는 버블 현상
+        /*의도 하지 않은 두번째 이벤트가 추가로 발생하여 오류가 발생할 수 있음
+        이를 피가히 위한 방법으로 event.stopPropagation()을 사용하여 경우 이벤트
+        버블링을 Firing하지 않아 이벤트가 발생하지 않음*/
+
+        window.alert("button")
+        });
+</script>
+</html>

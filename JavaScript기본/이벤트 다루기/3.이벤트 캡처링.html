@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.이벤트 캡처링</title>
+    <script src="./3.이벤트 캡처링.html"></script>
+</head>
+<body>
+    <div>
+        <h1>장바구니</h1>
+        <ul>
+            <li>노트북</li>
+            <li>모니터</li>
+            <li>책상</li>
+            <li>의자</li>
+            <li>키보드</li>
+            <li>마우스</li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    // 기억안나서 다시한번 메모
+    /* Document()는 새로운 Document 객체를 생성합니다. */
+    /* Document는 인터페이스는 브라우저가 불러온 웹 페이지를 나타내며 
+        페이지 콘텐츠(DOM 트리)의 진입점 역활을 수행합니다
+        DOM 트리는 <body>와 <table> 및 여러 다른 요소를 포함합니다.
+        Document는 페이지의 URL을 얻거나 문서에 새로운 요소를 생성하는 등의 
+        기능을 전역적으로 제공합니다.*/
+
+    /* Document.querySelector()는 제공한 선택자 또는 선택자 뭉치와 일치하는
+    문서 내 첫 번째 Element를 반환합니다. 일치하는 요소가 없으면 null을 반환합니다.*/
+    /* selectors */
+    /* selectors는 하나 이상의 선택자를 포함한 DOMString. 유효한 CSS선택자여야만 하며
+        아닐 경우 SYNTAX_ERR 예외가 발생합니다.*/
+    
+    /*
+    const container = document.querySelector("div"); // 쉽게말해서 container의 element는 div
+    const list = document.querySelector("ul"); // list의 element는 ul
+
+    container.addEventListener("click", (event) => {
+        console.info("DIV에 이벤트 발생"); // 여기의 output은 F12의 console에 적힌다. DIV에 이벤트 발생
+        event.target.style.background = "blue"; // 여기의 blue는 웹창의 글자의 배경색이 파랑색이 됨
+    });
+
+    list.addEventListener("click", (event) => {
+        console.warn("UL 이벤트 발생"); // output은 F12의 웹창에 UL 이벤트 발생이라고 적힘
+        event.target.style.background = "red"; // 여기의 red는 웹 창의 배경색이 RED가 됨
+    });
+    */
+
+    const container = document.querySelector("div"); // 쉽게말해서 container의 element는 div
+    const list = document.querySelector("ul"); // list의 element는 ul
+
+    container.addEventListener("click", (event) => {
+        console.error("DIV에 이벤트 발생"); // 여기의 output은 F12의 console에 적힌다. DIV에 이벤트 발생
+        event.target.style.background = "blue"; // 여기의 blue는 웹창의 글자의 배경색이 파랑색이 됨
+        },
+        //true, // true 지정해주면 addEventListener가 DIV에 이벤트 발생이 먼저 실행됨
+        false, // false로 지정해주면 UL 이벤트 발생이 먼저 호출되고 그다음 DIV에 이벤트 발생이 호출됨
+    ); 
+        // 여기서 console.error를 넣으면 F12의 도구의 console에는 에러형식으로 DIV에 이벤트 발생이라고 적히면서 이벤트가 실행됨
+        // EventListener는 원래 boolean타입으로 false이다 왜? event가 일어나면 안되기때문에 false로 지정함,,, 필요시 true로 가능
+
+    list.addEventListener("click", (event) => {
+        console.warn("UL 이벤트 발생"); // output은 F12의 웹창에 UL 이벤트 발생이라고 적힘
+        event.target.style.background = "red"; // 여기의 red는 웹 창의 배경색이 RED가 됨
+    });
+
+
+</script>
+</html>

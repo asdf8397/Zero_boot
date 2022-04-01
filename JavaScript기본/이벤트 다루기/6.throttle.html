@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>throttle</title>
+    <style>
+        div{
+            border: 1px solid black;
+            width: 500px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: red;"><h2>1</h2></div>
+    <div style="background-color: orange"><h2>2</h2></div>
+    <div style="background-color: yellow;"><h2>3</h2></div>
+    <div style="background-color: green;"><h2>4</h2></div>
+    <div style="background-color: blue;"><h2>5</h2></div>
+    <div style="background-color: navy;"><h2>6</h2></div>
+    <div style="background-color: violet;"><h2>7</h2></div>
+</body>
+<script>
+
+    // 모르겠음 한번 더 보고 공부해야함
+    let i = 0;
+    
+    window.addEventListener("scroll", throttle(() => {
+        i = i + 1;
+        console.log(i);
+        }, 1000)
+    );
+
+    /**
+     * 이벤트 발생이 많을 때 특정 밀리세컨드 동안 이벤트를 차단하고 단 한명만 실행시킨다.
+     * 실행시킬 함수, 차단시킬 밀리세컨드 
+     * 
+     * debounce
+     * debounce는 동일 이벤트가 반복적으로 실행되는 경우 마지막 이벤트가 실행되고 나서
+     * 일정 시간(밀리세컨드)동안 해당 이벤트가 다시 실행되지 않으면 해당 이벤트의 콜백 함수를 실행합니다.
+     * 
+     * throttle
+     * throttle은 동일 이벤트가 반복적으로 시행되는 경우 이벤트의 실제 반복 주기와 상관없이 임의로 설정한 일정 시간
+     * 간격(밀리세컨드)으로 콜백 함수의 실행을 보장합니다.
+     */
+
+    function throttle(callback, wait) {
+        let timeout = null;
+
+        return function (...args) {
+            const context = this;
+
+            if (!timeout) {
+                timeout = setTimeout(() => {
+                    callback.apply(this, args);
+                    timeout = null;
+                }, wait);
+            }
+        };
+    }
+</script>
+</html>

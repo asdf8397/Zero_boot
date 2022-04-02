@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero base</title>
+    
+    <!-- type="module"로 들어가면 순서대로 가지고 오고 실행됨 그리고 script type=module 지정해야 export한 값을 가지고 올 수 있음 -->
+    <!-- 여러가지를 가지고 올 수 있음 -->
+    <!-- 1 -->
+    <!-- <script type="module" src="./5.es-module_export4.js"></script> -->
+    <!-- 2 -->
+    <!-- <script type="module" src="./5.es-module_default-export4.js"></script> -->
+
+    <!-- async 예측 불가능 --> <!-- async는 순서대로 가지고 오는 것을 예측할 수 없음// 비동기로 로딩한다-->
+    <!-- <script async type="module" src="./5.es-module_export4.js"></script> -->
+    <!-- <script async type="module" src="./5.es-module_default-export4.js"></script> -->
+
+    <!-- HTML에서 인라인으로 모듈 실행 가능함 -->
+    <!-- 인라인으로 module을 가지고 와서 사용가능함 -->
+    <script type="module" src="./5.es-module_export4.js"></script>
+    <script type="module">
+        import {a, hello } from "./5.es-module_default-export4.js";
+
+        console.log(a);
+        console.log(hello());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -89,16 +89,11 @@ debugger
 default 
 delete 
 do 
-else 
 export
 extends 
-finally 
-for 
-function 
-if 
+for  
 import 
 in 
 instanceof 
 new 
-return 
 super

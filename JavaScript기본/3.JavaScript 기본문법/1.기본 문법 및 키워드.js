@@ -88,12 +88,9 @@ const
 debugger
 default 
 delete 
-do 
 export
 extends 
-for  
 import 
-in 
 instanceof 
 new 
 super

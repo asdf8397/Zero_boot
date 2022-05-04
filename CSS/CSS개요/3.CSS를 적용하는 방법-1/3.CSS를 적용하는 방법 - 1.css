@@ -1,0 +1,57 @@
+/* CSS를 적용하는 방법 */
+/* 
+1. 내부 스타일(embedded)
+2. 인라인 스타일(inline)
+3. 외부 스타일(external)
+*/
+
+/* 1. 내부 스타일(embedded) */
+/* HTML 내부의 <head>내부의 style을 적용해서 css를 적용하는 방식
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. 내부스타일</title>
+    <link rel="stylesheet" href="./3.CSS를 적용하는 방법 - 1.css">
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome!</h1>
+</body>
+</html> 
+*/
+
+
+/* 2. 인라인 스타일(inline) */
+
+/* inline방식은 body의 h1안에 직접 color를 대입하는 방식으로 되도록 지양하는 방식이다.
+<body>
+    <h1 style="color: red;">Welcome</h1>
+</body>
+
+*/
+
+/* 외부스타일(exteranl) */
+/* 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.외부스타일(external)</title>
+    <link rel="stylesheet" href="./3.CSS를 적용하는 방법 - 1.css">
+</head>
+<body>
+    <h1>Welcome!</h1>
+</body>
+</html>
+
+html에 link로 연결후 css를 연결해서 css에서 적용한다.
+*/

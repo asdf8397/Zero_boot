@@ -1,0 +1,27 @@
+/* attribute selector(속성 선택자) */
+
+/* 1.[attr] */
+a[target] {
+    color: hotpink;
+} /* a태그에 target이 들어간 attribute에 색상을 넣어줄때*/
+
+/* 2. [attr=value]  */
+a[href="https://example.com"] {
+    color: blue;
+} /* a태그에 target이 없는 href중의 웹사이트 링크를 적시해서 그것에만 색상을 줄때*/
+
+/* input[] {} */
+/* 이런식으로 지정해줄 수 있음 */
+
+input[type="text"] {
+    background-color: red;
+}
+
+input[type="submint"] {
+    background-color: blue;
+}
+
+input[type="reset"] {
+    background-color: green;
+}
+

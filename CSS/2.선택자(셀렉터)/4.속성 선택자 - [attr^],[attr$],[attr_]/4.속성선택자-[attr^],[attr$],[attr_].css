@@ -1,0 +1,16 @@
+/* Attribute selector(속성 선택자) */
+
+/* 1. [attr] */
+a[target] {
+    color: hotpink;
+}
+
+/* 2. [attr=value] */
+input[type="submit"] {
+    background-color: green;
+}
+
+/* 3. [attr^=value] */
+a[href="https://example.com"] {
+    color: red;
+}

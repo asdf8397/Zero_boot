@@ -1,0 +1,32 @@
+/* Type Selector */
+h2 {
+    color: purple;
+}
+
+h3 {color: red;}
+
+/* type Selector는 하나의 웹에서 하나의 일괄적으로 선택해서 지정해줄때 사용한다
+    주의해서 사용할 것 */
+
+
+/* ID Selector */
+/*id태그는 이름표라고 생각하면 되며,, id는 꼭 찝어서 설명할 수 있는 id를 지정해서 그 id에만 지정할때 사용
+유일하고 유니크한 이름을 붙여주는 것이기 때문에 html의 전체에서 한 id만 지정할때만 사용함*/
+#Welcome_title{
+    color: red; font-size: 18px;
+}
+
+/* class Selector */
+/* class는 중복이 가능하고 다른 태그에도 적용할 수 있음 */
+.coffee{
+    color: brown;
+    font-size: 30px;
+}
+.coffee_color{
+    color: blue;
+}
+.red{
+    color: magenta;
+}
+
+/* class{blue red};를 써주고 css에서 class적용하면 red의 적용된 색상이 적용된다 */

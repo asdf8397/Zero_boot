@@ -13,4 +13,25 @@ input[type="submit"] {
 /* 3. [attr^=value] */
 a[href="https://example.com"] {
     color: red;
+} 
+/* href="https://example.com"에 색상을 red로 지정한다.*/
+/* href는 정확하게 일치해야지 적용된다. */
+
+a[href^="https://www.google.c"] {/* ^는 https로 시작하는 것*/
+    color: brown;
+} /*^는 캐럿 기호로서 href의 https://www.goolg.c에서 정확하게 일치하지 않아도 색상이 적용되고 기능이 적용된다.*/
+
+a[href^="http://"] {
+    color: yellow;
+} /* http://로 시작하는 페이지
+
+/* 4. [attr$=value] */
+a[href$=".kr"] { /*$는 .kr로 끝나는 것에 sliver의 색상을 제공함*/
+    color: silver;
+    font-style: italic;
 }
+
+/* 5. [attr*=value] */
+a[href*="show"] {
+    color: sienna;
+} /* *는 show 중간에 show가 들어간 것을 찾아서 색상을 적용해준다. */

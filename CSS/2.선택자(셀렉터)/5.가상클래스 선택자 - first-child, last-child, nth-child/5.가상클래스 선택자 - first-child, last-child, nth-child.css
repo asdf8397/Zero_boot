@@ -1,0 +1,30 @@
+/* 
+Pseudo-Class Selector(가상 클래스 선택자)
+*/
+
+/* 1. first-child */
+li:first-child { 
+    color: green;
+}
+/* first-child는 li의 제일 첫번째있는 것을 지정해서 색상을 green으로 변경한다.*/
+/* 그리고 first-child는 li의 전체에서 첫번째 자식을 지칭하게 된다. */
+
+.movie:first-child {
+    font-size: 42px;
+}
+/* .movie의 first-child는 class로 movie를 준 것들 중에 첫번째 자식에게만 특성을 적용한다. */
+
+.movie1:first-child {
+    font-size: 32px;
+} /* movie1은 적용되지 않는다 그 이유는 movie1은 h3의 하위로서 h3의 하위에 li의 Toy Story1이 first-child요소 자리인데 movie1이 적용되어 있지 않아서
+    아무것도 적용되지 않는다.*/
+
+/* 2. last-child */
+span:last-child {
+    color: tomato;
+} /* last-child도 span의 마지막 자식요소에 적용됨(색상)*/
+
+/* 3. nth-child */
+li:nth-child(3) { /* li의 3번째 자식요소에 적용된다.*/
+    color: hotpink;
+}

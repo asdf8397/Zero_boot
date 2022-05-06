@@ -5,8 +5,29 @@ Pseudo-Class Selector
 
 /* first-child VS first-of-type */
 
+/* 1. first-child */
+p:first-child {
+    color: blue; 
+    /* selector의 div가 있는 자리가 first-child자리이다
+        그래서 적용되지 않음*/
+}
+
 /* 1. :first-of-type */
+p:first-of-type { /* first-of-type은 타입들 중에 첫번째를 적용한다는 뜻*/
+    color: red;
+}
 
 /* 2. :last-of-type */
+p:last-child {
+    color: green;
+}
+
+/* .................... */
+.MVE:first-of-type {
+    color: rebeccapurple;
+} /* MVE의 첫번째 자식을 선택해서 그 타입들 중에 첫번째 P태그 div태그의 첫번째 자식들만 색변환한다.*/
 
 /* 3. :nth-of-type() */
+p:nth-of-type(2) {
+    color: blue;
+} /* p태그의 2번째 타입을 blue로 색변환*/

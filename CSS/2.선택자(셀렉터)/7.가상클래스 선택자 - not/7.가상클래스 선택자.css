@@ -1,0 +1,14 @@
+/*
+Pseudo-Class Selector
+(가상 클래스 선택자)
+
+:not()
+*/
+
+input:not(.pw) { /* input에 색상을 적용하는데 not(.pw) pw가 적용된 것을 빼고 나머지만 적용하라*/
+    background-color: indianred;
+}
+
+input:not([type=password]) { /* input을 고르는데 type이 password인것만 제외하고 blue를 적용한다.*/
+    background-color: blue;
+}

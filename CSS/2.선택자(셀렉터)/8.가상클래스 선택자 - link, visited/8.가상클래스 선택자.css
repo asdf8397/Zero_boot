@@ -1,0 +1,18 @@
+/*
+Pseudo-Class Selector
+(가상 클래스 선택자)
+
+link, visited
+*/
+/*a {*/
+    /* /*color: yellowgreen;  */
+    /* 링크 색상을 yellowgreen으로*/
+    /* 클릭해서 방문을했다가 다시 돌아왔을때도 링크 색상은 yellowgreen상태 */
+/* } */
+
+a:link { /* */
+    color: tomato; /* 링크 클릭전 색상 tomato*/
+}
+a:visited {
+    color: hotpink; /* 링크 클릭 후 색상 hotpink */
+}

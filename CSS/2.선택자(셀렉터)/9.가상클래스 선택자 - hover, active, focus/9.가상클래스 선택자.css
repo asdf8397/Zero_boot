@@ -1,0 +1,31 @@
+/* Pseudo-Class Selector(가상 클래스 선택자)*/
+
+/* hover, active, focus */
+/*
+input[type=button] {
+    background-color: skyblue;
+    border: none;*/ /* border: 국경, 경계선 */
+/* } */
+
+/* input[value] {
+    background-color: blue;
+} */
+ /* value로 색상과 특성을 지정해줄수있음 단, value로 주면 일괄적으로 줘야함
+    또는 저를 클릭하세요라고 적힌 글자를 넣어서 지정할수있지만 공간이있으면 지정할수 없음 */
+
+input[type=button]:hover { /* hover는 마우스를 올리면 올린곳에 색상을 적용해준다.*/
+    background-color: teal;
+    color: white;
+}
+
+input[type=button]:active {
+    background-color: red;
+} /* active는 마우스를 클릭하면 색상이 red로 된다. */
+
+input[type=button]:focus {
+    background-color: blue;
+}
+input[type=text]:focus {
+    background-color: blue;
+    color: white;
+} /* 텍스트 박스를 클릭하면 색상이 blue가 된다.*/

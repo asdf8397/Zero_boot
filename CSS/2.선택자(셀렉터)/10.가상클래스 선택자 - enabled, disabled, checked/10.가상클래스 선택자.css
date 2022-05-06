@@ -1,0 +1,26 @@
+/* 
+Pseudo-Class Selector(가상클래스 선택자)
+    enabled, disabled, checked
+*/
+
+input[type=text] { /* 비활성화된 요소까지 색상이 적용된다*/
+    background-color: skyblue;
+}
+
+input[type1=text]:enabled { /* enabled를 적용해주면 비활성화된 것을 빼고 활성화된 칸까지만 색상이 적용된다.*/
+    background-color: skyblue;
+}
+input[type2=text]:enabled { /* enabled가 적용된 것만 색상 적용 skyblue */
+    background-color: skyblue;
+}
+input[type2=text]:disabled { /* disabled가 적용된 것만 색상 적용 silver */
+    background-color: silver;
+}
+
+input[type=radio]:checked { /* checked를 넣으면 선택된 것만 빨간색 테두리가 생김*/
+    outline: 3px solid red;
+}
+
+input[type=checkbox]:checked { /* checkbox가 클릭되면 3px의 파란색 테두리가 선택되고 아니면 꺼진다.*/ 
+    outline: 3px solid blue;
+}

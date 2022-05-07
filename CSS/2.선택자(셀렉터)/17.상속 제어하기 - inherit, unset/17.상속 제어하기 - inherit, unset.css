@@ -1,0 +1,49 @@
+/* 
+    상속 제어하기 - initial, inherit, unset
+*/
+
+/* inherit은 무조건 상속을 받아라 */
+
+div {
+    border: 1px solid silver;
+    margin: 2px;
+}
+
+.child1 {
+    color: red;
+}
+
+.parent1, .parent2 {
+    color: blue;
+}
+
+.parent2 * { 
+    /* parent2 *는 parent2의 밑에있는 모든 요소라는 뜻 */
+    /* parent 내부의 child1 child2는 상속값을 지정하지 않은상태
+        근데 .parent2 *{color: inherit}을 하면 상속을 받으라는 뜻으로서
+        위에서 지정한 .parent1, .parent2에서 지정한 color: blue가 상속되어 지게 된다. */
+    color: inherit;
+    /* all: inherit;,,, all: inherit은 모두 상속 받을때 사용한다.*/
+}
+
+/* unset 
+    1. 부모로부터 상속받을 값이 있을 때: inherit
+    2. 부모로부터 상속받을 값이 없을 때: initial
+*/
+
+div {
+    border: 1px solid silver;
+    margin: 2px;
+}
+
+.child10 {
+    color: red;
+}
+
+.parent10, .parent20 {
+    color: blue;
+}
+
+.parent20 .child10 {
+    all: unset; /* unset은 부모값으로부터 상속 받을 값이 있으면 inherit 없으면 initial로 한다.*/
+}

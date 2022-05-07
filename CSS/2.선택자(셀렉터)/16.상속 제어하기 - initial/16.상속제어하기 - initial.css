@@ -1,0 +1,28 @@
+/* 상속 제어하기 - initial, inherit, unset */
+
+div {
+    border: 1px solid silver;
+    margin: 2px;
+}
+
+.parent { /* parent에 color blue지정하고 child1은 color를 지정하지 않았기때문에 child1은 parent의 color를 상속받는다*/
+    color: blue;
+}
+
+.child2 { /* child2는 색상을 지정했기 때문에 parent 부모의 색상이 상속 받지 않는다.*/
+    color: red;
+}
+
+section {
+    border: 1px solid silver;
+    margin: 2px;
+}
+.parent_1 {
+    color: skyblue;
+    font-size: 7px;
+}
+.child_2 {
+    color: initial; /* initial은 부모 속성을 상속해줄때 그 상속을 끊을때 사용할수 있음*/
+    font-size: initial;
+    all: initial; /* all: initial은 모든 적용된 child_2에 적용되는 모든 속성들을 초기값으로 돌릴때 사용한다.*/
+}

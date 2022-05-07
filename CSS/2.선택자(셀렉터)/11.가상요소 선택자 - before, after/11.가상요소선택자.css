@@ -1,0 +1,29 @@
+/*
+Pseudo-Element Selector(가상 요소 선택자)
+before, after
+*/
+
+.movie::before { /* before를 적용하면 색상을 적용해준 것은 가상의 대상에 지정되서 거기에 색상이 적용됨 */
+    content: "MOVIE "; /* before으로 지정한 것이 content: MOVIE에 선택되서 색상이 지정됨 */
+    color: indianred;
+}
+
+.favorite::before { /* 꾸밈의 요소로 사용함 */
+    content: "★";
+    color: red;
+}
+
+.SPECIAL::after { /* 글자 뒤에 contents가 붙게된다.*/
+    content: "＠";
+    color: blue;
+}
+/*
+
+Pseudo-Class Selector(가상 클래스 선택자)
+-> selector:____
+
+Pseudo-Element Selector(가상 요소 선택자)
+-> Selector::____
+-> Selector::____
+
+*/

@@ -1,0 +1,26 @@
+/*
+Pseudo-Element Selector (가상 요소 선택자)
+*/
+
+.lorem::first-letter { /* first-letter는 각 문단의 첫번째 글자에 효과를 준다.*/
+    color: red;
+    font-size: 30px;
+}
+
+.lorem::before { /* HTML에서 써준 글자들 Lorem앞에 .lorem::before로 지정했기때문에 그 자리에 BEFORE이 들어가게 됨 효과도 적용됨 */
+    color: blue;
+    content: 'BEFORE';
+}
+
+.letter::first-line { /* first-line은 첫번째 줄에 효과를 넣어줄때 사용함*/
+    color: magenta;
+    font-size: 30px;
+}
+
+.selection::selection { /* selection으로 지정하면 드래그하면 드래그한 부분에 효과를 넣어줌 ... 드레그하면 red로 나오고 글자는 검정색이됨 */
+    background-color: red;
+    color: black;
+}
+
+
+

@@ -1,0 +1,16 @@
+/*
+범용 선택자(Universal Selector)
+*/
+
+p.red{ /* p태그 중에 class가 red인 것을 선택해서 color red를 적용한다. */
+    color: red;
+}
+
+p1 + * { /* p의 하위에 있는 것들에 대해서 색상을 추가할때 사용하게 된다.*/
+    color: hotpink;
+}
+
+/* 
+    div > *  { ----- div 하위에 있는 모든 자식들을 요소를 추가하게 될때 >를 사용하게 된다.  여기서 *는 전체라는 뜻이다.
+        color: red;
+    */

@@ -1,0 +1,23 @@
+/*
+Selector Combinators (선택자 결합)
+
+    하위(), 자식(>), 형제 선택자, 그룹화
+*/
+/* 1. 일반 형제 선택자 결합(~) */
+
+code ~ p { 
+    /* code뒤에 p가 들어오면 p에 색상 특성을 적용한다. red로*/
+    /* 현제 선택자이면 red가 적용됨 */
+    color: red;
+}
+
+/* 2.인접 형제 선택자 결합(+) */
+
+code + div { /* code에 바로 인접한 div가 background-color는 blue로 지정된다. */
+    background-color: blue;
+}
+
+/* 그룹화 */
+p, span { /* p와 span을 따로 지정해서 색상을 지정하는것이 아니라 한번에 묶어서 색상을 적용할 수 있다.*/
+    color: purple;
+}

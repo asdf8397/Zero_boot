@@ -1,0 +1,14 @@
+/*Selector Combinators (선택자 결합) */
+/* 하위, 자식, 형제선택자, 그룹화 */
+
+ul li:last-of-type { /* ul의 li 마지막 리스트4만 색상을 추가하고 싶을때  class id 추가하지 않고 넣는 방법*/ 
+    color: red;
+}
+
+#list li:last-of-type { /* id list로 지정했고 이것의 li의 last-of-type은 리스트2와 리스트4가 요소에 적용된다. */
+    color: magenta;
+}
+
+div:first-child {
+    color: brown;
+}

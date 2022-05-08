@@ -1,0 +1,14 @@
+/* 
+폰트/텍스트 관련 속성
+*/
+
+.paragraph1 { /* 문단의 첫줄에 들여쓰기 20px만큼 한다. */
+    /* text-indent: 20px; */
+}
+
+.container { /* 전체문단의 50px만큼 들여쓰기 한다. */
+    text-indent: 50px;
+}
+.inline { /* span인 inline 요소에는 들여쓰기가 적용되지 않는다. */
+    text-indent: 30px;
+}

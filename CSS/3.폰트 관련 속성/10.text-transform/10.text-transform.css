@@ -1,0 +1,20 @@
+/* text-transform */
+
+/* 
+폰트/텍스트 관련 속성
+text-transform
+*/
+
+.container1 p:last-of-type {
+    color: blue;
+    text-transform: uppercase ; /* uppercase는 모든 글자가 대문자로  */
+}
+
+.container2 p:last-of-type {
+    color: red;
+    text-transform: lowercase; /* lowercase는 모든 글자가 소문자로*/
+}
+.container3 p:last-of-type {
+    color: magenta;
+    text-transform: capitalize; /* capitalize는 글자의 단어의 첫글자를 대문자로*/
+}

@@ -1,0 +1,20 @@
+/* 폰트/텍스트 관련 속성
+    word-break
+*/
+
+p {
+    width: 100px; /* 100px만큰 width크기만큼 적용만해준다 */
+    background-color: cadetblue;
+}
+
+.A, B[lang="en"] { /* word-break: break-all은 글이 들어간곳에 글이 적용범위를 넘어설때 줄바꿈을 해서 적용범위내로 들어오게 설정한다. */
+    word-break: break-all;
+}
+
+.c[lang="ko"] {
+    word-break: keep-all;
+}
+.d[lang="ko"] {
+    word-break: keep-all; 
+    /* keep-all은 설정에서 글이 튀어나가는 것을 자동 조정해주는데 자동 조정안하고 있는 그대로 설정 */
+}

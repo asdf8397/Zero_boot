@@ -3,12 +3,28 @@
     text-align
 */
 
-p {
+p, span {
     background-color: rosybrown;
 }
 
 .text { 
     /* text-align: right 오른쪽 정렬, text-align: left 왼쪽정렬, text-align: center 가운데 정렬 */
     /* 블록요소에는 적용되지만 span같은 인라인 요소에는 적용되지 않는다. */
+    text-align: center;
+}
+
+p, span {
+    background-color: rosybrown;
+}
+
+.block { /* p태그는 block요소로서 text-align을 center로 줄수있는데 */
+    text-align: center;
+}
+
+.inline { /* span태그는 inline요소로 text-align이 먹히지 않는다 */
+    text-align: right;
+}
+
+.container { /* 만약 span을 text-align: center로 지정하고 싶으면 span을 감싸고있는 div의 class를 지정하고 text-align을 해주면 된다. */
     text-align: center;
 }

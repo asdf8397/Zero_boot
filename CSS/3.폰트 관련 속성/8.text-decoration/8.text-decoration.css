@@ -1,0 +1,16 @@
+/* 
+폰트/텍스트 관련 속성
+
+text-decoration
+*/
+
+span {
+    color: blueviolet;
+    text-decoration: line-through underline red 3px wavy; 
+    /* text-decoration은 span을 꾸며주는 것으로서 lin-throuth는 안녕하세요라는 글에 줄을 그어서 아니다 표시를 해줄수있고 red는 red줄을 쓸때 사용함*/
+    /* 3px는 줄이 굵어짐 */
+    /* double 줄이 2개 */
+    /* dotted 점선 */
+    /* wavy는 줄선 */
+    /* line-throuth underline은 붙여써야지 적용됨 */
+}

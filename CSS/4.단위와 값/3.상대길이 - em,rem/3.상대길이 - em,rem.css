@@ -1,0 +1,36 @@
+/* 단위와 값
+    상대길이 - em, rem
+*/
+
+div {
+    border: 1px solid silver;
+    padding: 1px;
+}
+
+/* 1em === 부모의 font-size */
+
+.parent {
+    color: blue;
+    font-size: 24px;
+}
+
+.child {
+    color: red;
+    font-size: 1em; 
+    /* font-size: 1em은 font-size는 24px이고 0.5px는 12px로 계산된다. */
+    /* em은 %로 쓸수있다 예를들어 부모의 font가 100일떄 50%이면 부모의 font-size에 1/2 200%이면 부모의 font-size에 2배 */
+}
+
+/* 1rem === root의 font-size */
+/* 1rem: 16px,,,, rem은 body의 자체적인 font의 사이즈 */
+/* 2rem: 32px, 3rem: 48px */
+
+.parent1 {
+    color: blue;
+    font-size: 2rem;
+}
+
+.child1 {
+    color: red;
+    font-size: 1.5rem;
+}

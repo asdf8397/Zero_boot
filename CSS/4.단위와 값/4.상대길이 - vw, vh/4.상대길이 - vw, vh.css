@@ -1,0 +1,31 @@
+/* 
+단위와 값
+
+상대길이 - vw, vh
+*/
+
+/* 
+length
+
+1. 상대길이
+    a. 글꼴 상대길이 - em, rem...
+    b. 뷰포트 백분율길이 - vw, vh...
+
+2. 절대길이 - px...
+*/
+
+/* 
+vw: 화면에 보이는 화면의 가로길이
+vh: 화면의 세로 길이 
+*/
+body {
+    margin: 0;
+}
+
+.container {
+    background-color: coral;
+
+    /* width; */
+    width: 100vw; /* 화면에서 가로길이 100vw만큼 차지하게 설정한다.*/
+    height: 50vh; /* 화면에서 세로길이 50vh만큼 차지하게 설정한다. */
+}

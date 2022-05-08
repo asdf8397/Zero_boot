@@ -1,0 +1,28 @@
+/* 
+함수 표기법
+
+calc(), min(), max()
+*/
+
+.container {
+    width: calc(100% - 50px); 
+    /* calc()는 계산할수있는것*/
+    /* calc(100% - 50px)은 현재의 화면이 100%일때 여기서 50px만큼빼는것  */
+    /* calc(100 / 3)은 현재의 화면에서 100일때 여기서 3을 나눠서 30%만 사용하게 한것 */
+    /* calc()에는 연산할때 공백이 필요함 */
+    height: 200px;
+
+    background-color: wheat;
+}
+
+.container1 {
+    width: min(100%, 500px); /* min은 화면의 100% 크기와 500px중에 작은것을 선택해서 적용하고*/
+
+    background-color: wheat;
+}
+
+.container2 {
+    width: max(100% 500px); /* max는 화면에서 100%과 500px 크기중에 큰것을 선택해서 화면에 적용한다. */
+
+    background-color: bisque;
+}

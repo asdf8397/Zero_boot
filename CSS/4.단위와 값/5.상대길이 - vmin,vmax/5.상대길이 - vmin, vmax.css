@@ -1,0 +1,15 @@
+/* 
+단위와 값
+
+상대길이 - vmin, vmax
+*/
+
+body {
+    margin: 0;
+}
+
+.container {
+    background-color: blue;
+    width: 100vmin;
+    height: 100vmax;
+} /* 가로세로를 맞출때 사용한다. */

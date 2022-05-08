@@ -1,0 +1,19 @@
+/* 
+크기 - width, height
+*/
+
+.box {
+    /* width 박스의 가로 크기 */
+    /* height는 박스의 세로 크기 */
+    /* width와 height의 크기를 작성하지 않으면 auto값이 들어간다 */
+    width: auto;
+    height: auto;
+    background-color: red;
+    color: white;
+}
+
+.inline { /* inline 요소는 width와 height요소는 지정할수 없음 꼭 알고 있어야 */
+    width: auto;
+    height: auto;
+    background-color: yellowgreen;
+}

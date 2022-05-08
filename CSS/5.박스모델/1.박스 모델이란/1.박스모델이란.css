@@ -1,0 +1,12 @@
+/* 
+박스모델(Box Model)
+*/
+
+.box { /* 박스의 제일 바깥쪽이 margin이고 그다음이 border이고 그다음이 padding 그다음이 메인이 되는 contents가 된다.*/
+    width: 200px;
+    height: 200px;
+
+    padding: 20px;
+    border: 20px solid blue;
+    margin: 20px;
+}

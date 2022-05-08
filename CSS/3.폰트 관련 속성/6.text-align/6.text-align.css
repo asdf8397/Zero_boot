@@ -1,0 +1,14 @@
+/* 폰트/텍스트 관련 속성 
+    
+    text-align
+*/
+
+p {
+    background-color: rosybrown;
+}
+
+.text { 
+    /* text-align: right 오른쪽 정렬, text-align: left 왼쪽정렬, text-align: center 가운데 정렬 */
+    /* 블록요소에는 적용되지만 span같은 인라인 요소에는 적용되지 않는다. */
+    text-align: center;
+}

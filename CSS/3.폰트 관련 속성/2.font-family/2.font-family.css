@@ -1,0 +1,10 @@
+/* 
+폰트/텍스트 관련 속성
+
+font-family,
+line-height
+*/
+
+.text {
+    font-family:'Courier New', Courier, monospace
+} /* font-family는 글꼴을 나열해서 사용하되 글꼴이 없을때 뒤에 글꼴들이 적용되서 들어간다.*/

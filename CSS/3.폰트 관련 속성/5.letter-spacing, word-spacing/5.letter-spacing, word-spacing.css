@@ -1,0 +1,8 @@
+/* 폰트/텍스트 관련 속성 */
+
+/* letter-spacing, word-spacing */
+
+.text {
+    letter-spacing: 5px; /* 글자간의 간격이 5px만큼씩 띄어쓰기 된다 */
+    word-spacing: 10px; /* 단어별로 글자의 띄어쓰기가 10px만큼씩 들어간다. */
+}

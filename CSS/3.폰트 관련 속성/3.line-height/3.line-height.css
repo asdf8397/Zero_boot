@@ -1,0 +1,14 @@
+/* 
+폰트/텍스트 관련 속성 
+
+font-family, line-height
+*/
+
+p {
+    font-size: 24px;
+    line-height: 2.0; /* 글자의 문단의 간격*/
+}
+
+.text {
+    font-family: "Franklin Gothic Medium";
+}

@@ -1,0 +1,14 @@
+/* 
+폰트/텍스트 관련 속성 
+
+font-size
+font-style
+font-weight
+*/
+
+.text {
+    font-size: 12px; /* 폰트크기 */
+    font-style: italic; /* 옆으로 기울어진 글씨체 */
+    /* font-style: normal; 아무것도 글씨체가 아닐때 */
+    font-weight: bold; /* font-weight 폰트의 굵기 기본값은 normal,,, bold는 굵기와 기울임 */
+}

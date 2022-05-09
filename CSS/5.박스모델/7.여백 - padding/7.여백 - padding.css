@@ -1,0 +1,47 @@
+/* 
+여백 - padding 
+*/
+
+.parent {
+    width: 300px;
+    height: 300px;
+
+    padding: 30px; /* padding: 30px는 위 아래 좌 우 적용됨 */
+    padding: 30px 10px; /* padding: 30px 10은 30은 위 아래 10은 좌우*/
+    padding: 10px 20px 30px 40px; /* padding: 10px 20px 30px 40px은 10은 위 20은 우측 30은 아래 40은 좌측 */
+
+
+    background-color: skyblue;
+}
+
+.child {
+    width: 50px;
+    height: 50px;
+
+    background-color: red;
+}
+
+.parent2 {
+    width: 200px;
+    height: 200px;
+
+    background-color: skyblue;
+}
+
+.child2 {
+    width: 100px;
+    height: 100px;
+
+    padding: 10px; /* 이때는 고정값*/
+    padding: 50%; /* 이때의 %값은 부모의 값에 50%로 계산된다. */
+
+    /* %로 쓸경우 부모의 container의 백분율로 %계산되서 적용되게 된다.  */
+    background-color: orange;
+}
+
+.grand-child {
+    width: 50px;
+    height: 50px;
+
+    background-color: red;
+}

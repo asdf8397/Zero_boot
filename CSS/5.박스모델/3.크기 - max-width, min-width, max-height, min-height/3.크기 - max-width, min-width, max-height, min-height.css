@@ -5,15 +5,39 @@ body {
 }
 
 #container {
-    width: 300px;
-    min-width: 300px; /* min-width: 300px을 하면 화면에서 300px 이하가되면 더이상 작아지지 않음*/
+    width: 50%; /* 화면에서 50%를 차지하고 있음 화면을 늘리면 화면에서 50%를 차지하게 설정됨 */
+    min-width: 300px; /* min-width: 화면에서 늘렸을때 50%를 차지하게되지만 그 크기가 min-width를 300px을 하면 화면에서 300px 이하가되면 더이상 작아지지 않음*/
     height: 300px;
 
     background-color: lightcoral;
 }
 
-.container2 {
-    width: 300px;
+.parent {
+    width: 50px;
     height: 300px;
+
+    background-color: blue;
+}
+
+#child {
+    width: 50%;
+    min-width: 100px; /* parent는 width: 50px인데 min-width 최소로 작아지는 값이 100일때 튀어나온다.  */
+    height: 100px;
+
+    background-color: lightgreen;
+}
+
+.partner {
+    width: 800px;
+    height: 300px;
+
+    background-color: lightcoral;
+}
+
+.partner2 { /* width 800px이고 partner2에서 width: 50%로 지정했어도 max-width가 300px이므로 300px이상으로 커지지 않음 */
+    width: 50%;
     max-width: 300px;
+    height: 100px;
+
+    background-color: lightgreen;
 }

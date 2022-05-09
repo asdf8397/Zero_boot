@@ -1,0 +1,20 @@
+/* 여백 - margin */
+
+#parent {
+    width: 300px;
+    height: 200px;
+
+    border: 5px solid blue;
+}
+
+#child {
+    width: 50px;
+    height: 50px;
+
+    margin: 10px; /* margin: 10px는 박스의 위, 아래, 좌, 우에 10px을 준다 */
+    margin: 10px 20px; /* margin: 10px은 좌 20px은 우*/
+    margin: 10px 20px 30px 40px; /* margin: 위 10px, 우 20px, 아래 30px, 좌 40px */
+
+    margin: 30%; /* 부모의 width에 30% */
+    border: 5px solid tomato;
+}

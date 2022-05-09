@@ -1,0 +1,34 @@
+/* 
+레이아웃
+
+요소를 없애는 방법 - 
+display: none
+visibility: hidden
+*/
+
+div {
+    height: 200px;
+    border: solid;
+}
+
+.box1 {
+    background-color: darkorange;
+}
+.box2 {
+    background-color: greenyellow;
+    /* display: none; */ /* display: none을 설정하면 box2가 사라진다. 자리도 없어진다. */
+}
+.box3 {
+    background-color: dodgerblue;
+}
+
+.box4 {
+    background-color: darkorange;
+}
+.box5 {
+    background-color: greenyellow;
+    visibility: hidden; /* visibility: hidden은 레이아웃을 없애지만 자리는 차지하고 있는 것 */
+}
+.box6 {
+    background-color: dodgerblue;
+}

@@ -1,0 +1,13 @@
+/*
+테두리 - 
+border
+*/
+
+.box {
+    width: 300px;
+    height: 300px;
+
+    border: dotted red 5px;
+
+    background-color: rgb(175, 207, 233);
+}

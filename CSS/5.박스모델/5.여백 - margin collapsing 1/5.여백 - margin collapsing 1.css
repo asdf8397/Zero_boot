@@ -1,0 +1,15 @@
+/* 마진상쇄 (margin collapsing) */
+/* margin collapsing은 margin을 설정했을때 박스와 박스가 겹치는 부분을 말한다 */
+/* margin collapsing은 box의 margin이 겹쳐져서 하나로 보이는것 */
+
+body {
+    margin: 0%;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: tomato;
+
+    margin: 20px;
+}

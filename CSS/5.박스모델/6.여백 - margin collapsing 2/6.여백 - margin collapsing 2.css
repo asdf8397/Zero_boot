@@ -1,0 +1,43 @@
+/* 
+마진 상쇄(margin collapsing) 
+*/
+
+body {
+    margin: 0%;
+}
+
+#parent {
+    width: 100px;
+    height: 100px;
+
+    margin-top: 30px; /* parent의 박스의 기준에서 top부분이 본인의 박스기준에서 top으로 30*/
+
+    background-color: cadetblue;
+}
+
+#child {
+    width: 30px;
+    height: 30px;
+    
+    margin-top: 40px; /* child박스의 기준에서 margin-top까지는 top으로 40정도이다.*/
+
+    background-color: indianred;
+}
+
+.part_box {
+    width: 100px;
+    height: 100px;
+
+    margin-top: 30px;
+    background-color: skyblue;
+}
+.part_box2 {
+    width: 30px;
+    height: 30px;
+    
+    padding: 1px;
+    border: 1px solid red;
+
+    margin-top: 40px;
+    background-color: brown;
+}

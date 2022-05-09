@@ -1,0 +1,34 @@
+/* 
+레이아웃
+
+float
+*/
+
+.image1 { /* 현재상태의 image1는 none상태 div옆에 올수 없음*/
+    width: 100px;
+    height: 100px;
+
+    background-color: hotpink;
+    border: 5px solid blue;
+}
+
+.image2 {
+    width: 100px;
+    height: 100px;
+
+    background-color: hotpink;
+    border: 5px solid blue;
+    float: left; /* float: left는 image박스가 왼쪽에 정렬 p태그 글자들 오른쪽으로 들어오게된다. */
+}
+
+.image3 {
+    border: solid;
+    width: 100px;
+    height: 100px;
+
+    background-color: hotpink;
+    border: 5px solid blue;
+    float: right; /* float: right는 image박스가 오른쪽에 정렬되서 p태그 글자는 왼쪽으로 들어오게 된다. */
+    margin: 10px; /* image3 박스가 겉에 margin을 설정해서 글자와 딱 붙지 않게 설정한다. */
+}
+

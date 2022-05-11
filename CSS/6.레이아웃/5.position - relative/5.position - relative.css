@@ -1,0 +1,40 @@
+/* 값 */
+
+/* position */
+/*
+static: 기준없음(배치불가능/기본값)
+relavtive: 요소 자기 자신을 기준으로 배치
+absolute: 부모(조상) 요소를 기준으로 배치
+fixed: 뷰포트 기준으로 배치
+stickey: 스크롤 영역 기준으로 배치
+*/
+
+/* static
+    요소를 일반적으로 문서 흐름에 따라 배치합니다. top, right, bottom left, z-index 속성이 아무런 영향도 주지 않습니다. 기본값입니다.  */
+
+/* relative */
+/* 요소를 일반적인 문서 흐름에 따라 배치하고 자기 자신을 기준으로 top, bottom, left의 값에 따라 오프셋을 적용합니다.
+오프셋은 다른 요소에는 영향을 주지 않습니다. 따라서 페이지 레이아웃에서 요소가 차지하는 공간은 static일때와 같습니다. */
+
+/* z-index의 값이 auto가 아니라면 새로운 쌓임 맥락을 생성합니다. table-*-group, table-row, table-column, table-cell, table-caption 요소에 적용했을때의 작동 방식은 정의되지 않았습니다 */
+
+div {
+    width: 200px;
+    height: 200px;
+    border: 5px solid orangered;
+    margin-left: 150px /* div의 상자에 왼쪽에 margin-left: 150px로 설정함 */
+}
+
+
+#box {
+    background-color: peachpuff;
+
+    position: relative;
+
+    /* position: static;  이것을 비활성화 시키면 움직일수있게됨*/
+
+    /* top: ; bottom: ; left: ; right: ; position이 static일때는 적용되지 않는다. */
+    top: 50px; /* box의 위치가 자시자신에서 top에서 50만큼 멀어짐 */
+    left: -80px; /* -80px은 자기자신을 기준으로 top에서 50px만큼 멀어진 것에서 왼쪽으로 -80px만큼으로 이동함 */
+    bottom: 100px; /* 이동하지 않는다. 왜냐? 설정은 top으로 되어있는데 bottom의 값이 먹혀들지 않음 */
+}

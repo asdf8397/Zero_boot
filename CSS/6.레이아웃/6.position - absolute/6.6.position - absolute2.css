@@ -1,0 +1,37 @@
+/* 레이아웃
+    position - absolute
+*/
+
+div {
+    width: 200px;
+    height: 200px;
+    border: 5px solid orangered;
+    margin-left: 150px;
+}
+#box {
+    width: 150px;
+    height: 100px;
+    border-color: darkblue;
+    background-color: cornflowerblue;
+    border-radius: 30px;
+
+    position: absolute; /* absolute는 공중에 붕뜨게 된다. */
+
+    top: 100px; /* 여기서 position이 static인 상태에서는 조상요소를 기준으로 설정되지만
+        만약 relative로 설정되면 부모요소를 기준으로 설정되게 된다. */
+
+    /* 
+    position: absolute인 요소는
+    조상 중에서 position이 static이 아닌 요소를 찾아 기준을 삼는다. 
+    */
+    left: 20px; /* 부모요소를 기준으로 parent의 position의 relative */
+}
+
+#parent {
+    position: relative; 
+    /* position의 요소 자기 자신을 기준으로 배치*/
+}
+
+/* 이랬을때 기준을 position relative로 설정하면 기준은 #parent가 되고 parent를 기준으로 box의 속성이 지정되게 된다
+만약 position 속성을 지정하지 않았을 경우 body(부모요소를 기준으로 설정되게 된다.) */
+/* 부모요소가 static만 아니면 되기때문에 absolute로 설정해도 된다 */

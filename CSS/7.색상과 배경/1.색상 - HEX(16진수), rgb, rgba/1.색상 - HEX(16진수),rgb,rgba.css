@@ -11,5 +11,22 @@ CSS <color> 자료형은 sRGB색 공간의 한 색을 표현하며, 추가로 �
 */
 
 div {
+    background-color: aliceblue; 
+    /* background-color를 치면 자동적으로 색상이 연결되어 나오는데 이것을 16진수 표기법이라고 한다.
+    16진수 표기법은 0이 제일 작고 16이 가장 큰 것
+    0이 가장 어둡고 제일 높은 16에 가까워 질때 제일 밝은색상이 된다. */
+    background-color: rgb(255, 255, 255);
+}
 
+.HEX {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(117, 20, 20);
+}
+
+.RGB {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 255, 1); 
+    /* rgba를 이용하면 색상의 투명도까지 사용할 수 있음*/ /* 순서: (r,g,b,a)*/
 }

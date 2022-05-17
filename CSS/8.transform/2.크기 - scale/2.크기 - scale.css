@@ -1,0 +1,31 @@
+/* 값 */
+/* transform-function - 크기 조절 */
+
+#bolt {
+    width: 200px;
+
+    /* transform: scale();은 크기를 조절하는 함수 */
+    transform: scale(0.5); 
+    /* 설정한 이미지의 가로, 세로가 0.5, 0.5가 된다. */
+    /* width: 200px이 설정되어있지만 그 자리에서 크기만 0.5로 줄이게 된다.  */
+}
+.bolt2 {
+    width: 400px;
+    transform: scale(1); /* 1은 크기가 그대로 들어간다. */
+}
+.bolt3 {
+    width: 400px;
+    /* transform: scale(1.5); 1.5 이미지의 가로세로 크기 */
+}
+.bolt4 {
+    width: 400px;
+    transform: scale(1.5 0.5); /* 이미지가 x축 1.5배 y축으로 0.5배 크기 */
+}
+.bolt5 {
+    width: 400px;
+    transform: scaleX(0.5); /* X축으로 가운데를 기준으로 양쪽이 0.5씩 줄어듬 */
+}
+.bolt6 {
+    width: 400px;
+    transform: scaleY(0.5); /* Y축을 가운데를 기준으로 Y축으로 0.5씩 줄어듬 */
+}

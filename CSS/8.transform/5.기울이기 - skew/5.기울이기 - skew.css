@@ -1,0 +1,14 @@
+/* 5.기울이기 skew */
+
+.bolt {
+    width: 300px;
+    margin: 100px;
+
+    transform: skewX(45deg); /* 기울이기 X축으로 45도 */
+}
+.bolt2 {
+    width: 300px;
+    margin: 100px;
+
+    transform: skewY(45deg); /* 기울이기 Y축으로 45도*/
+}

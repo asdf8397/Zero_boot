@@ -1,0 +1,29 @@
+/* Transform(변형) */
+
+.bolt {
+    width: 300px;
+
+    transform: translate(100px, 150px); /* (x축으로 100px오른쪽으로 이동 y축으로 아래로 150px만큼 이동 */
+}
+.bolt2 {
+    width: 300px;
+    transform: translateX(150px); 
+    /* 150px만큼 오른쪽으로 이동*/
+    /* transform: translatex(-150px); 이면 왼쪽으로 150px만큼 */
+}
+.bolt3 {
+    width: 300px;
+    transform: translateY(150px);
+    /* y축 아래로으로 150px만큼 이동 */
+    /* transform: translateY(-150px);은 y축으로 위로으로 이동 */
+}
+.bolt4 {
+    width: 300px;
+    transform: translate(-50px);
+    /* -50px는 X축으로 왼쪽으로 50px만큼 이동 */
+}
+.bolt5 {
+    width: 300px;
+    transform: translate(50%, 30%);
+    /* 50%, 30%는 원래 있던 0,0에서 가로 50%이동 세로 30%를 이동했다.  */
+}

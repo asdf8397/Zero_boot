@@ -1,1 +1,32 @@
-/* <angle> */
+/* <angle> 회전 */
+/* angle은 자료형 <>으로 되어있는 것들은 자료형이다. */
+
+/* turn은 1turn은 한바퀴 0.25turn은 45도 */
+
+/* 회전, 각도 
+시계방향
+transform: rotate(45deg) : 45도 시계방향으로
+transform: rotate(90deg) : 90도 시계방향으로
+transform: rotate(3.1416rad) : 180deg = 200grad = 0.5turn = 3.1416rad 180도 시계방향
+
+반시계방향
+transform: rotate(-50grad); : 45도 반시계방향
+transform: rotate(1.75turn)
+*/
+
+/* transform(변형) */
+.bolt {
+    width: 300px;
+
+    transform: rotate(45deg);
+}
+
+.bolt2 {
+    width: 300px;
+    transform: rotate(-45deg);
+}
+
+.bolt3 {
+    width: 300px;
+    transform: rotate(0.5turn) scale(.5); /* 0.5turn은 180deg와 같음 그리고 scale(0.5)는 크기를 반으로 줄이는것*/ 
+}

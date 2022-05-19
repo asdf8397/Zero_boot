@@ -1,0 +1,42 @@
+/* transform-origin */
+
+.box1 { /* transform은 원점을 찍고 박스가 움직임 */
+    border: solid black;
+
+    height: 300px;
+    width: 200px;
+    /* height, width를 지정하면 여기의 height와 width를 기준으로 transform-origin: center를 기준으로 한다. */
+
+    transform-origin: center; /* .box1의 중앙에 원점을 찍고 그것을 기준으로 transform scale은 (1.3)만큼 커졌음 */
+    transform: scale(1.3); /* 기존의 크기 height 300px width 200px에서 1.3배 커진다 */
+}
+.box2 { /* transform은 left top부분에 원점을 찍고 박스가 움직임 */
+    border: solid black;
+    height: 300px;
+    width: 200px;
+    transform-origin: top left; /* 원점은 top left이면 왼쪽 위부분이고 그것을 기준으로 이동함*/
+    transform: scale(1.3);
+}
+.box3 { /* transform은 */
+    border: solid black;
+    height: 300px;
+    width: 200px;
+    transform-origin: bottom right; /* 기준점을 오른쪽 아래로 잡고 scale이 1.3배 커진다. */
+    transform: scale(1.3);
+}
+.box4 {
+    border: solid black;
+    height: 300px;
+    width: 200px;
+    transform-origin: 50px 100px; 
+    /* transform-origin은 height 300 width 200일때 transform-origin이 50px과 100px이 있는 점을 기준으로 scale이 1.3배가 된다.  */
+    transform: scale(1.3);
+}
+.box5 {
+    border: solid black;
+    height: 300px;
+    height: 200px;
+    transform-origin: top left;
+    transform: rotate(30deg);
+    /* transform-origin은 원점을 top left를 꼭지로 하고 이것을 30deg만큼 돌게 한다.  */
+}

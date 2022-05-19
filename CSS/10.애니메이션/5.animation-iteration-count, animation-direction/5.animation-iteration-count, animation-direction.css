@@ -1,0 +1,157 @@
+/* animation-iteration-count - 반복 횟수 */
+
+div {
+    width: 100px;
+    height: 100px;
+    border: 10px solid silver;
+    /* border-radius: 30px; */
+    border-radius: 50%; /* box의 모서리를 50%로 설정해서 원으로 적용 */
+    background-color: rgb(245, 255, 199);
+}
+.box1 {
+    animation-name: rotate; /* 적용할 애니메이션이름(animation-name) rotate(이름을 rotate로 적용함 @keyframes의 이름이 됨*/
+    animation-duration: 3s; /* duration:지속(단어) duration은 rotate를 하는데 3초동안 한다 그래서 */
+    animation-iteration-count: infinite; 
+    /* iteration: 반복 count 숫자를 세다 */
+    /* iteration-count는 몇번을 하는지 infinity: 무한번 */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg); /* 시계방향으로 회전 */
+    }
+}
+
+.box2 {
+    animation-name: rotate_box;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate_box {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-360deg); /* 시계 반대방향으로 회전 */
+    }
+}
+
+.box3 {
+    animation-name: rotate_rotate;
+    animation-duration: 3s;
+    animation-timing-function: linear; /* 회전을 쉬지않고 계속 회전하는 것 처럼 보임 */
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate_rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.box4 {
+    animation: rotate_count;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1; 
+    /* animation-iteration-count를 1로 설정하면 애니메이션을 새로 고침했을때 한번만 돌게된다. */
+}
+
+@keyframes rotate_count {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.box5 {
+    animation-name: rotate_half;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 0.5; /* animation-iteration-count: 0.5는 회전에서 반만돌고 제자리로 복귀한다. */
+}
+@keyframes rotate_half {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.box6 {
+    animation-name: rotate_reverse;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction:reverse; /* animation-direction(방향): reverse 설정하면 반대방향으로 회전(반시계반향)*/
+}
+@keyframes rotate_reverse {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.box7 {
+    animation-name: rotate_alternate;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+    /* alternate: 번갈아하는 */
+    /* animation-direction: alternate;로 설정하면 시계방향으로 한바퀴돌고 다시 반대로 한바퀴돌고 계속 번갈아가면서 돌게된다.  */
+}
+@keyframes rotate_alternate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.box8 {
+    animation-name: rotate_alternate_reverse;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    /* 시계 반대방향으로 한바퀴 돌고 그다음 반대방향으로 한바퀴돌면서 번갈아가면서 돈다. */
+}
+@keyframes rotate_alternate_reverse {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* animation-direction */
+/* animation-direction은 css속성은 애니메이션이 앞뒤로 번갈아 재생되어야하는지 여부를 결정합니다 */
+
+/* 사용할 수 있는 속성 */
+/* normal: normal은 기본값 */
+
+/* reverse */
+/* 애니메이션은 매 사이클마다 역방향으로 재생됩니다. 즉 순환 할 때마다 
+애니메이션이 종료 상태로 재설정되고 다시 시작됩니다. 애니메이션 단계가 거꾸로 수행되고
+타이밍 기능 또한 반대로 됩니다. */
+
+/* reverse: 거꾸로 */
+
+/* alternate */
+/* 애니메이션 매 사이클마다 각 주기의 방향을 뒤집으며, 첫번째 반복은 정방향으로 진행됩니다
+    사이클이 짝수인지 홀수인지를 결정하는 카운트가 하나에서 시작됩니다. */
+
+/* alternate-reverse */
+/* 애니메이션은 매 사이클마다 각 주기의 방향을 뒤집으며, 첫번째 반복은 역방향으로 진행됩니다.
+    사이클이 짝수인지 홀수인지 결정하는 카운트가 하나에서 시작됩니다. */

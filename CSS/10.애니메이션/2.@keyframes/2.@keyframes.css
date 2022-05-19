@@ -1,0 +1,109 @@
+/* @keyframes */
+/* @keyframes는 @규칙은 개발자가 애니메이션 중간중간의 특정 지점들을 거칠 수 있는 키프레임들
+설정함으로써 CSS 애니메이션 과정의 중간 절차를 제어할 수 있게합니다. */
+
+/* 사용 예시 */
+@keyframes slidein { /* 애니메이션을 만들때 프레임을 하나하나 만들때 사용함 */
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    0% {top: 0; left: 0;} /* 애니메이션이 0(시작)할때 지금 스타일*/
+    30% { top: 50px;}   /* 애니메이션이 30%를 지나갈때 이런 스타일*/
+    68%, 72% {left: 50%;} /* 애니메이션이 68% 지나갈때쯤 이런 스타일*/
+    100% {top: 100px; left: 100%;} /* 애니메이션이 100%에 도달했을때 이런 스타일을 적용한다. */
+
+    /* 2가지 스타일을 적용할때는 from to로 적용해볼수있다 */
+}
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+/* animation(애니메이션) */
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 10px solid seagreen;
+    background-color: rgb(204, 253, 225);
+    border-radius: 30px;
+
+    animation: my-first-animation .5s infinite;
+}
+
+@keyframes my-first-animation { 
+    /* @keyframes에 넣은 것을 설명하면 from{width: 100px은
+        현재 설정한 .box의 width: 100px이 height: 100px인데
+        이것이 width: 100px height:200px로 바뀌어라고 수정한 것*/
+    from {width: 100px;}
+    to {width: 200px;}
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    border: 10px solid seagreen;
+    background-color: rgb(284, 253, 225);
+
+    animation: my_second_animation 2s infinite;
+}
+
+@keyframes my_second_animation {
+    0% {
+        width: 100px;
+    }
+    50% {
+        width: 300px;
+        font-size: 80px /* font-size를 설정하면 박스가 커질때 글자, 이모티콘도 커진다. */
+    }
+    100% {
+        width: 100px;
+    }
+    /* width: 100px인 상태에서 50%(진행중에는 300px까지 커졌다가 다시 마지막에 100px으로 작아진다.  */
+}
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    border: 10px solid seagreen;
+    background-color: rgb(204, 253, 225);
+    border-radius: 30px;
+
+    animation: my_third_animation .5s infinite alternate;
+    /* alternate는 길어졌다가 돌아왔다가 하면서 끊기지 않게 설정할 수 있음 */
+}
+
+@keyframes my_third_animation {
+    for {width: 100px;}
+    to { width: 200px;}
+}
+
+.box4 {
+    width: 100px;
+    height: 100px;
+    border: 10px solid seagreen;
+    background-color: rgb(204, 253, 225);
+    border-radius: 30px;
+}
+
+.box4:hover { /* hover를 추가하면 마우스를 올렸을때만 작동한다. */
+    animation: my-last-animation 2s infinite;
+}
+
+@keyframes my-last-animation {
+    0% {
+        font-size: 20px;
+    }
+    50% {
+        width: 300px;
+        font-size: 80px;
+    }
+    100% {
+        font-size: 20px;
+    }
+} /* box의 font-size는 20px 0% 그다음 50%일땐 width: 300px
+    그다음 font-size: 80% 그다음 100%일땐 20px로 된다. */

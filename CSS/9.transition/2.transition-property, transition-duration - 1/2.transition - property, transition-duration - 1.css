@@ -1,0 +1,25 @@
+/* transition-property */
+/* 어떤 요소가 얼마만큼의 시간을 두고 변화하는가 */
+
+/* transition-property, transition-duration */
+
+/* transition-property 어떻게 변화시킬것인가
+    transition-property: margin-right
+    transition-property: margin-right, color
+    transition-property: all;
+    transition-property: none;
+
+    transition-duration: 얼마만큼의 시간을 가지고 변화시킬 것인가.
+    transition-duration: 500ms;
+    transition-property: margin-right
+
+    transition-duration: 2s;
+    transition-property: background-color
+
+    transition-duration: 2s;
+    transition-property: margin-right, color
+
+    transition-duration: 3s, 1s
+    transition-property: margin-right, color
+
+*/

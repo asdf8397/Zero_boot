@@ -1,0 +1,32 @@
+/* 5.transition */
+/* 다 합쳐서 transition으로 사용할 수 있음 */
+
+/* syntax */
+
+/* property name | duration */
+/* transition: margin-left(property name) 4s(duration) */
+
+/* property name | duration | delay */
+/* transition: margin-left(property name) 4s(duration) 1s(delay); */
+
+/* property name | duration | timing function | delay */
+/* transition: margin-left | 4s | ease-in-out | 1s; */
+
+.box {
+    width: 300px;
+    height: 80px;
+    background-color: blue;
+    font-size: 50px;
+    color: white;
+    /*
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+    */          /*↓*/
+    transition: all 0.5s ease-in-out; /* duration: 속도 */
+}
+
+.box:hover {
+    background-color: red;
+    height: 400px;
+}

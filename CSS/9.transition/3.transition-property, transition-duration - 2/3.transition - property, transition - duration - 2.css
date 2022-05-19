@@ -1,0 +1,47 @@
+/* transition(전환) */
+/* transition-property, transition-duration */
+
+.box { 
+    /* transition-property와 duration을 .box에 넣었을때 박스에 마우스를 올리면
+        변경되고 마우스르 떼면 천천히 기능을 유지하면서 돌아온다. */
+        /* .box에 들어가 있으면 그 기능이 연결 끊김 전체를 책임짐
+            .box:hover에 들어가면 연결되고 끊길때는 책임안짐 */
+    width: 300px;
+    height: 80px;
+    border: 2px dashed teal;
+    background-color: darkslategray;
+    font-size: 50px;
+    color: white;
+
+    transition-property: all;
+    transition-duration: .5s;
+}
+
+.box:hover {
+    width: 340px;
+    background-color: indianred;
+    color: bl ack;
+    font-size: 60px;
+}
+/* 주의할 점
+    box랑 box:hover를 붙여서 사용하면 개판됨 */
+.box2 {
+    width: 300px;
+    height: 80px;
+    border: 2px dashed teal;
+    background-color: darkslategray;
+    font-size: 50px;
+    color: white;
+}
+
+.box2:hover { 
+    /* .box2:hover안에 transition-property와 duartion이 있으면 박스에 마우스를 올렸다 내리면 
+        끊기듯이 원상태로 돌아온다. */
+    width: 340px;
+    background-color: indianred;
+    color: black;
+    font-size: 60px;
+
+    transition-property: all;
+    transition-duration: .5s;
+}

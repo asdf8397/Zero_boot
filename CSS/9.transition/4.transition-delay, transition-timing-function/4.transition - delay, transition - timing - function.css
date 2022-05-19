@@ -1,0 +1,39 @@
+/* transition(전환) */
+/* transition-property, transition-duration,
+    transition-delay, transition-timing-function */
+
+.box {
+    width: 300px;
+    height: 80px;
+    background-color: blue;
+    font-size: 50px;
+    color: white;
+
+    transition-property: all;
+    transition-duration: 0.8s; /* background-color blue에서 red로 변하는 시간 0.8초*/
+    transition-delay: 1s; /* 마우스를 올렸을때 지연되는 시간 1초 */
+}
+
+.box:hover {
+    background-color: red;
+}
+
+/* transition-timing-function */
+
+.box2 {
+    width: 300px;
+    height: 80px;
+    background-color: blue;
+    font-size: 50px;
+    color: white;
+
+    transition-property: all;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+    /* 반전효과를 등속으로 열렸다 닫혔다한다. */
+}
+.box2:hover {
+    background-color: red;
+    height: 400px;
+
+}

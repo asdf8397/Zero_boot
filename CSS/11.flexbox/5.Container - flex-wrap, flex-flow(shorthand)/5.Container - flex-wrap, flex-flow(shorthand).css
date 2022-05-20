@@ -1,0 +1,121 @@
+/* Flexbox
+
+Container - flex-wrap
+flex-flow(shorthand)
+*/
+
+/* flex-wrap */
+/* CSS의 flex-wrap은 property는 flex-item 요소들이 강제로 한줄에 배치되게 할 것인지
+    또는 가능한 영역 내에서 벗어나지 않고 여러행으로 나누어 표현 할 것인지 결정하는 속성입니다.
+    만약 영역 내에서 벗어나지 못하게 설정한다면, 동시에 요소의 방향 축을 결정할 수 있습니다. */
+
+/* nowrap: 기본 설정값으로 flex-container 부모요소 영역을 벗어나더라도 flex-item요소들을 한줄에 배치합니다.
+            시작점은 flex-direction에 의해 결정된 방향으로 적용됩니다.
+
+    wrap: flex-item 요소들이 내부 로직에 의해 분할되어 여러 행에 걸쳐서 배치됩니다.
+            nowrap 속성과 마찬가지로 요소가 배치되는 시작점은 flex-direction에 의해 결정됩니다.
+            일반적으로 위에서 아래로 쌓이는 순서입니다.
+
+    wrap-reverse: wrap 속성값과 동일하지만 요소가 나열되는 시작점과 끝점의 기준이 반대로 배치됩니다.
+        
+*/
+.container1 {
+    height: 500px;
+    border: 5px dashed orange;
+    display: flex;
+    flex-wrap: nowrap; /* flex-wrap의 가장 기본값 nowrap*/
+}
+
+.item1 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+
+.container2 {
+    height: 500px;
+    border: 5px dashed orange;
+    display: flex;
+    flex-wrap: wrap; /* item에서 설정한 박스 1,2,3,4,5가 들어갈 수 없다면 그 다음줄로 박스가 내려간다. */
+}
+.item2 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.container3 {
+    height: 500px;
+    border: 5px dashed orange;
+    display: flex;
+    flex-wrap: wrap-reverse; /* wrap-reverse는 시작점과 끝점이 변경된다. 아래에서 시작된다. */
+}
+.item3 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.container4 {
+    height: 500px;
+    border: 5px dashed orange;
+    display: flex; /* 원래 박스는 세로정렬이지만 flex를 통해서 가로정렬 */
+    flex-flow: row wrap; /* row wrap을 적용 안하면 박스가 박스에 맞춰서 작게 적용되지만 row wrap을 적용하면 공간 박스에 맞춰서 밑으로 내려간다. */
+}
+.item4 {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.container5 {
+    height: 500px;
+    border: 5px dashed orange;
+    display: flex;
+    flex-flow: row-reverse; /* 가로로 우측에서 좌측으로 박스가 정렬됨 */
+}
+.item5 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.container6 {
+    height: 500px;
+    border: 5px dashed orange;
+    display: flex;
+    flex-flow: column wrap-reverse; /* column은 축을 세로로 wrap-reverse right를 기준으로 박스를 세로로*/
+}
+.item6 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.container7 {
+    height: 500px;
+    border: 5px dashed orange;
+    display: flex;
+    flex-flow: column wrap; /* wrap은 left를 기준으로 box를 bottom으로 */
+}
+.item7 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}

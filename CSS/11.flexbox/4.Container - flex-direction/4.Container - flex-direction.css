@@ -1,0 +1,41 @@
+/* flex-direction */
+/* flex-direction 속성은 플렉스 컨테이너 내의 아이템을 배치할 때 사용할 주축 및 방향
+    (정방향, 역방향)을 지정합니다. */
+
+/* main exit: 주축 X축
+    cross exit: y축 교차축 */
+
+.box1 {
+    height: 500px;
+    border: 5px dashed orange;
+    display: flex; /* display 가로 정렬 */
+    flex-direction: row; /* 주축이 왼쪽에서 오른쪽으로 */
+}
+.box2 {
+    height: 500px;
+    border: 5px dashed orange;
+    display: flex; /* display 가로 정렬 */
+    flex-direction: row-reverse; /* 주축이 오른쪽에서 왼쪽으로*/
+}
+.box3 {
+    height: 500px;
+    border: 5px dashed orange;
+    display: flex; /* display 가로 정렬 */
+    flex-direction: column; /* 주축이 top에서 bottom쪽으로 */
+}
+.box4 {
+    height: 500px;
+    border: 5px dashed orange;
+    display: flex; /* display 가로 정렬 */
+    flex-direction: column-reverse; /* 주축이 bottom에서 top쪽으로 */
+}
+
+
+.item {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}

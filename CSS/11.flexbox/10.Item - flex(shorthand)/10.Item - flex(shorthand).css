@@ -1,0 +1,69 @@
+/* flex */
+/* flex CSS 속성은 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나
+줄이는 방법을 설정하는 속성입니다. flex는 flex-grow, flex-shrink, flex-basis의 단축 속성입니다. */
+
+/* 기능 */
+/* flex: 1, flex: 2 이렇게 사용하면 flex-grow로 적용되서 들어간다 
+    그리고 length 또는 percentage를 지정하면 flex-basis로 지정되서 자동으로 들어간다. */
+
+
+/* Flexbox 
+    Item -flex(shorthand)
+*/
+
+.container1 {
+    height: 200px;
+    border: 5px dashed orange;
+    display: flex;
+}
+
+.item1 {
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+
+    flex: 1; /* flex: 1로 사용하면 flex-basis를 자동으로 0으로 맞춰줌
+                flex-grow:1로 사용하면 flex-basis를 맞춰야함 
+                그래서 box의 flex-basis를 사용해야 할때는 flex:를 간소화 해서
+                사용하면 편리함 */
+    /* 한개 또는 두개의 단위 없는 숫자 값을 사용할 때, <flex-basis>의 값은 auto가 아니라
+    0이 됩니다. */
+}
+
+.container2 {
+    height: 200px;
+    border: 5px dashed orange;
+    display: flex;
+}
+.item2 {
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+    /* 값이 두개일때 첫번쨰 값은 nuber이어야 하고 그 number는 flex-grow가 됩니다.
+    number를 지정하면 flex-shrink가 되고 length, percentage 또는 auto를 지정하면
+    flex-basis가 됩니다.  */
+    /* flex: 1(flex-grow) 5(shrink); 로 지정됨  */
+    /* flex: 1(flex-grow) 50px(flex-basis)로 지정됨 */
+}
+
+.container3 {
+    height: 200px;
+    border: 5px dashed orange;
+    display: flex;
+}
+.item3 {
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+
+    /* flex: 10(flex-grow) - number, 20(flex-shrink) - number, 30(flex-basis) - length, percentage */
+}
+
+/* 값 */
+/* flex: initial, flex: auto, flex: none 다른 키워들을 사용할 수 도 있음 */

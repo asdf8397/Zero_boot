@@ -6,4 +6,87 @@
 
     보통 flex-grow를 사용할땐 flex-shrink, flex-basis 속성을 함께 사용합니다.
     그리고 일반적으로 모든 값이 설정되었음을 보장하기 위해 flex 속성을 이용해 축약형으로 사용합니다.
-    */
+    
+    flex-grow의 기본값은 0이다.
+
+    형제 요소로 렌더링 된 모든 flex-item 요소들이 동일한 fle-grow값을 갖는다면
+    flex-container 내부에서 동일한 공간을 할당받습니다. 
+*/
+
+.container1 {
+    height: 200px;
+    border: 5px dashed orange;
+    display: flex;
+}
+
+.item1 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+    /* 여기선 flex-grow: 0인 상태이다. */
+}
+/* flex-grow: 0인상태 container의 box의 안에 작은 item의 box 크기는 원래의 맞춰놓은 크기이다. */
+
+.container2 {
+    height: 200px;
+    border: 5px dashed orange;
+    display: flex;
+}
+.item2 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+
+    flex-grow: 1; /* flex-grow:1로 설정하면 각자 값을 1:1:1로 갖는다. 동일한 값으로 갖는다. */
+} /* container2의 box의 크기에서 item의 박스의 크기를 맞춰놓음 flex-grow:1은 container 크기에 맞게 item2의 box도 커진다. */
+/* 할당이 되는 공간이 남으면 본인들 박스의 크기에 맞춰서 box가 커진다.  */
+
+/* 설명 */
+/* 형제 요소로 렌더링 된 모든 flex-item 요소들이 동일한 flex-grow 값을 갖는다면,
+    flex-container 내부에서 동일한 공간을 할당받습니다. 하지만 flex-grow 값으로 다른 소수값을 지정한다면,
+    그에 따라 다른 공간값을 나눠 할당받게 됩니다. */
+
+.container3 {
+    height: 200px;
+    border: 5px dashed orange;
+    display: flex;
+    flex-wrap: wrap; /* box의 크기가 커서 위의 자리가 없으면 두번째 줄까지 wrap을 적용해서 박스를 내릴 수 있음 ㄴ*/
+}
+
+.item3 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+
+    flex-grow: 1;
+}
+
+.container4 {
+    height: 200px;
+    border: 5px dashed orange;
+    display: flex;
+}
+.item4 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.item4:nth-child(2) {
+    flex-grow: 2;
+}
+.item4:nth-child(3) {
+    flex-grow: 1;
+} /* item4에서 nth-child(2)의 크기를 2로하고 nth-child(3) flex-grow: 1으로 하면 
+    item4의 1은 0을 적용한 그대로의 값이고 제일 큰 것은 nth-child(2) 그 다음 nth-child(3)이다. */

@@ -1,0 +1,18 @@
+/* flex-basis */
+/* flex-basis CSS 속성은 플렉스 아이템의 초기 크기를 지정합니다.
+box-sizing을 따로 지정하지 않는다면 콘텐츠 박스의 크기를 변경합니다 */
+
+.container {
+    height: 200px;
+    border: 5px dashed orange;
+    display: flex;
+}
+
+.item {
+    width: 200px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}

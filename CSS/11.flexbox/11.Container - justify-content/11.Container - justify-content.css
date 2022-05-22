@@ -1,0 +1,275 @@
+/* justify-content */
+/* justify-content - 주축을 기준으로 아이템을 어떻게 정렬할지.... */
+/* 범용으로 사용되는 값만 5개 */
+
+/* flex-direction: row;는 가로(x)축으로 순서대로 정렬 */
+/* flex-direction: row-reverse;는 가로(x)축으로 역으로 정렬*/
+/* flex-direction: column은 세로(y)축으로 순서대로 정렬 */
+/* flex-direction: column-reverse은 세로(y)축으로 순서의 역방향으로 정렬 */
+
+.container1 {
+    border: 5px dashed orange;
+    display: flex; /* diplay: flex는 주축이 x축으로 왼쪽에서 오른쪽이다. */
+    justify-content: flex-start; 
+    /* (주축이 왼쪽 시작점) 왼쪽에서 오른쪽으로 시작되는데 주축이 시작되는 곳을 찍음 flex-start로 */
+    /* justify-content: flex-start는 주축이 좌측에서 우측으로 흐르고 고정축은 촤측에 있다
+        item box 또한 순서가 바뀌지 않고 1,2,3,4,5 순서대로 정렬된다.  */
+}
+.item1 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+
+.container2 {
+    border: 5px dashed orange;
+    display: flex; /* display: flex로 x축 방향임 */
+    justify-content: flex-end; 
+    /* display: (주축이 오른쪽 끝지점) x축으로 정렬 되어있고 주축은 끝나는 지점을 주축으로 했을때 flex-end 주축을 (오른쪽)*/
+    /* justify-content는 주축이 우측에서 좌측으로 흐른다. 
+    justify-content: flex-end는 box의 순서는 1,2,3,4,5로 순서대로 정렬되어 있음 주축만 우측에서 좌측으로 흐른다.  */
+}
+.item2 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+
+.container3 {
+    border: 5px dashed orange;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row; /* flex-direction: row는 순서대로 정렬 */
+}
+.item3 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid blue;
+    background-color: paleturquoise;
+    font-size: 30px;
+}
+.container4 {
+    border: 5px dashed orange;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row; /* flex-direction: row는 순서대로 정렬 */
+}
+.item4 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid blue;
+    background-color: paleturquoise;
+    font-size: 30px;
+}
+.container5 {
+    border: 5px dashed orange;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse; 
+    /* flex-direction: row-reverse를 사용하면 container5에 item5가
+        justify-content: flex-start에 맞춰 start에 축을 정렬 1,2,3,4,5
+        를 순서대로 좌측에서 우측으로 향하게 한다.
+        근데 여기서 flex-direction: row-reverse를 사용하면 justify-content: flex-start에 지정된
+        축과 item5의 1,2,3,4,5번의 박스의 순서도 바뀐다
+        순서 오른쪽 축에 고정되서 5,4,3,2,1
+    
+    flex-direcition: row-reverse를 사용하면 완전히 바뀐다고 보면 됨    */
+}
+.item5 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid blue;
+    background-color: paleturquoise;
+    font-size: 30px;
+}
+.container6 {
+    border: 5px dashed orange;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    /* container6는 justify-content: flex-end에 의해서 오른쪽에 우측을 기준점으로 1,2,3,4,5 우측에 고정된다.
+        flex-direction: row-reverse를 지정해주면 고정축과 박스의 정렬 1,2,3,4,5에서 5,4,3,2,1로 완전히 바뀐다
+        우측에서 좌측으로 되어있던 축도 좌측에서 우측으로 바뀌고 box의 순서도 바뀐다.
+        
+    flex-direction: row-reverse    */
+}
+.item6 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid blue;
+    background-color: paleturquoise;
+    font-size: 30px;
+}
+
+.container7 { /* 기본 */
+    height: 500px;
+    border: 5px dashed orange;
+    
+    /* 현재의 기본으로 설정한 container7은 display: flex와 flex-direction: column으로 설정한 container8과 item의 box들의 정렬은 같음 */
+}
+.item7 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid blue;
+    background-color: paleturquoise;
+    font-size: 30px;
+}
+.container8 {
+    height: 500px;
+    border: 5px dashed orange;
+    display: flex;
+
+    flex-direction: column;
+    /* display: flex와 flex-direction을 설정한 container8은 아무것도 설정하지 않은 container7과 값이 같음 */
+}
+.item8 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid blue;
+    background-color: paleturquoise;
+    font-size: 30px;
+}
+.container9 {
+    height: 500px;
+    border: 5px solid orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* justify-content: flex-start를 지정하면 주축이 column상태로서 
+        주축은 top부분에서 아래로 향하게 되고 item의 box 정렬은
+        container7(기본), container8(column)만 지정한 것과 container9와 같음 */
+}
+.item9 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid blue;
+    background-color: paleturquoise;
+    font-size: 30px;
+}
+.container10 { /* container10과 container11의 비교*/
+    height: 500px;
+    border: 5px solid orange;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: flex-end; */
+
+    /* display:flex, flex-direction: column, justify-content를 적용 안해도 자동적으로 container에는 
+    column은 적용되어 있다. 
+        하지만 이때 flex-end를 적용해서 y축으로 bottom에 box가 닿게 bottom을 내릴수 없음 그래서 bottom부분에 점을 설정할 수 없음 */
+}
+.item10 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid blue;
+    background-color: paleturquoise;
+    font-size: 30px;
+}
+.container11 { /* container10과 container11의 비교*/
+    height: 500px;
+    border: 5px solid orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* display:flex와 flex-direction:column과 justify-content: flex-end를 적용해야지 bottom부분에 축을 점으로 설정할 수 있음 */
+}
+.item11 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid blue;
+    background-color: paleturquoise;
+    font-size: 30px;
+}
+.container12 {
+    height: 500px;
+    border: 5px solid orange;
+    display: flex;
+    flex-direction: row; /* flex-direction: row는 기본값으로 있을때와 없을때 설정은 같다 없어도 item12 box는 center에 정렬되어 있음 */
+    justify-content: center /* 주축을 x축의 center로 하고 있음 justify-content: center로 하기때문에 */
+    /* 가로축을 justify-content: center center에 자리 잡게 됨,,, flex-direction: row 상태 */
+}
+.item12 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid blue;
+    background-color: paleturquoise;
+    font-size: 30px;
+}
+.container13 {
+    height: 500px;
+    border: 5px solid orange;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    /* flex-direction: row-reverse;의 상태에선 현재 box의 순서 1,2,3,4,5 상태인데
+        이것을 역순으로 바꾸고 5,4,3,2,1 완전히 반대로 바꾸고 justify-content: center를 넣어주면 center에 위치하게 됨 */
+}
+.item13 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid blue;
+    background-color: paleturquoise;
+    font-size: 30px;
+}
+.container14 {
+    height: 500px;
+    border: 5px solid orange;
+    display: flex;
+    justify-content: space-between;
+    /* item14의 box들이 각각의 넓이를 가지고 정렬될수있음 양 끝단(좌우측)의 기준으로 */
+    /* space-between은 flex-start, flex-end부분에 기준을 잡고 box들의 간격을 맞춤 */
+}
+.item14 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid blue;
+    background-color: paleturquoise;
+    font-size: 30px;
+}
+.container15 {
+    height: 500px;
+    border: 5px solid orange;
+    display: flex;
+    justify-content: space-around;
+    /* flex-start, flex-end는 item15 박스들의 앞,뒤 box들의 앞뒤 간격이 있어서 그것으로 box들 간의 간격을 맞추게 됨 */
+}
+.item15 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid blue;
+    background-color: paleturquoise;
+    font-size: 30px;
+}
+.container16 {
+    height: 500px;
+    border: 5px solid orange;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse; /* flex-direction: row-reverse가 적용되면 1,2,3,4,5의 box정렬이 5,4,3,2,1의 순서로 정렬 됨 */
+}
+.item16 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 3px solid blue;
+    background-color: paleturquoise;
+    font-size: 30px;
+}

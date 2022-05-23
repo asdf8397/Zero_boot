@@ -1,0 +1,53 @@
+/* grid
+    grid 속성은 shorthand property 입니다. 
+    외재적인 속성은 grid-template-rows, grid-template-columns, grid-template-areas,
+    값과 내재적인 grid-auto-rows, grid-auto-columns, grid-auto-flow 값을 한번에 설정합니다.
+*/
+
+/* 외재적인 속성: 명시적인 속성 */
+/* 내재적인 속성: 암시적인 속성 */
+
+/* grid: auto-flow / 1fr 1fr 1fr은 : auto-flow(row) / 1fr 1fr 1fr(column) */
+
+.container1 {
+    border: 5px dashed orange;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr; /* 1번 box 3번 box의 세로 크기 1:2*/
+    grid-template-columns: 100px 200px; /* 1번 box 2번 box의 크기는 1번 box 100px 2번 box 200px */
+
+    /* grid: 1fr 2fr / 100px 200px; (↑ grid-template-rows, grid-template-columns)와 같음 */
+}
+
+.item1 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.container2 {
+    border: 5px dashed orange;
+    display: grid;
+    grid: 1fr 2fr / 100px 200px; /* ↓과 같음 .... 순서는 grid-template-rows / grid-template-columns */
+    /* grid-template-rows: 1fr 2fr;
+    grid-template-columns: 100px 200px; */
+}
+.item2 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.container3 {
+    border: 5px dashed orange;
+    display: grid;
+    grid: 1fr 2fr / 100px 200px;
+    /* grid: 1fr 2fr (auto-flow:row) / 100px 200px (auto-flow:column); 
+    auto-flow:row를 설정하려면 1fr 2fr 있는 구간에 써주면 되고
+    auto-flow:column을 써주려면 100px 200px 있는 구간에 써주면 된다. */
+
+    /* 되도록 단축속성으로 쓰지말고 개별속으로 사용하자. */
+}
+.item3 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}

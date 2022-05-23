@@ -1,0 +1,193 @@
+/* justify-content, align-contents */
+
+.container1 {
+    border: 5px dashed orange;
+
+    width: 100%; /* 가로 넓이 화면의 100% 설정*/
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 100px) ;
+    grid-template-columns: repeat(3, 100px);
+
+    justify-content: start; /* item1 box는 top 왼쪽에 정렬*/
+}
+.item1 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.container2 {
+    border: 5px dashed orange;
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+
+    justify-content: center; /* item2 box는 top center에 정렬 */
+}
+.item2 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.container3 {
+    border: 5px dashed orange;
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+
+    justify-content: end; /* item3 box는 top 오른쪽 끝 end부분에 정렬 */
+}
+.item3 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.container4 {
+    border: 5px dashed orange;
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+
+    justify-content: space-around; /* 메인축을 기준으로 box 시작부분과 다른 박스 붙는 부분까지 간격이 있음*/
+}
+.item4 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.container5 {
+    border: 5px dashed orange;
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+
+    justify-content: space-between;
+    /* 메인축에 여백을 남기지 않고 start center end까지 정렬 box마다 사이 간격을 두고 정렬 */
+}
+.item5 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.container6 {
+    border: 5px dashed orange;
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+
+    /* align-content는 교차축 y축으로 했을때 어떻게 움직이는가 를 나타냄 */
+    align-content: end; /* end를 하게 되면 맨 아래 위치하게 됨 end:마지막부분*/
+}
+.item6 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.container7 {
+    border: 5px dashed orange;
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+
+    align-content: center; /* y의 교차축을 기준으로 center 가운데에 위치하게 됨 */
+}
+.item7 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.container8 {
+    border: 5px dashed orange;
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+
+    align-content: start; /* y교차축을 기준으로 start 시작점에 위치 하게 됨*/
+}
+.item8 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.container9 {
+    border: 5px dashed orange;
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+
+    justify-content: center; /* x의 교차축 기준으로 center에 고정됨 */
+    align-content: center; /* y의 교차축을 기준으로 center에 고정됨*/
+
+    /* Container box의 item의 box들이 center에 정렬됨 */
+    
+}
+.item9 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.container10 {
+    border: 5px dashed orange;
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+
+    justify-content: space-around; /* x축을 기준으로 top에 고정*/
+    /* space-around를 설정하면 각 item box들은 앞 뒤로 공간이 생긴다.*/
+    /* align-content: center; center로 하면 가운데에 모이게 됨*/
+    align-content: space-around; /* y축을 기준으로 좌측에 고정되면 */
+    /* align-content: space-around;, justify-content: space-around;를 둘다 하게되면 box들은 각각의 공간을 두고 띄워지게 된다. */
+}
+.item10 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.container11 {
+    border: 5px dashed orange;
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 100px);
+
+    align-content: space-between;
+    justify-content: space-between;
+    /* align-content: space-between, justify-content: space-between을 설정하면
+        x,y축에 시작점들에 고정되서 각각의 box들은 start와 end부분에 공간을 두지 않고
+        각자 분포되게 된다.  */
+}
+.item11 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}

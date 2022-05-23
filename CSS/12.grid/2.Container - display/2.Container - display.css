@@ -1,0 +1,54 @@
+/* 
+Grid
+
+Container - display
+*/
+
+.Container1 {
+    border: 5px dashed orange;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 행과 열을 생성 */
+    width: 150px;
+}
+.item1 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.Container2 {
+    border: 5px dashed orange;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 150px;
+}
+.item2 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+
+.Container3 {
+    border: 5px dashed orange;
+    display: inline-grid; 
+    /* Container는 원래 block요소로 box를 설정되어있는데 display: inline-grid를 설정하면 box를 inline으로 설정하겠다고 설정한 것*/
+    /* display: inline-grid를 설정하면 block 요소가 아니라서 가로로 나란히 box가 정렬된다.  */
+    grid-template-columns: 1fr 1fr;
+    width: 150px;
+}
+.item3 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.Container4 {
+    border: 5px dashed orange;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 150px;
+}
+.item4 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}

@@ -1,0 +1,43 @@
+/* grid-auto-rows */
+/* 
+Grid
+
+Container - grid-auto-rows, grid-auto-columns
+*/
+
+.container1 {
+    border: 5px dashed orange;
+    display: grid;
+
+    grid-template-rows: 100px 150px 80px; 
+    /* 행을 3개로 나누는데 첫번째 행 100px 두번째 행 150px 세번째 행 80px */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 열은 1:1:1 */
+
+    /* 근데 만약 지정한 item1보다 더 많은 box를 새로 만들었다고 했을때 설정된 box는 크기 넓이가 지정되지 않아서
+    찌부된다. 이때 grid-auto-rows, grid-auto-column을 사용해주면 된다.  */
+}
+
+.item1 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+
+.container2 {
+    border: 5px dashed orange;
+    display: grid;
+
+    grid-template-rows: 100px 150px 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-auto-rows: 100px; 
+    /* grid-auto-rows를 사용하면 templete에 명시적으로 설정하지 못했지만 암시적으로 높이랑 넓이를 지정해서 새로 들어오는 box를 암시적으로 크기를 지정해줄수있다.*/
+    grid-auto-columns: 50px;
+    /* grid-auto-columns은 암시적으로 설정해줘서 box가 넘쳐날 경우 열을 지정해줄수 있음 암시적으로 */
+}
+.item2 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}

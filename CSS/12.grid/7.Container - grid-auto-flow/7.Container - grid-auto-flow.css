@@ -1,0 +1,146 @@
+/* 
+Grid
+
+Container - grid-auto-flow
+*/
+
+.container1 {
+    border: 5px dashed orange;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.item1 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+
+.item1:nth-child(2) {
+    grid-column: span 2; /* grid-column으로 2번 item을 2칸을 차지하게 할 수 있다. */
+}
+
+.container2 {
+    border: 5px dashed orange;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* item2:nth-child(2) grid-column: span 2;를 설정하면 span요소로 2번 box가 2칸 차지하게 한다.
+    이때 grid-template-columns를 2 column으로 맞추면 2번은 2칸을 못하기때문에 다음 칸으로 이동 후 2번 box는 2번 칸에서 전체를 사용하게 된다. */
+}
+.item2 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.item2:nth-child(2) {
+    grid-column: span 2;
+}
+
+.container3 {
+    border: 5px dashed orange;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-auto-flow: column; 
+    /* flow: 흐름*/
+    /* grid-auto-flow: column;을 적용하면 column이 세로방향으로 향한다.  */
+}
+.item3 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+/* .item3:nth-child(2) {
+    grid-column: span 2;
+} */
+
+.container4 {
+    border: 5px dashed orange;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-auto-flow: row; 
+    /* grid-auto-flow: row는 default 값으로 기본값이다. 가로(행) 방향임*/
+}
+.item4 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+
+.container5 {
+    border: 5px dashed orange;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-auto-flow: column;
+    /* grid-auto-flow: column는 세로(열) 방향으로 정렬 */
+}
+.item5 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+
+.container6 {
+    border: 5px dashed orange;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.item6 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.item6:nth-child(2) {
+    grid-column: span 3; 
+    /* nth-child(2)은 span 3칸을 차지하게 하니까 
+        2번째 칸으로 이동해서 3칸을 차지하고 있음*/
+}
+
+.container7 {
+    border: 5px dashed orange;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-auto-flow: row dense;
+    /* grid-auto-flow: row dense를 적용하면 nt-child(2){ grid-column: span 3};을
+        적용했을때 2번 box는 2번째 칸으로 이동하고 2번 box가 있었던 빈공간에는 3번, 4번 box가
+        들어와서 채운다. --- 순서대로 box 빈공간 채운다. 
+        row는 행축을 기준으로 사용되고 row-dense라고 써도 되고 dense라고 써도 됨 */
+}
+.item7 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.item7:nth-child(2) {
+    grid-column: span 3;
+}
+
+.container8 {
+    border: 5px dashed orange;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-auto-flow: column dense; 
+    /* column은 열을 기준으로 2번 box가 커지면 2번 box가 커져서 들어가지 못하는 
+        곳에 2번 box 이후의 3번 box 4번 box가 들어갈 수 있음 */
+}
+
+.item8 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.item8:nth-child(2) {
+    grid-column: span 3;
+}

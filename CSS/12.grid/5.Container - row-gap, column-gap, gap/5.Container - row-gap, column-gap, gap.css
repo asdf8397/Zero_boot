@@ -1,0 +1,47 @@
+/* row-gap(grid-row-gap) */
+/* 
+row-gap: 0;
+row-gap: 1ch;
+row-gap: 1em;
+row-gap: 20px 
+*/
+
+/* row: 행, column: 열 */
+
+.container1 {
+    border: 5px dashed orange;
+    width: 400px;
+    height: 400px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2개의 column 열 똑같은것 1번 반복 1fr */
+    grid-template-rows: repeat(4, 1fr); /* 4개의 rows 행 똑같은것 1번 반복 1fr */
+    row-gap: 20px; /* row-gap: 20은 row행 gap(사이 간격) 20px을 준 것 */
+    column-gap: 24px; /* column-gap: 24px은 첫번째 열과 두번째 열의 gap(사이간격)은 24px 만큼 띄운다. */
+}
+
+.item1 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+
+.container2 {
+    border: 5px dashed orange;
+    width: 400px;
+    height: 400px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 열 3개 크기 1:1:1*/
+    grid-template-rows: repeat(4, 1fr); /* 행 4개 크기 1:1:1:1 */
+
+    /* row-gap: 20px;
+    column-gap: 50px; */
+
+    gap: 20px 50px; /* gap: 20px 50px을 했을때 20px은 행 row 간격 50px은 열 column 간격이다. */
+}
+.item2 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}

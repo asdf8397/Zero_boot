@@ -1,0 +1,73 @@
+/* 
+grid
+Container - display
+*/
+
+.container1 {
+    border: 5px dashed orange;
+    width: 400px;
+    height: 400px;
+
+    display: grid; 
+    /* grid를 사용하면 box들이 꽉차게 됨 */
+    /* grid의 개념은 html에 item들을 채울때 마다 자동적으로 container에 맞춰서 채워진다. */
+    grid-template-columns: repeat(5, 1fr); /* 1:1:1:1:1로 column으로 5번(가로)로 쪼갠다. */
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "hd hd hd hd hd"
+    "ma ma ma sb sb"
+    "ft ft ft ft ft";
+}
+.item1 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.header1 {
+    grid-area: hd;
+}
+.main1 {
+    grid-area: ma;
+}
+.sidebar1 {
+    grid-area: sb;
+}
+.footer1 {
+    grid-area: ft;
+}
+
+.container2 {
+    border: 5px dashed orange;
+    width: 400px;
+    height: 400px;
+
+    display: grid; 
+    /* grid를 사용하면 box들이 꽉차게 됨 */
+    /* grid의 개념은 html에 item들을 채울때 마다 자동적으로 container에 맞춰서 채워진다. */
+    grid-template-columns: repeat(5, 1fr); /* 1:1:1:1:1로 column으로 5번(가로)로 쪼갠다. */
+    /* grid-templete-columns는 1fr 크기로 가로 5개 ,,,, column: 행*/
+    grid-template-rows: repeat(3,1fr);
+    /* grid-templete-rows는 열로 3의 크기로 1fr 3개 */
+
+    grid-template-areas: 
+    "hd hd hd hd hd" /* 여기서 hd, ma, sb, ft는 grid-area에서 설정한 name이다. 설정한 name을 사용해야함 */
+    "ma ma ma . sb" /*.을 찍으면 그 부분은 빈칸이 된다. */
+    "ft ft ft ft ft";
+}
+.item2 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.header2 {
+    grid-area: hd;
+}
+.main2 {
+    grid-area: ma;
+}
+.sidebar2 {
+    grid-area: sb;
+}
+.footer2 {
+    grid-area: ft;
+}

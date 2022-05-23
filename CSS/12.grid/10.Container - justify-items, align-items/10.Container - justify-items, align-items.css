@@ -1,1 +1,213 @@
 /* justify-items, align-items */
+
+.container1 {
+    border: 5px dashed orange;
+
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr); /* 행 3개 1:1:1*/
+    grid-template-columns: repeat(3, 1fr); /* 열 3개 1:1:1 */
+
+}
+
+.item1 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.item1:nth-child(1) { 
+    /* item의 1번 box를 width: 50px height: 50px를 줬을때 container box를 
+        전체로 보면 1번은 50px 50px만큼 box는 작아졌지만 칸의 전체가 잡힘 안보이지만 빈칸도 사용하고 있음*/
+    width: 50px;
+    height: 50px;
+}
+
+.container2 {
+    border: 5px dashed orange;
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    
+    /* justify-items: stretch; */ /* 기본값은 stretch임 */
+    justify-items: start; /* justify-items: start로 했기 때문에 크기를 지정하지 않았기 때문에 본인 만큼의 box가 작아짐 */
+    /* justify-items: start를 설정하면 item의 box들은 start축에 붙는다 
+        box의 형태가 변형되서 붙게된다 이유는 box들에 설정을 하지 않은 상태여서
+        변경되서 start에 붙게 된다. */
+}
+.item2 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+    width: 50px;
+}
+.item2:nth-child(1) {
+    width: 50px;
+    height: 50px;
+}
+.container3 {
+    border: 5px dashed orange;
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-items: end; /* item3 box전체가 end에 붙음 */
+}
+.item3 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+}
+
+.item3:nth-child(1) {
+    width: 50px;
+    height: 50px;
+}
+.container4 {
+    border: 5px dashed orange;
+
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-items: center; /* center를 기준으로 box를 정렬 item4 box 전체 */
+}
+.item4 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+}
+.item4:nth-child(1) {
+    width: 50px;
+    height: 50px;
+}
+.container5 {
+    border: 5px dashed orange;
+
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-items: start; /* 좌측 시작점을 지점으로 item5 box전체 좌측에 붙음 */
+}
+.item5 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+}
+
+.item5:nth-child(1) {
+    width: 50px;
+    height: 50px;
+}
+.container6 {
+    border: 5px dashed orange;
+
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-items: stretch; 
+}
+.item6 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.item6:nth-child(1) {
+    width: 50px;
+    height: 50px;
+}
+.item6:nth-child(2) { /* 2번째 box만 end로 보내고 싶으면  justify-items: stretch */
+    /* justify-items: end; */ /* 여기서 justify-items: end는 통하지 않는다.
+        이유는 container6의 전체에 justify-items: stretch; ← 기본값을 설정해뒀기 때문에 움직이지 않음 */
+        justify-self: end; /* container6에 justify-items: stretch를 지정했기 때문에 이때는 justify-self: end를 사용해야 함*/
+}
+.container7 {
+    border: 5px dashed orange;
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+    /* justify-items: start; */
+    align-items: start; /* 열을 중심으로 start를 하고*/
+    /* align-items: flex-end; */
+}
+.item7 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.item7:nth-child(1) {
+    width: 50px;
+    height: 50px;
+}
+.container8 {
+    border: 5px dashed orange;
+
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-items: start;
+    /* align-items: start; */
+}
+.item8 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.item8:nth-child(1) {
+    width: 50px;
+    height: 50px;
+}
+.container9 {
+    border: 5px dashed orange;
+
+    width: 100%;
+    height: 500px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    justify-items: center;
+    align-items: center;
+}
+.item9 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.item9:nth-child(1) {
+    width: 50px;
+    height: 50px;
+}

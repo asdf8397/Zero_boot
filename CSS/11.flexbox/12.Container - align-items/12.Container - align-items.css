@@ -1,0 +1,92 @@
+/* Flexbox 
+    Container - align-items
+*/
+
+.container1 {
+    height: 400px;
+    border: 5px dashed orange;
+    margin-bottom: 20px;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: stretch; 
+    /* stretch는 box가 빈칸을 다 차지하는 것 기본값 */
+    /* 기본적으로 box들은 stretch를 가지고 있음 그래서 높이의 전부 다 차지함 */
+}
+
+.item1 { /* height: 50으로 설정 안하면 box의 높이는 container의 전체 높이 만큼 400만큼 을 차지하게 된다. stratch가 그 높이 크기를 말함 */
+    width: 50px;
+    /* height: 50px; */
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+
+.container2 {
+    height: 400px;
+    border: 5px dashed orange;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: flex-start; /* align-item의 시작부분이 flex-start 첫부분에 있기때문에 top 좌측에 있음 box들은 top에 있음*/
+}
+.item2 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.container3 {
+    height: 400px;
+    border: 5px dashed orange;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end; 
+    /* align-item의 시작부분이 끝부분 bottom의 좌측에 있기때문에 box들은 bottom에 붙어 있음 */
+}
+.item3 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.container4 {
+    height: 400px;
+    border: 5px dashed orange;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center; /* center를 사용하면 전체중에서 가운데에 들어간다. */
+}
+.item4 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.container5 {
+    height: 400px;
+    border: 5px dashed orange;
+    display: flex;
+    flex-wrap: wrap; /* 웹 화면을 줄이면 box들 간의 공간이 작아지다가 안되면 box가 작아지는데
+        box간의 칸을 유지하고 안된다면 box를 다음 칸으로 넘겨주려면 flex-wrap: wrap을 사용해주면 넘어간다. */
+
+    justify-content: space-between;
+    align-items: center;
+}
+.item5 {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}

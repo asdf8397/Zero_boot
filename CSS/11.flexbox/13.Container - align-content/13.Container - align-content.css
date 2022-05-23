@@ -1,0 +1,122 @@
+/* align-content */
+/* CSS의 align-content 속성은 콘텐츠 사이와 콘텐츠 주위 빈칸을 플렉스박스의
+    교차축, 그리드의 블록 축을 따라 배치하는 방식을 결정합니다.  */
+
+/* Flexbox - Container - align-content */
+
+/* 메모 */
+/* 
+사용할때 목적성이 다르다 
+align-item: 한줄 정렬
+align-content: 여러줄 정렬
+*/
+
+.container1 {
+    height: 400px;
+    border: 5px dashed orange;
+    display: flex;
+    /* flex-wrap: wrap; */ /* flex-wrap: wrap을 설정하지 않으면 .container box의 item의 내부의 box들이 크기를 줄였을때 찌그러진다. */
+}
+
+.item1 {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.container2 {
+    height: 400px;
+    border: 5px dashed orange;
+    display: flex;
+    flex-wrap: wrap; 
+    /* flex-wrap: wrap을 설정하면 화면을 줄였을때 본인들의 크기는 지키면서 box들은 찌그러지지 않고 밑에 칸으로 이동한다.(크기 그대로 유지)*/
+}
+.item2 {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.container3 {
+    height: 400px;
+    border: 5px dashed orange;
+    display: flex;
+    flex-wrap: wrap; /* flex-start, flex-end, center를 해줄 때 wrap을 사용하면 box들이 묶임(뭉침)*/
+
+    align-content: flex-start; /* align-content: flex-start를 하면 시작점에 box들이 뭉침*/
+}
+.item3 {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.container4 {
+    height: 400px;
+    border: 5px dashed orange;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end; /* flex-end를 지정하면 끝나는 지점에 box가 뭉침 */
+}
+.item4 {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.container5 {
+    height: 400px;
+    border: 5px dashed orange;
+    display: flex;
+    flex-wrap: wrap; 
+    align-content: center; /* align-content의 center를 하면 box들이 중간에 뭉침 (중간지점)*/
+}
+.item5 {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.container6 {
+    height: 400px;
+    border: 5px dashed orange;
+    display: flex;
+    flex-wrap: wrap; /* box wrap상태로 설정 */
+
+    align-content: space-between; /* container6의 item6 box들은 시작지점에 간격없이 box들간의 간격이 동일하게 띄워지게 된다. */
+}
+.item6 {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}
+.container7 {
+    height: 400px;
+    border: 5px dashed orange;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: space-around;
+    /* align-content: space-around로 설정하면 container7의 item7 box은 시작지점과 box들 간의 간격을 두고 box들 간의 동일하게 띄워지게 된다. */
+}
+.item7 {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 30px;
+}

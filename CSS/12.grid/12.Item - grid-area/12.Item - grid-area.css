@@ -1,0 +1,28 @@
+/* 
+Grid
+Item - grid-area
+*/
+
+.container1 {
+    border: 5px dashed orange;
+
+    display: grid;
+    grid-template-rows: repeat(5, 100px);
+    grid-template-columns: repeat(3, 1fr);
+}
+.item1 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+}
+.item1:first-child {
+    background-color: coral;
+
+    /* grid-row: 4 / span 2;
+    grid-column: 2 / -1; */
+
+    /* ↑ 와 같음 */
+
+    grid-area: 4 / 2 / span 2 / -1;
+    /* grid-area: 4(gird-row-start) / 2(grid-column-end) / span 2(gird-row-start) / -1(grid-colum-end); */
+}

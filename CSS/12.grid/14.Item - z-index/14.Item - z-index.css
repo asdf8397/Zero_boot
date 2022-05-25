@@ -2,3 +2,74 @@
 /* z-index는 CSS z-index 속성은 위치 지정 요소와 그 자손 또는 하위 플렉스
 아이템의 z축 순서를 지정합니다. 더 큰 z-index값을 가진 요소가 작은 값의 요소
 위를 덮습니다.  */
+
+.container1 {
+    border: 5px dashed orange;
+
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.item1 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+    opacity: 0.7;
+}
+
+.item1:nth-child(1) { /* 1번 box가 */
+    grid-row: 1 / span 2; /* grid-row는 1(첫번째 row 행) 1번째 칸에서부터 span 2번째 칸까지*/
+    grid-column: 1 / span 2; /* grid-column는 1(첫번째 column 열) 1번째 열에서부터 span 2번째 칸까지  */
+}
+.item1:nth-child(2) { /* item1의 2번 box가 뒤에 들어왔기때문에 1번 box 위에 얹혀지게 된다. */
+    grid-row: 1 / 2; /* nth-child(2) 2번 box도 가로 1부터 2번까지 크기 차지함*/
+    grid-column: 2 / 4; /* grid-column을 설정해서 세로(열)로도 2번부터 4번까지 차지함*/
+}
+
+.container2 {
+    border: 5px dashed orange;
+
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 1fr);
+}
+.item2 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+    opacity: 0.7;
+}
+.item2:nth-child(1) {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span2;
+}
+.item2:nth-child(2) {
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+    z-index: -1; 
+    /* z-index는 1번 요소를 2번요소보다 위에 얹히게 작성할 수 있다.*/
+    /* z-index: -1을 하면 nth-child(2) 2번 box가 1번 box 밑으로 들어가게 된다. */
+}
+.container3 {
+    border: 5px dashed orange;
+    
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 1fr);
+}
+.item3 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+    font-size: 24px;
+    opacity: 0.7; /* 투명도 */
+}
+.item3:nth-child(1) {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+}
+.item3:nth-child(2) {
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+    z-index: 3; /* z-index: 3을 설정하면 nth-child(1) 1번 box 보다 위로 올라간다. */
+}

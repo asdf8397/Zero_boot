@@ -1,0 +1,97 @@
+/*
+Grid
+
+Grid 단위 - auto-fill, auto-fit
+*/
+.container1 {
+    border: 5px dashed orange;
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr); /* 3칸으로 쪼개고 비율으 1:1:1*/
+}
+.item1 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+}
+.container2 {
+    border: 5px dashed orange;
+    display: grid;
+    grid-template-columns: repeat(3, 100px); 
+    /* 3칸으로 쪼개고 칸은 100px로 지정하면 화면을 늘리면 어느 부분에서는 칸에 맞지않고 작아진다. */
+}
+.item2 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+}
+
+/* auto-fill */
+.container3 {
+    border: 5px dashed orange;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+     /* auto-fill: 자동 채우기 */
+    /* auto-fill: 화면을 늘리면 자동채우기가 들어간다 100px만큼 화면에서 차지하게 하면서 */
+}
+.item3 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+}
+.container4 {
+    border: 5px dashed orange;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px); /* (auto-fill, 100px)에서 100px은 가로값*/
+     /* auto-fill: 자동 채우기 */
+    /* auto-fill: 화면을 늘리면 자동채우기가 들어간다 100px만큼 화면에서 차지하게 하면서 */
+    grid-template-rows: 50px; /* 행 길이 50px */
+}
+.item4 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+}
+
+/* minmax(min, max) */ 
+/* - minmax는 가장 작아질수있는 최소의 크기, 최대의 크기를 지정할 수 있음*/
+.container5 {
+    border: 5px dashed orange;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    /* repeat(minmax(100px, 1fr))을 설정하면 가로 크기가 100px만큼 커지고 만약 더 커지면 1:1을 가지게 되고
+        더 커지면 1:1:1의 크기를 가지게 되고 더 커지면 1:1:1:1의 box의 크기를 가질 수 있게 설정함 */
+    grid-auto-rows: 50px;
+}
+.item5 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+}
+
+.container6 {
+    border: 5px dashed orange;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));를 적용하면 300px이 가로 되서
+        화면에 세로로 1:1:1:1:1:1로 쭉 내려가게 됨 */
+    grid-auto-rows: 50px;
+}
+.item6 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+}
+
+/* auto-fit */
+.container7 {
+    border: 5px dashed orange;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* container7의 item7이 2개만 있을때 container7의 box설정에 비해 box가 적기때문에
+        공간이 남는다 이때 공간을 다 채우기 위해서는 auto-fit을 사용하면 공간이
+        가득차지하게 됨 */
+    /* auto-fill과 auto-fit은 동일하게 사용하지만 남는 공간이 생겼을때 어떻게 사용할지는 auto-fit과 auto-fill의 차이가 있음 */
+    grid-auto-rows: 50px;
+}
+.item7 {
+    background-color: paleturquoise;
+    border: 3px solid blue;
+}

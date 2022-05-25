@@ -1,0 +1,10 @@
+body {
+    background-color: blanchedalmond;
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+    /* 화면의 크기가 최소 300px 최대 500px일때만 tomato색상이 적용된다. */
+    body {
+        background-color: tomato;
+    }
+}

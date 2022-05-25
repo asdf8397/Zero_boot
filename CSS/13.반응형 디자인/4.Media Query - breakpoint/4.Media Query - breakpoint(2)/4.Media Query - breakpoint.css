@@ -1,0 +1,23 @@
+body {
+    background-color: blanchedalmond;
+}
+
+/* 모바일 퍼스트 */
+/* 모바일에 맞춰 작성하고 점점 커지게 작성한다. */
+.title {
+    font-size: 48px;
+}
+
+/* 2가지로 breakpoint를 걸었다.  */
+/* 768px보다 작으면 모바일, 768px ~ 1024 테블릿 1024px보다 크면 pc로 보겠다. */
+@media screen and (min-width: 768px) {
+    body { /* 768px 작으면 모바일*/
+        background-color: tomato;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: tomato;
+    }
+}

@@ -1,0 +1,11 @@
+body {
+    background-color: blanchedalmond;
+}
+
+@media screen and (orientation: landscape) { 
+    /* 가로모드일때만 안쪽의 배경색을 실행해라
+        가로 폭이 세로 폭 보다 커질때 색상이 변한다. */
+    body {
+        background-color: tomato;
+    }
+}

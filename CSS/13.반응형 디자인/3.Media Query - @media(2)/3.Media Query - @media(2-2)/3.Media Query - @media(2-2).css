@@ -1,0 +1,9 @@
+body {
+    background-color: blanchedalmond;
+}
+
+@media (max-width: 300px) { /* screen and 또는 all and를 사용하지 않아도 작동한다. */
+    body{
+        background-color: tomato;
+    }
+}

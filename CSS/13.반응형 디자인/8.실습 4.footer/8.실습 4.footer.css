@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(227, 240, 251);
+}
+.container {
+    background-color: rgb(77, 146, 207);
+    max-width: 768px;
+    min-height: 188vh;
+    margin: 0 auto;
+    display: flex;
+}
+nav {
+    background-color: orange;
+    color: white;
+    flex-basis: 120px;
+}
+.box-container {
+    background-color: aquamarine;
+    flex-grow: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.box {
+    background-color: wheat;
+    border: 3px solid rgb(44, 24, 44);
+    border-radius: 5px;
+    flex-basis: 50%;
+    min-height: 150px; /* 120px보다 더 줄어들지 않음 */
+    flex-grow: 1; /* 새로운 box가 추가되도 여백없이 채우고 새로운 box가 추가될시 그 자리에 맞춰 box가 추가된다. */
+}
+.box:nth-child(2n) {
+    border-color: rgb(39, 39, 129);
+}
+
+footer {
+    min-height: 50px;
+    background-color: rgb(170, 255, 170);
+    border: 3px solid green;
+
+    flex-grow: 1; /* 1은 꽉차게 */
+    flex-basis: 100%; /* flex-basis: 100%를 넣으면 새로운 box가 추가되도 footer는 움직이지 않고 고정되어있음 */
+}

@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(277, 240, 251);
+}
+.container {
+    background-color: rgb(77, 146, 207);
+    max-width: 768px;
+    min-height: 188vh;
+    margin: 0 auto;
+    display: flex;
+}
+nav {
+    background-color: orange;
+    color: white;
+    flex-basis: 120px;
+}
+.box-container {
+    background-color: aquamarine;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box {
+    background-color: wheat;
+    border: 3px solid rgb(44, 24, 44);
+    border-radius: 5px;
+    flex-basis: 50%;
+    min-height: 150px;
+    flex-grow: 1;
+}
+.box:nth-child(2n) {
+    border-color: rgb(39, 39, 129);
+}
+footer {
+    min-height: 50px;
+    background-color: rgb(170, 255, 170);
+    border: 3px solid green;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
+@media screen and (max-width: 768px) { /* 1번째 break point */
+    .container {
+        flex-direction: column; 
+        /* 웹화면을 접었을때 화면의 움직이는 방향이 왼쪽에서 오른쪽으로 향하게 된다
+            하지만 웹에서 앱을 띄울때는 화면이 조정되면서 작아지고 큰 화면이 밑으로 
+            접혀야 되기 때문에 flex-direction: column이 된다. */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .box-container {
+        flex-direction: column; 
+        /* 접으면 box-container는 접혀서 위에서 아래로 향하는 방향이 됨 
+            가로로 되어있던 box들이 세로로 정렬됨 */
+    }
+    /* .box-container{ flex-direction: column}을 사용하는 방법
+        또는 .box {flex-basis: 100%}를 사용하는 방법이 있다. flex-basis: 100%는
+        웹을 접었을때 화면에 한칸마다 하나의 box가 가로로 정렬되게 설정한 것 */
+}

@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box; 
+    /* box-sizing에 맞춰서 border-box에 맞춰 box가 맞춰지게 된다. */
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(227, 240, 251);
+}
+
+.container {
+    background-color: rgb(77, 146, 207);
+    max-width: 768px;
+    min-height: 188vh;
+    margin: 0 auto;
+
+    display: flex;
+}
+
+nav {
+    background-color: orange;
+    color: white;
+    flex-basis: 120px
+}
+.box-container {
+    background-color: aquamarine;
+    flex-grow: 1;
+
+    display: flex;
+    flex-wrap: wrap; /* 박스1,2,3,4,5,6들의 가로 줄이 생김 200px씩 들어감 가로 줄로  */
+}
+
+.box {
+    background-color: wheat;
+    border: 3px solid rgb(44, 24, 44);
+
+   /* width: 50%; = flex-basis: 50% 둘다 사용할 수 있음 */ 
+   /* box의 가로가 50% 만큼 */
+   border-radius: 5px;
+    flex-basis: 50%;
+
+    /* width: 200px; */ /* width: 200px을 하면 오른쪽에 빈공간이 생긴다 이것을 채워주기 위해서는 */
+
+    /* flex-grow: 1; - width: 200px 같음 */
+    /* grid: 격자형태 정렬 */
+
+    min-height: 150px; /* 최대한 줄어들어도 150px 이하로 줄어들지 않게 설정 */
+}
+.box:nth-child(2n) {
+    border-color: rgb(39, 39, 129);
+}

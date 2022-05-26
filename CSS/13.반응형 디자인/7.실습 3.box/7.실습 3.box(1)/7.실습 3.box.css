@@ -1,0 +1,40 @@
+html body {
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    background-color: rgb(227, 240, 251);
+}
+
+.container {
+    background-color: rgb(77, 146, 207);
+    max-width: 768px;
+    min-height: 188vh;
+    margin: 0 auto;
+
+    display: flex;
+}
+
+nav {
+    background-color: orange;
+    color: white;
+    flex-basis: 120px
+}
+.box-container {
+    background-color: aquamarine;
+    flex-grow: 1;
+
+    display: flex;
+    flex-wrap: wrap; /* 박스1,2,3,4,5,6들의 가로 줄이 생김 200px씩 들어감 가로 줄로  */
+}
+
+.box {
+    background-color: wheat;
+    border: 3px solid rgb(202, 97, 202);
+
+    width: 200px; /* flex-grow: 1; - width: 200px 같음 */
+    /* grid: 격자형태 정렬 */
+}
+.box:nth-child(2n) {
+    border-color: rgb(39, 39, 129);
+}

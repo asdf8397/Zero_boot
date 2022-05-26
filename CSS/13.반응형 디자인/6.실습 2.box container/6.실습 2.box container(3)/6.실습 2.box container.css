@@ -20,15 +20,22 @@ body {
 nav {
     background-color: tomato;
     color: white;
-    width: 120px; 
+    /* width: 120px;  */
     /* width: 120px을 지정하기 전까지 nav는 전체를 차지했지만 
         시작지점에서 width: 120px를 하면 120px만큼 시작점에서 지정되기 때문에 왼쪽에 붙는것 처럼 보임 */
+    flex-basis: 120px; /* width: 120px 같음*/
 }
 .box-container {
     background-color: aquamarine;
-    width: 100%;
+    /* width: 100%; */
+    flex-grow: 1; /* flex-grow는 나머지 영역을 꽉차면서 width: 100%와 같음*/
+
+    display: flex; /* display: flex는 박스를 만들어주려고 설정함 */
 }
 
 .box {
     border: 3px solid orange;
+}
+.box:nth-child(2n) {
+    border-color: rgb(39, 39, 129)
 }

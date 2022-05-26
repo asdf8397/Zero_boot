@@ -1,0 +1,31 @@
+/* 실습 2.box container */
+
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: rgb(227, 240, 251);
+}
+
+.container {
+    background-color: rgb(77, 146, 207);
+    max-width: 760px; /* 760px 보다 더 커지지 않음 */
+    min-height: 100vh; /* 최소높이 */
+    margin: 0 auto;
+
+    display: flex; /* display: flex를 하면 box는 가로 였다가 세로로 정렬이 바뀜 */
+}
+
+nav {
+    background-color: tomato;
+    color: white;
+    width: 120px; 
+    /* width: 120px을 지정하기 전까지 nav는 전체를 차지했지만 
+        시작지점에서 width: 120px를 하면 120px만큼 시작점에서 지정되기 때문에 왼쪽에 붙는것 처럼 보임 */
+}
+.box-container {
+    background-color: aquamarine;
+}
+
+.box {
+    border: 3px solid orange;
+}

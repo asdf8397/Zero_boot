@@ -1,0 +1,74 @@
+body {
+    height: 10000px;
+}
+
+.num1 {
+    position: relative; /* 기본값은 relative */
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.num2 {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.num2 .num2_span { /* 여기서 span은 div에 들어가 있기때문에 .num의 안에서 top: 10px left: 10px만큼 움직였다고 생각하면 됨 */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: blue;
+}
+
+.num3 {
+    position: fixed; /* 스크롤이 움직이고 있지만 화면의 상단에 붙어있음 */
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.num3 .num3_span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: blue;
+}
+.num4 {
+    position: fixed;
+    top: 400px;
+    width: 100%;
+    height: 32px;
+    background-color: red;
+}
+.num4 .num4_span {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: blue;
+}
+
+.num5 { 
+    /* div의 box가 고정되어 있다가 화면을 내리면 화면의 상단에 붙어서
+    내려가게 된다. */
+    /* 모바일에서 많이 사용된다. */
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: 32px;
+    background-color: red;
+}
+
+.num5 .num5_span {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 32px;
+    background-color: red;
+}

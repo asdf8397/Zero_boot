@@ -14,3 +14,15 @@
 
 /* 5. 가상 요소 선택자 */
 /* ::before, ::after, ::placeholder */
+
+* {
+    color: red;
+}
+
+body {
+    color: red;
+}
+.box * { /* box안에 전체(*) */
+    font-size: 40px;
+    color: blue;
+}

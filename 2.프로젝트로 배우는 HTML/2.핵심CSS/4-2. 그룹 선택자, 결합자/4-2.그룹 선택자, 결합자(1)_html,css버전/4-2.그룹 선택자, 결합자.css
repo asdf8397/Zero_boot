@@ -1,0 +1,38 @@
+.box1, .box2 { /*.box1 따로 .box2 따로 설정하는게 아니라 .box1, .box2를 다중으로 선택할 수 있다. */
+    color: red; 
+}
+
+.border_box1 { /* 만약 class를 설정했을 때 "box5 border_box3이라고 설정하고 적용할때는 .border_box3으로 적어줘야 한다. */
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border: 10px solid #000;
+}
+.border_box2 { /* class를 설정했을 때 "box6 border_box4이라고 설정하면 적용할 때는 border_box4라고 적어주면 된다. */
+    width: 100px;
+    height: 100px;
+    background-color: magenta;
+    border: 10px solid #000;
+}
+/* --------------------------------------------------- 비교 Sass */
+.box5 {
+    font-size: 20px;
+}
+
+.box5.border_box3 {
+    border: 10px solid red;
+}
+.box5.border_box4 {
+    background-color: blue;
+}
+        /* ↑ 위와 비슷하게 써주면?  */
+/* Sass를 사용하면? */
+/* .box6 {
+    font-size: 20px;
+    &.border_box5 {
+        border: 10px solid red;
+    }
+    &.border_box6 {
+        background-color: blue;
+    }
+} */

@@ -1,0 +1,17 @@
+div {   /* 색상을 gray로 설정했음에도 */
+    color: gray;
+}
+div .moca { /* div .moca의 색상을 magenta*/
+    color: magenta;
+}
+div .latte { /* div .latte의 색상을 brown으로 설정하면 따로 따로 색상이 설정됨 */
+    color: brown;
+}
+
+input[type="text"] {
+    border-color: red; /* text box의 border는 color는 red로 색상이 잡힘 */
+}
+
+img[alt] {
+    border: 1px solid blue; /* alt: 그림 들어가는 곳 테두리 색상 blue로 들어감 border */
+}

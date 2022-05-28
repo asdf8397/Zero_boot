@@ -1,0 +1,35 @@
+/* 일반적인 CSS
+.box {
+    font-size: 20px
+}
+.box.border-box1 {
+    border: 10px solid red;
+}
+.box.border-box2 {
+    background-color: blue;
+}
+*/
+        // ↓ 같음
+/* Sass임 */
+.box {
+    font-size: 20px;
+    &.border-box1 {
+        border: 10px solid red;
+    }
+    &.border-box2 {
+        background-color: blue;
+    }
+}
+
+.box2 {
+    font-size: 20px;
+    &.border_box3 {
+        border: 10px solid red;
+        .text {
+            color: magenta;
+        }
+    }
+    &.border_box4 {
+        background-color: blue;
+    }
+}

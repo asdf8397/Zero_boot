@@ -1,0 +1,16 @@
+/* 선택자 */
+
+/* 1. 기본선택자 */
+/* *(전체), div(요소), .(클래스), #(아이디), [attr](특성) */
+
+/* 2.그룹 선택자: , */
+
+/* 3. 결합자 */
+/* (자손결합자), >(자식 결합자), ~(일반 형제 결합자), +(인접 형제 결합자) */
+
+/* 4. 가상 클래스 선택자 */
+/* :hover, :focus, :focus-visible, :active, :checked, :disabled, :not()
+:first-child, :last-child, :nth-child(), :only-child */
+
+/* 5. 가상 요소 선택자 */
+/* ::before, ::after, ::placeholder */

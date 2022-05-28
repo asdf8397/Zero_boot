@@ -1,0 +1,99 @@
+.div1 {
+    margin: 100px;
+    padding: 100px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: #fff;
+    font-size: 16px;
+    color: black;
+    text-align: right;
+    overflow: auto; /* overflow: auto는 영역을 넘어가면 이때 scroll을 생성 */
+}
+.div2 {
+    margin: 100px;
+    padding: 100px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: #fff;
+    font-size: 16px;
+    color: black;
+    text-align: right;
+    overflow: scroll; /* overflow: scroll은 글이 영역을 넘어가지 않았음에도 scroll이 생성된다. */
+}
+.div3 {
+    margin: 100px;
+    padding: 100px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: #fff;
+    font-size: 16px;
+    color: black;
+    text-align: right;
+    overflow: hidden; /* overflow: hidden은 칸을 넘어서면 넘어선 부분의 글을 안보이게 hidden 처리한다. */
+}
+.div4 {
+    margin: 100px;
+    padding: 100px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: red;
+    font-size: 16px;
+    color: black;
+    text-align: right;
+    overflow: auto;
+    z-index: 1;
+}
+.div5 { /* div4보다 div5가 더 우선 순위 이기때문에 div5 box가 div4위로 올라간다. */
+    margin: 100px;
+    padding: 100px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: red;
+    font-size: 16px;
+    color: black;
+    text-align: right;
+    overflow: auto;
+    z-index: 1;
+    position: relative;
+    top: -300px;
+    left: 50px;
+}
+.div6 { 
+    /* div7이 div6보다 우선해서 box를 겹쳤을때 div7이 위로 올라오게 되지만 z-index를 적용해서 div6에 z-index: 2,, div7에 z-index: 1을 적용해주면 div6이 위로 올라온다. */
+    margin: 100px;
+    padding: 100px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: red;
+    font-size: 16px;
+    color: black;
+    text-align: right;
+    overflow: auto;
+    z-index: 2;
+    position: relative;
+    /* top: -300px;
+    left: 50px; */
+}
+.div7 {
+    margin: 100px;
+    padding: 100px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: red;
+    font-size: 16px;
+    color: black;
+    text-align: right;
+    overflow: auto;
+    z-index: 1;
+    position: relative;
+    top: -300px;
+    left: 50px;
+    z-index: 1;
+}

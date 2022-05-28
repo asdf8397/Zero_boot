@@ -1,0 +1,28 @@
+button {
+    font-size: 40px;
+}
+
+button:hover { /* 마우스를 올렸을때 red색상으로 변경 */
+    background-color: red;
+}
+
+button:focus { /* 마우스를 클릭했을때 색상 orange 색상으로 변경 focus는 마우스를 클릭했을때 눌리는 색상 */
+    background-color: orange;
+}
+
+button:active { /* active는 마우스를 올려서 클릭했을때 클릭하고 누르고 있는 순간 색상이 yellow 색상이 된다. */
+    background-color: yellow;
+}
+
+.button2 {
+    font-size: 40px;   
+}
+.button2:hover {
+    background-color: red;
+}
+.button:focus-visible {
+    background-color: orange;
+}
+.button:active {
+    background-color: yellow;
+}

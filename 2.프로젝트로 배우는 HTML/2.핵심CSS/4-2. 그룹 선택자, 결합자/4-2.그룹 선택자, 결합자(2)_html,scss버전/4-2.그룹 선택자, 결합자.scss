@@ -20,7 +20,8 @@
         background-color: blue;
     }
 }
-
+ 
+// Scss는 큰틀에서 box2를 기준으로 box2 border_box3 text box2 border_box4으로 나가기 때문에 큰틀에서 box2로 묶고 그것을 기준으로 연결하면 된다. 그게 Scss임 
 .box2 {
     font-size: 20px;
     &.border_box3 {
@@ -31,5 +32,45 @@
     }
     &.border_box4 {
         background-color: blue;
+    }
+}
+
+span { // 따로 있는 span
+    background-color: gray;
+}
+div > span { // div에 들어있는 span을 꾸며준다. 
+    background-color: dodgerblue;
+}
+
+ul {
+    li ~ li { 
+        // 설명 ul태그 안에서 li 다음의 ~li를 선택해서 red 색상을 지정한다.
+        // 그렇다는건 2~4번까지 숫자가 색상이 red가 지정되게 된다. 
+        color: red;
+    }
+}
+
+div {
+    h1 + p { 
+        // 설명
+        // div의 h1의 바로 따라오는 p에만 색상을 red로 주겠다
+        // 그렇다는건 h1 바로 뒤의 p태그에 색상이 red 색상이 적용된다. 
+        color: red;
+    }
+}
+
+input[type="text"] {
+    &.error + .error-msg {
+        color: red;
+        /* 조건 설명*/
+        /* input type="text"이고 class명으로 error로 가질 때 
+            그것에 바로 인접한 error-msg는 색상은 red이다.  */
+    }
+}
+
+input[type="text"] {
+    &.error + .error-msg {
+        display: block;
+        color: red;
     }
 }

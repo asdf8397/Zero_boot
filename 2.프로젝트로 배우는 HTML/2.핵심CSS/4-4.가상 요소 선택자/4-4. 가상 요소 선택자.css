@@ -1,0 +1,95 @@
+@charset "UTF-8";
+.block1 {
+  margin: 100px;
+  display: inline-block;
+}
+
+.block1 {
+  /* block1 내부에 들어있는 글자는 scss에서 &::before, &::after를 해주면 
+    content: '(', ')'를 해주면 글자를 추가해도 자동으로 괄호가 들어간다. */
+}
+
+.block1::before {
+  content: '(';
+}
+
+.block1::after {
+  content: ')';
+}
+
+.block2 {
+  margin: 50px 100px;
+  display: inline-block;
+}
+
+.block2::before {
+  content: '(';
+}
+
+.block2::after {
+  content: ')';
+}
+
+.ul1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.li1 + li {
+  /* 첫번째 li요소가 아닌 두번째 li요소부터 */
+}
+
+.li1 + li::before {
+  content: '|';
+  margin: 0 8px;
+  color: #ddd;
+}
+
+input {
+  font-size: 30px;
+  color: black;
+}
+
+input::-webkit-input-placeholder {
+  color: red;
+}
+
+input:-ms-input-placeholder {
+  color: red;
+}
+
+input::-ms-input-placeholder {
+  color: red;
+}
+
+input::placeholder {
+  color: red;
+}
+
+#name {
+  font-size: 30px;
+  color: blue;
+}
+
+#name::-webkit-input-placeholder {
+  color: red;
+  opacity: 0.5;
+}
+
+#name:-ms-input-placeholder {
+  color: red;
+  opacity: 0.5;
+}
+
+#name::-ms-input-placeholder {
+  color: red;
+  opacity: 0.5;
+}
+
+#name::placeholder {
+  color: red;
+  opacity: 0.5;
+}
+/*# sourceMappingURL=4-4. 가상 요소 선택자.css.map */

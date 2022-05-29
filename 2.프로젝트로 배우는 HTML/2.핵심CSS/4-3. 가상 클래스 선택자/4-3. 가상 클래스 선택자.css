@@ -1,58 +1,27 @@
-/* 의사 클래스 */
-/* css에서 의사 클래스는 선택자에 추가하는 키워드로, 선택한 요소가 특별한 상태여야
-만족할 수 있다. 예를 들어 :hover를 사용하면 포인터를 올렸을때에만 글씨 색을 바꾸고
-싶을때 사용할 수 있습니다. */
-
-.button1 {
-    font-size: 40px;
+@charset "UTF-8";
+.ul1 .li1 {
+  border-top: 1px solid #ddd;
 }
 
-.button1:hover { /* 마우스를 올렸을때 red색상으로 변경 */
-    background-color: red;
+.ul1 .li1:first-child {
+  color: red;
 }
 
-.button1:focus { /* 마우스를 클릭했을때 색상 orange 색상으로 변경 focus는 마우스를 클릭했을때 눌리는 색상 */
-    background-color: orange;
+.ul1 .li1:last-child {
+  color: blue;
+  border-bottom: 1px solid #ddd;
 }
 
-.button1:active { /* active는 마우스를 올려서 클릭했을때 클릭하고 누르고 있는 순간 색상이 yellow 색상이 된다. */
-    background-color: yellow;
+.ul2 .li2:nth-child(3) {
+  color: red;
 }
 
-.button2 {
-    font-size: 40px;
-}
-.button2:hover {
-    background-color: red;
-}
-.button2:focus-visible { 
-    /* focus-visible을 하면 마우스를 올리고 클릭하고 마우스를 떼지않으면 hover상태 유지된다. */
-    /* focus-visible을 적용하지 않으면 마우스를 클릭후 떼지않아도 focus의 값 orange색상이 적용된다. */
-    background-color: orange;
-}
-.button2:active {
-    background-color: yellow;
-}
-/* ----------------------------------------------------------------- */
-
-/* 적용이 되지 않지만 button에 클릭이 안되게 설정할 수 있음 */
-.button3 {
-    font-size: 40px;
-}
-.button3:not(:disabled):hover {
-    background-color: red;
-}
-.button3:focus-visible {
-    background-color: orange;
-}
-.button3:active {
-    background-color: yellow;
-}
-.button3:disabled {
-    opacity: 0.5;
+.ol1 .li_ol1:nth-child(3) ~ .li_ol1 {
+  color: gray;
 }
 
-input[type="checkbox"]:checked + label {
-    color: blue;
-} /*input타입의 checkbox일때 :checked를 하면 + label(인접 레이블)을 체크할때
-    색상을 blue로 설정된다. */
+.ol2 .li_ol2:only-child {
+  /* ol2태그 내부의 li_ol2가 유일한 태그를 색상을 지정할때 */
+  color: red;
+}
+/*# sourceMappingURL=4-3. 가상 클래스 선택자.css.map */

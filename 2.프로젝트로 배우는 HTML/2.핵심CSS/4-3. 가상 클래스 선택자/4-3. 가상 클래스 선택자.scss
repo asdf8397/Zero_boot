@@ -1,0 +1,33 @@
+.ul1 {
+    .li1 {
+        border-top: 1px solid #ddd; // 리스트에 선을 그을때 top으로 긋다가
+        &:first-child {                         // ↓
+            color: red;
+        }
+        &:last-child {
+            color: blue;
+            border-bottom: 1px solid #ddd;  // 리스트에 바닥에 선을 그을때
+        }
+    }
+}
+.ul2 {
+    .li2 {
+        &:nth-child(3) {
+            color: red; // li2 태그에 nth:child(3)번 라인에 색상을 color: red를 지정한다. 
+        }
+    }
+}
+.ol1 {
+    .li_ol1 {
+        &:nth-child(3) ~ .li_ol1 { // 자식요소 3번라인 이후부터 색상 gray적용
+            color: gray;
+        }
+    }
+}
+.ol2 {
+    .li_ol2 {
+        &:only-child { /* ol2태그 내부의 li_ol2가 유일한 태그를 색상을 지정할때 */
+            color:red;
+        }
+    }
+}

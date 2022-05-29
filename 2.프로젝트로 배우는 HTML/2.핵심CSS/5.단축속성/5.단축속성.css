@@ -1,0 +1,51 @@
+/* 단축속성 */
+/* 속성의 적용
+    padding: 100px (상하좌우)에 다 적용
+    padding: 100px 80px (100px: 상,하), 80px(좌, 우)
+    padding: 100px 80px 100px (100px: 상), 80px(좌, 우), (100px: 하)
+    padding: 100px 80px 100px 80px (100px: 상), (80px: 우), (100px: 하), (80px: 좌)
+*/
+
+.span_ex1 {
+    display: inline-block;
+    padding: 100px 50px 80px 20px;
+    margin: 0 auto;
+    background-color: red;
+}
+.div_ex1 {
+    display: block;
+    margin: 0 auto; /* 0 auto를 적어주게되면 0(상, 하) auto(좌, 우)일때 좌우 동일하게 적용해야하기 때문에 
+                        auto를 설정하면 좌우 여백이 똑같아져서 123 box는 center에 정렬된다.  */
+    width: 100px;
+    background-color: red;
+}
+
+
+/* 단축속성(글꼴 속성) */
+/* 
+    font-style: italic;
+    font-weight: bold;
+    font-size: .8em;
+    line-height: 1.2;
+    font-family: Arial, sans-serif 
+*/
+
+/* 단축속성 (테두리 속성) */
+/*  border-width: 1px;
+    border-style: solid;
+    border-color: #000; 
+*/
+
+/* 단축할 수 있다. */
+/* border: 1px solid #000; */
+
+/* 단축속성(배경 속성) */
+/* 
+    background-color: #000
+    background-image: url(images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: top-right;
+ */
+
+/* 선언의 하나로 사용해서 단축할 수 있음 */
+/*  background: #000 url(images/bg.gif) no-repeat top right; */

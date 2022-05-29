@@ -1,0 +1,57 @@
+.block1 {
+    margin: 100px;
+    display: inline-block;
+}
+
+.block1 { 
+    /* block1 내부에 들어있는 글자는 scss에서 &::before, &::after를 해주면 
+    content: '(', ')'를 해주면 글자를 추가해도 자동으로 괄호가 들어간다. */
+    &::before { 
+        content: '(';
+    }
+    &::after {
+        content: ')';
+    }
+}
+
+.block2 {
+    margin: 50px 100px;
+    display: inline-block;
+}
+
+.block2 {
+    &::before {
+        content: '(';
+    }
+    &::after {
+        content: ')';
+    }
+}
+
+.ul1 {
+    display: flex;
+    list-style: none;
+}
+.li1 + li { /* 첫번째 li요소가 아닌 두번째 li요소부터 */
+    &::before {
+        content: '|'; // 디자인으로 꾸며줄때 before after를 사용한다. (일일히 다 적어주지 않으려면 before부터 after요소를 사용해서 시작과 끝으로 적용해서 사용한다. 
+        margin: 0 8px;
+        color: #ddd;
+    }
+}
+
+input {
+    font-size: 30px;
+    color: black;
+    &::placeholder {
+        color: red; // input type안에 placeholoder의 색상을 red로 지정해주겠다
+    }
+}
+#name {
+    font-size: 30px;
+    color: blue;
+    &::placeholder {
+        color: red;
+        opacity: 0.5; // 투명도 반으로 줄임 1이 제일 선명 0.5는 그 선명도의 반으로 줄일때 사용 
+    }
+}

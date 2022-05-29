@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/*
+    가독성 저하, 어디서부터 어디까지 어떤 스타일을 담당하고 있는지 파악하기 어려움
+    중복 코드 혹은 레거시 코드를 생성하기 쉬움
+    단순 수정에도 전체 코드를 일일히 확인해야 함
+    프로젝트가 커질수록 CSS로 작업할 수록 느려짐
+*/
+p span {
+  color: red;
+}
+
+span {
+  color: blue;
+}
+/*# sourceMappingURL=1.Sass.css.map */

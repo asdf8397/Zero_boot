@@ -1,0 +1,21 @@
+Sass 7-1 패턴[설명]
+
+1. base/
+2. components
+3. layout/
+4. pages/
+5. themes/
+6. abstracts/
+7. vendors/
+
+[순서]
+abstracts: 제일위에 위치한다. (추상화 되어야하는 것들)
+base: 기본이 되는 것들 - 전체중에 기본이 되는 것들
+components: button, drop-down 같은 기능들
+layout: 굵직 굵직한 큰 섹션, gnb, form요소
+pages: components, layout가 조합된 하나의 페이지, mypage, 주문page
+themes: 테마에 대한 스타일
+vendors: 필요에 의한 외부 리소스, Jquary
+
+---------------------------------------------------------
+파일명에 _가 붙는 경우 @import되어 사용될 것으로 파악

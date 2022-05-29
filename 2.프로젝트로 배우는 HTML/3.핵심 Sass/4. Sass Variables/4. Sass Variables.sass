@@ -1,0 +1,37 @@
+Variables 예제
+
+variables에서 색상의 변경이 되었을 때: 기존의 CSS는 모든 색상을 변경해줘야한다.
+하지만 Sass는 색상이 변경되었을 때 variables는 Sass의 색상 하나를 변경해주면 다 변경이 된다.
+Sass의 장점이다. (관리하기에 변리하다.)
+
+$h1-size: 5em;
+$h1-color: red;
+$h1-align: center;
+
+h1 {
+    font-size:$h1-size;
+}
+
+
+
+$h1-size: 5em;
+$h1-color: blue;
+$h1-align: center;
+$gray100: #dedede;
+
+h1 {
+    font-size: $h1-size;
+    color: $h1-color;
+    text-align: $h1-align;
+}
+
+div {
+    color: $h1-color;
+}
+
+만약 여기서 색상이 변경해야할 때 h1{} 태그 안의 색상을 변경해줘야 하는 것이 아니라
+$h1-size
+$h1-color
+$h1-align
+$gray100
+으로 되어있는 것들을 변경해주면 된다.

@@ -1,0 +1,89 @@
+<!-- 
+    초보자를 위해서 제일 처음부터 설명
+
+1. VSC(Visual Studio Code)설치한다.
+VSC(Visual Studio Code)는 사용하고 있는 운영체제에 맞게 다운로드한다.
+윈도우(windows), Mac(Mac) 등 본인의 컴퓨터 운영체제에 맞는 운영체제버전을 다운로드 한다.
+
+
+2. Node 설치한다.
+Google(구글)검색창에 node install 또는 node js 다운로드를 검색하면 다운로드 창이 뜬다.
+다운로드 창에 들어가면 본인의 사용 컴퓨터에 맞는 운영체제별 다운로드를 하면 된다.
+
+
+3. Terminal을 실행한다.
+VSC(Visual Studio Code)를 열면 상단에 terminal을 클릭하고 terminal의 list들 중의 new terminal을 클릭한다.
+new terminal 하단에 실행된다. 
+
+
+4. Terminal에서 세팅준비
+VSC(Visual Studio Code)에서 Terminal을 실행하고 terminal에서 창에서 "node -v"라고 치고 Enter 누르면 node.js의 버전이 뜬다.
+"node js"가 설치 되어야지 Sass를 설치할 수 있음
+
+
+5. Sass 설치하기
+Sass 설치방법은 Terminal을 실행하고 무조건 node.js가 설치되어 있는 상태에서 terminal에 "sudo npm i -g sass"를 적어주면
+Sass 설치가 된다... etc: 만약 "sudo npm i -g sass" 작성하고 설치할 수 없다고 나오면 "npm i -g sass"라고 다시 작성해주면
+설치가 실행된다.
+만약 sudo npm i -g sass 또는 npm i -g sass를 쳤는데 password 입력이 나오면 본인의 PC의 잠금했던 비밀번호를 입력하면 된다.
+
+
+6. Sass 설치 후 버전을 확인하는 방법
+Sass를 설치한 terminal화면 또는 일반적인 terminal화면에서 "sass --version"이라고 치고 Enter키를 누르면 다운로드 된 Sass의 버전이 나온다.
+
+
+7. VSC(visual Studio Code)의 확장기능을 설치
+Visual Studio Code의 확장기능 설치에서 live server를 설치해준다. 
+그 다음 live Sass compiler를 설치해준다. 
+
+8. Live Sass compiler를 설정하기
+확장기능 설치에서 다운받은 live sass compiler의 톱니바퀴(설정기능)에서
+Extension Settings을 클릭하고 들어가면 settings에서 검색할 수 있는 창에
+"live sass"를 적으면 "Live Sass Compile > Settings: Autoprefix"가 뜬다.
+live sass"를 적으면 "Live Sass Compile > Settings: Autoprefix의 밑에 
+"Edit in settings.json"을 클릭해서 들어가면 settings.json을 편집할 수 있는
+창으로 이동하고
+{
+    "liveServer.settings.CustomBrowser": "chrome",
+    "git.autofetch": true,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveSassCompile.settings.autoprefix": [
+    
+    ]
+}
+↑ 이렇게 되어있는데 여기서
+
+이렇게 완성 시켜주면 된다. ↓
+{
+    "liveServer.settings.CustomBrowser": "chrome",
+    "git.autofetch": true,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveSassCompile.settings.autoprefix": [
+    
+    ],
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": null
+        }
+    ]
+}
+
+liveSassCompile.settings.formats:[]에서 변경시켜야하는 부분은 "savePath: null로 되어있는
+부분을 변경시켜야한다. "savePath": null부분에 어느부분에 넣을 것인가를 적어줘야 한다. 
+자신이 지정할 파일의 경로까지면 연결하면 된다.
+예를 들어 "Sass프로젝트 준비(외부 큰 제일 처음파일) > assets > images, css, scss 까지의
+파일이 있을 경우 "savePath": "./assets/css까지만 열결해주면 연결이 된다.
+
+
+9. 정상적으로 실행되는지 확인하는 방법
+연결이 되었으면 하단의 "Watch Sass"를 클릭하면 watching이라고 실행되고
+CSS에 연결되서 css가 생성된다.
+SASS에서 변경한 후 save를 하면 css에도 적용된다.
+
+
+10. 세팅 후 Sass 프로그램은 자동으로 실행되지 않고 Sass를 누르고 실행이되면 Sass는 동작하는 것
+ -->

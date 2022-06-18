@@ -1,0 +1,27 @@
+@charset "UTF-8";
+.ul1 .li1 {
+  border-top: 1px solid #ddd;
+}
+
+.ul1 .li1:first-child {
+  color: red;
+}
+
+.ul1 .li1:last-child {
+  color: blue;
+  border-bottom: 1px solid #ddd;
+}
+
+.ul2 .li2:nth-child(3) {
+  color: red;
+}
+
+.ol1 .li_ol1:nth-child(3) ~ .li_ol1 {
+  color: gray;
+}
+
+.ol2 .li_ol2:only-child {
+  /* ol2태그 내부의 li_ol2가 유일한 태그를 색상을 지정할때 */
+  color: red;
+}
+/*# sourceMappingURL=4-3. 가상 클래스 선택자.css.map */

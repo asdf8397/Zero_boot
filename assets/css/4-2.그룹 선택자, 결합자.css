@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/* 일반적인 CSS
+.box {
+    font-size: 20px
+}
+.box.border-box1 {
+    border: 10px solid red;
+}
+.box.border-box2 {
+    background-color: blue;
+}
+*/
+/* Sass임 */
+.box {
+  font-size: 20px;
+}
+
+.box.border-box1 {
+  border: 10px solid red;
+}
+
+.box.border-box2 {
+  background-color: blue;
+}
+
+.box2 {
+  font-size: 20px;
+}
+
+.box2.border_box3 {
+  border: 10px solid red;
+}
+
+.box2.border_box3 .text {
+  color: magenta;
+}
+
+.box2.border_box4 {
+  background-color: blue;
+}
+
+span {
+  background-color: gray;
+}
+
+div > span {
+  background-color: dodgerblue;
+}
+
+ul li ~ li {
+  color: red;
+}
+
+div h1 + p {
+  color: red;
+}
+
+input[type="text"].error + .error-msg {
+  color: red;
+  /* 조건 설명*/
+  /* input type="text"이고 class명으로 error로 가질 때 
+            그것에 바로 인접한 error-msg는 색상은 red이다.  */
+}
+
+input[type="text"].error + .error-msg {
+  display: block;
+  color: red;
+}
+/*# sourceMappingURL=4-2.그룹 선택자, 결합자.css.map */

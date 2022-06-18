@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": ";AACA;;;;;EAKE;AAGF,AACI,CADH,CACG,IAAI,CAAC;EACD,KAAK,EAAE,GAAG;CACb;;AAGL,AAAA,IAAI,CAAC;EACD,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "../../2.프로젝트로 배우는 HTML/3.핵심 Sass/1.Sass란/1.Sass.scss"
+    ],
+    "names": [],
+    "file": "1.Sass.css"
+}

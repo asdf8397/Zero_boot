@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-3 가상클래스 선택자</title>
+    <link rel="stylesheet" href="4-3.%20가상%20클래스%20선택자.css">
+    <link rel="stylesheet" href="4-3.%20가상%20클래스%20선택자.scss">
+</head>
+<body>
+    <button class="button1">button</button>
+    
+    <br>
+    <br>
+
+    <button class="button2">버튼</button>
+    
+    <br>
+    <br>
+
+    <button class="button3">버튼</button>
+    
+    <br>
+    <br>
+
+    <button class="button4" disabled>버튼</button>
+
+    <br>
+    <br>
+
+
+    <input type="checkbox" id="chk_1">
+    <label for="chk1">체크</label>
+    <!-- 메모 -->
+    <!-- input에 id를 chk1을 지정하고 label에 chk1이라고 지정하면 id를 따라간다 label의 chk1은 -->
+    <!-- 프로젝트에서 많이 사용된다. -->
+
+    <br>
+    <br>
+
+    <ul class="ul1">
+        <li class="li1">1</li>
+        <li class="li1">2</li>
+        <li class="li1">3</li>
+    </ul>
+
+    <br>
+    <br>
+
+    <ul class="ul2">
+        <li class="li2">1</li>
+        <li class="li2">2</li>
+        <li class="li2">3</li>
+        <li class="li2">4</li>
+    </ul>
+
+    <br>
+    <br>
+
+    <ol class="ol1">
+        <li class="li_ol1">홍길동</li>
+        <li class="li_ol1">아무개</li>
+        <li class="li_ol1">김갑돌</li>
+        <li class="li_ol1">김갑순</li>
+        <li class="li_ol1">김갑순</li>
+    </ol>
+
+    <br>
+    <br>
+
+    <ol class="ol2">
+        <li class="li_ol2">홍길동</li>
+    </ol>
+
+    <div>
+        <div>I am the 1st sibling.</div>
+        <div>I am the 2nd sibling.</div>
+        <div>I am the 3rd sibling, <div>but this is an only child.</div></div>
+      </div>
+      <!-- 여기서 only-child 색상이 지정될때 
+        <div>but this is an only child</div>에 색상이 적용된다
+        이유는 ,을 찍어서 다른 div라고 설정했기때문에
+        but this is an only child는 다른 only-child속에 들어가게 된다.  -->
+</body>
+</html>

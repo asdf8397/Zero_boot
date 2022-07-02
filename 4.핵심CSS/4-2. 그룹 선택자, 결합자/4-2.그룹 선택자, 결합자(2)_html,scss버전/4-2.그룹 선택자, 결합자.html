@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4-2.그룹 선택자, 결합자</title>
+    <link rel="stylesheet" href="4-2.그룹%20선택자,%20결합자.scss">
+</head>
+<body>
+    <div class="box border-box1">box1</div>
+    <div class="box border-box2">box2</div>
+
+    <br>
+
+    <div class="box2 border_box3">
+        <p class="text">text</p>
+    </div>
+    <div class="box2 border_box4">box2</div>
+
+    <br>
+    <br>
+
+    <div>
+        <span>Span #1, in the div.
+            <span>Span #2, in the span that's in the div.</span>
+        </span>
+    </div>
+    <span>Span #3, not in the div at all.</span>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+
+    <div>
+        <h1>h1 title</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non soluta, et praesentium perspiciatis incidunt voluptatum temporibus molestias culpa reprehenderit officiis expedita cupiditate natus quae ullam ad! Nihil, possimus obcaecati. Ab?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla provident ex quo nam, in minus laudantium perferendis aliquid! Voluptatem doloremque quam exercitationem animi fugiat, illum nesciunt quod nihil possimus sit?</p>
+    </div>
+
+    <input type="text" class="error">
+    <p class="error-msg">에러 메시지</p>
+
+    <input type="text" class="">
+    <p class="error-msg2">에러 메시지</p>
+</body>
+</html>

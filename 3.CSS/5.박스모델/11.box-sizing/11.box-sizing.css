@@ -1,0 +1,20 @@
+/* box-sizing */ /* 강의 한번 더봐야함 뭔말인지 모르겠음 */
+
+* {
+    box-sizing: border-box; /* 여기서 *(전체)라고 지정하면서 border-box를 지정하고 시작하면 밑의 처럼 .box{}안에서 따로 지정해줄 필요 없음 */
+}
+
+.box { /* contents가 width: 300px height: 200px 이다 */
+    width: 300px;
+    height: 200px;
+
+    border: 30px solid blue;
+
+    box-sizing: border-box; /* box-sizing: border-box라고하면 border는 기존의 contents영역에서 벗어나서 border박스의 크기에 대입해서 width, height값이 적용된다. */
+
+    background-color: skyblue;
+}
+
+/* 값은 content-box가 3.CSS 표준이 정한 초기 기본값이고 width와 height속성이 콘텐츠 영역만 포함하고 안팎 여백과 테두리는 포함하지 않는다.
+하지만 border-box를 지정하면 width와 height는 속성이 안쪽 여백과 테두리를 포함하고 바깥 여백은 포함하지 않는다 안쪽 여백과 
+테두리가 요소 상자의 위치함을 유의해야한다. - 쉽게말해서 contents 밖의 margin 안의 border를 설정할수있게 됨 */

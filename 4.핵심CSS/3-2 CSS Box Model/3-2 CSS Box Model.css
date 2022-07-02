@@ -1,0 +1,23 @@
+/* 3.CSS Model */
+
+.num1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.num2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    padding: 20px;
+}
+.num3 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 10px solid #000;
+    padding: 24px;
+    margin: 20px;
+    box-sizing: border-box;
+}

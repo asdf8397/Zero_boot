@@ -1,0 +1,25 @@
+/* 핵심 3.CSS 속성 순서는 이렇게 적어줘야 헷갈리지 않음 */
+/* 
+box-sizing: border-box
+position: relative | absolute | fixed | sticky
+display: flex | block | Inline-block | block
+margin: 100px
+padding: 100px
+width: 100px
+height: 100px
+border: 1px solid #000
+background: #fff
+font-size: 16px
+font-weight: 300(thin) | 400(normal) | 500(medium) | 700(bold)
+color: #000
+text-align: center | left | right
+overflow: auto | scroll | hidden
+z-index: 1
+*/
+
+div {
+    font-size: 20px;
+    background-color: red;
+    width: 150px;
+    height: 200px;
+} /* 순서가 맞지않게 사용하면 수정할때 힘들 수 있음 */

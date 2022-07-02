@@ -1,0 +1,100 @@
+/* 7.animation-fill-mode */
+/* 값 */
+/* none
+    애니메이션은 실행되지 않을때 대상에 스타일을 적용하지 않습니다.
+    요소는 대신 적용된 다른 3.CSS 규칙을 사용하여 표시됩니다.  */
+
+/* forwards
+    대상은 실행된 애니메이션의 마지막 keyframe에 의해 설정된 계산 된 값을 유지합니다.
+    마지막 키 프레임은 animation-direction 및 animation-iteration-count의 값에 따라 다릅니다. */
+
+/* backwards
+    애니메이션은 대상에 적용되는 즉시 첫 번째 관련 keyframe에 정의 된 값을 적용하고
+    animation-delay기간 동안 이 값을 유지합니다. 첫 번째 관련 키프레임은 animation-direction의 값에 따라 다릅니다. */
+
+/* both
+    애니메이션은 앞뒤 양쪽 모두의 규칙을 따르므로 애니메이션 속성이 양방향으로 확장됩니다.  */
+div {
+    width: 100px;
+    height: 100px;
+    border: 10px solid green;
+}
+
+.box1 {
+    background-color: rgb(245, 255, 229);
+    animation: fill-mode 3s linear 1s;
+}
+
+@keyframes fill-mode {
+    0%{
+        background-color: red;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        background-color: black;
+    }
+}
+/* 설정할때 keyframes를 from에서 to로 갈수도 있고
+    0%에서 100%로 갈수도 있다.  */
+
+.box2 {
+    background-color: rgb(245, 255, 229);
+    animation: fill-mode_num2 3s linear 1s;
+    animation-fill-mode: forwards;
+    /* animation-fill-mode: forwards를 설정하면 시작할때 빨간색이었다가
+        검정색으로 변해서 끝이난다. */
+}
+
+@keyframes fill-mode_num2 {
+    0% {
+        background-color: red;
+    }
+    50% {
+        width: 200px;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+.box3 {
+    background-color: rgb(245, 255, 229);
+    animation: fill-mode_num3 3s linear 1s;
+    animation-fill-mode: backwards;
+    /* animation-fill-mode를 backwards로 설정하면
+        시작할때 빨간색으로 시작해서 끝날때 검정색으로 끝이나고 끝이난후 rgb색상으로 된다. */
+}
+
+@keyframes fill-mode_num3 {
+    0% {
+        background-color: red;
+    }
+    50% {
+        width: 200px;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+.box4 {
+    background-color: rgb(245, 255, 229);
+    animation: fill-mode_num4 3s linear 1s;
+    animation-fill-mode: both;
+    /* animation-fill-mode를 both로 하면 
+        시작할때 붉은색으로 시작해서 끝날때 검정색으로 끝난다. */
+}
+
+@keyframes fill-mode_num4 {
+    0% {
+        background-color: red;
+    }
+    50% {
+        width: 200px;
+    }
+    100% {
+        background-color: black;
+    }
+}

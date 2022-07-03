@@ -14,4 +14,9 @@ console.log("Hello " /* 끼워넣기 */ + "World");
  * @param {string} author - The author of the book
  */
 function Book(title, author) {
+    let print_A = title;
+    let print_B = author;
+    console.log(print_A);
+    console.log(print_B);
 }
+Book(10, 10);

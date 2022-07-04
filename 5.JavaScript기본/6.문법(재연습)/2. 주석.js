@@ -23,7 +23,7 @@ function Book(title, author) {
 }
 Book("function String", 100);
 // output: function String, 100
-
+ 
 function Cost(Snack, Potato) {
     let Cost_Snack = Snack;
     let Const_Potato = Potato;

@@ -20,7 +20,7 @@ function outerFunc() {
     const num = 123;
     console.log(global_varVal);
     console.log(num);
-
+ 
     function innerFunc() {
         var innerVal = "함수 내부 지역 변수";
         console.log(global_varVal);

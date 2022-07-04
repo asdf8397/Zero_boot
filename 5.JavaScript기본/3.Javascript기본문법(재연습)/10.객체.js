@@ -19,7 +19,7 @@ console.log(Dongyoung.introduce())
 console.log(Dongyoung.introduce("KIM DONG"))
 // Hello KIM DONG my name is Mr Kim // 설정해준 내용을 전체 출력 함
 
-
+ 
 // 2. 나라는 사람을 프로그래밍 언어로 표현하자면 어떻게 될까?
 
 let Me = {

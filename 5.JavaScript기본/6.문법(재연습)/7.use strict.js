@@ -4,4 +4,4 @@ function func() {
     console.log(this);
     return "hello";
 }
-func();
+func(); 

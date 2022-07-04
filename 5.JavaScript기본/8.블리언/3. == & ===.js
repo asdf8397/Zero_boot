@@ -18,7 +18,7 @@ console.log("" == []); // output: true
 
 // 엄격한 비교 ===
 console.log("1" === 1); // output: false
-consoke.log(0 === []); // output: false
+console.log(0 === []); // output: false
 console.log(0 === ""); // output: false
 console.log("" === []); // output: false
 

@@ -10,4 +10,4 @@ function function() {
     /* 언어는 중복되면 안된다 특히 예약어를 선언해서 써주면 안된다
     break, let, const, var, function, for, default, break, continue
     등등처럼 */
-}
+} 

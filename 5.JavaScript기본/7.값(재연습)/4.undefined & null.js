@@ -22,7 +22,7 @@ console.log(!!undefined); // false
 // 완벽히 다르지만 == 느슨한것과 === 엄격한 것의 boolean은 다르게 나옴
 console.log(undefined === null); // false
 console.log(undefined == null); // true
-
+ 
 console.log(!undefined === !null); // true
 console.log(!!undefined == !!null); // true
 

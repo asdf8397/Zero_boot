@@ -72,7 +72,7 @@
  * console.log(rice); 결과: 1
  *
  * 원래대로라면 중복선언을 하면 syntax error가 발생하지만 var는 중복선언이 되서
- * syntax error의 발생이 없음
+ * syntax error의 발생이 없음 
  *
  * let
  * 선언단계(Declaration phase)

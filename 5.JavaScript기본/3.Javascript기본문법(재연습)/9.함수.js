@@ -23,7 +23,7 @@ function solution_function (num) {
 }
 solution_function(1) // 오오 num이 10보다 작네요.
 solution_function(11) // 오오 num이 10보다 크네요.
-
+ 
 function input_Function(number1, number2) { // 자연스러운 코드 작성
     return number1 + number2
 }

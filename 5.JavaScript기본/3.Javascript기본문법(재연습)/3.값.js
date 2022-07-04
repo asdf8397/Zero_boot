@@ -26,5 +26,5 @@ const str3 = "문자열" // str형 문자열
 if (num === 0) {
     console.log("num은 0입니다.")
 } else {
-    console.log("num은 0이 아닙니다.")
+    console.log("num은 0이 아닙니다.") 
 };

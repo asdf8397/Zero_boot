@@ -17,7 +17,7 @@ console.log(word2[2])
 console.log(word2[3])
 console.log(word2[4])
 console.log(word2[5])
-
+ 
 // string 문자의 길이를 측정
 console.log(word.length);
 let len = word.length;

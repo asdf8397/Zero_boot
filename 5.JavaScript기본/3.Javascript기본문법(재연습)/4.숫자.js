@@ -9,4 +9,4 @@ console.log((Math.pow(2, 9999))) // output: infinity
 
 // isNaN은 숫자를 찾는 것을 숫이자면 true, 숫자가 아니면 false로 나타낸다.
 console.log(isNaN(1)); // false
-console.log(isNaN("Hi")); // true
+console.log(isNaN("Hi")); // true 

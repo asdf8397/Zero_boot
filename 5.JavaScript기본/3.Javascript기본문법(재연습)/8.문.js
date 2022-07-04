@@ -24,5 +24,5 @@ for (let i = 0; i < ArrayList.length; i++) {
 }
 const ArrayList_ForEach = [1,2,3];
 ArrayList_ForEach.forEach(i => {
-    console.log(i);
+    console.log(i); 
 })

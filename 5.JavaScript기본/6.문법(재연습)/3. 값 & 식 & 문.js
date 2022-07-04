@@ -24,7 +24,7 @@
  * 값으로 귀결된 식 or 연산식
  * 
  * 인터프리터에게 명령한다. 그것을 지시문으로
- */
+ */ 
 
 // let isFlag = false;
 // console.log(isFlag);

@@ -21,7 +21,7 @@ console.log(object.age);
 console.log(object.arr);
 console.log(object.func()); // 함수는 목록에서는 나타나지만 따로 print할경우 undefined로 나타남
 console.log(object.child);
-
+ 
 const obj = {
     string: "string",
 }

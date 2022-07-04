@@ -22,7 +22,7 @@ function outerFunc() {
     innerFunc()
 }
 outerFunc();
-
+ 
 // console.log(innverVal); // 출력할수없음 오류발생
 /** function innerFunc()과 function outerFunc()
  * 두 함수는 밖의 값들을 함수 내부로 가져와서 사용할 수 있음

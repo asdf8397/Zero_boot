@@ -25,7 +25,7 @@ console.log(b_change); // 숫자 10을 문자타입으로 변환
 let num = 20;
 let number_String = String(num);
 console.log(number_String); // number형식의 20이 그대로 20인 상태로 출력됨
-
+ 
 let string_Number_Chnage = "10";
 
 // 문자를 숫자로 변환 ParseInt형

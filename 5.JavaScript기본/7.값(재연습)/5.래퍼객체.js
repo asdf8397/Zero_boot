@@ -20,7 +20,7 @@ console.log(typeof str); // String
 console.log(typeof bool2); // Object
 console.log(typeof num2); // object
 console.log(typeof str2); // object
-
+ 
 let New_boolean = false;
 let New_num = 123;
 let New_str = "String";

@@ -20,7 +20,7 @@ console.log(arrayList[3]); // output: name
 // 배열 안에 먼저 값을 넣고 재할당해서 다시 뺴내는 형식
 
 const list_a = "MINI";
-const list_b = "BOX";
+const list_b = "BOX"; 
 const list_c = "SOLUTION";
 
 let arrayList_BOX = [list_a, list_b, list_c, "MEMO"];

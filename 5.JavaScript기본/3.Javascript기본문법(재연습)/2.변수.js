@@ -20,4 +20,4 @@ console.log(count); // 1
 
 // 잘 읽히고 예상하기 쉬움
 count = count + 1;
-console.log(count) // 2
+console.log(count) // 2 

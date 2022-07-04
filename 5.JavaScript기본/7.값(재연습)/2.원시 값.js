@@ -24,4 +24,4 @@ const boool = true;
 bool2 = !boool;
 console.log(bool2); // false
 console.log(!bool2); // true
-
+ 
